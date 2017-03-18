@@ -3,14 +3,13 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use common\models\Cate;
-use common\widgets\ueditor\UEditor;
+use common\widgets\ueditor\Ueditor;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Document */
 /* @var $form yii\widgets\ActiveForm */
 //$cate=Yii::$app->request->get('cate');
 
-$cate= Cate::findOne(Yii::$app->request->get('cate'))? Cate::findOne(Yii::$app->request->get('cate')): Cate::findOne($model->getAttribute('cate'));
 $template = '{label}<div class="col-sm-10">{input}</div>{error}{hint}';
 $label = ['class'=>"col-sm-2 text-c control-label form-label"];
 ?>
@@ -23,7 +22,7 @@ $label = ['class'=>"col-sm-2 text-c control-label form-label"];
 <label  class="col-sm-2 text-c control-label form-label" style="padding-right: 13px !important;font-size: 1.1em">栏目</label>
     <div class="  radio radio-info radio-inline" style="margin-bottom: 10px">
         <input type="radio" id="inlineRadio1" value="option1" name="" checked="" disabled>
-        <label for="inlineRadio1"> <?=$cate['name']?> </label>
+        <label for="inlineRadio1"> <?=$cate->name?> </label>
     </div>
 
    <?= $form->field($model, 'title',[
@@ -39,7 +38,8 @@ $label = ['class'=>"col-sm-2 text-c control-label form-label"];
 
     <?= $form->field($model, 'breviary',['template' => $template])->textarea(['rows' => 3,'class'=>'form-control md-input '])->label(null,$label) ?>
 
-    <?= $form->field($model, 'content',['template' => $template])->label(null,$label)->widget(UEditor::className(),['class'=>'col-sm-10 ','id'=>'content','name'=>'content', ])  ?>
+    <?= $form->field($model, 'content',['template' => '{label}<div class="col-sm-8">{input}</div>{error}{hint}'])
+        ->label(null,$label)->widget(Ueditor::className(),['class'=>'col-md-8 ','id'=>'content','name'=>'content', ])  ?>
 
     <?= $form->field($model, 'author',['template' => $template])->textInput(['maxlength' => true,'class'=>'form-control sm-input '])->label(null,$label) ?>
 

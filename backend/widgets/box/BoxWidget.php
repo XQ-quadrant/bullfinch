@@ -14,7 +14,7 @@ use yii\db\ActiveRecord;
 
 class BoxWidget extends Widget
 {
-    public $css = ['warper'=>'box-widget','title'=>'with-border','body'=>'box-profile'];
+    public $css = ['warper'=>'box-widget','title'=>'with-border','body'=>'box-profile','css'=>'','icon'];
     public $model ;
     public $activeRecord ;
     public $cate ;
@@ -41,7 +41,7 @@ class BoxWidget extends Widget
             $this->activeRecord = $this->model
                 ->find()
                 ->where(['status'=>Document::STATUS_AOLLOW ,'cate'=>$this->cate])
-                ->orderBy(['level' => SORT_DESC])
+                ->orderBy(['level' => SORT_DESC,'create_at'=>SORT_DESC])
                 ->limit($this->liNum)
                 ->all();
 

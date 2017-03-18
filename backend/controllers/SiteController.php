@@ -1,6 +1,8 @@
 <?php
 namespace backend\controllers;
 
+use backend\models\Pic;
+use common\models\Cate;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -57,8 +59,17 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        //$name ="";
-        return $this->render('index',[]);
+        $pic = Pic::findAll(['status'=>1,'category'=>39]);
+        $pic_bottom = Pic::findAll(['status'=>1,'category'=>41]);
+
+
+        $link_bottom = Cate::findAll(['status'=>Cate::$STATUS_AOLLOW,'pre_cate'=>46]);
+
+        return $this->render('index',[
+            'pic'=>$pic,
+            'pic_bottom'=>$pic_bottom,
+            'link_bottom'=>$link_bottom
+        ]);
     }
 
     public function actionLogin()

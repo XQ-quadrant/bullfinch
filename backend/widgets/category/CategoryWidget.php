@@ -10,6 +10,8 @@ namespace backend\widgets\category;
 use common\models\Cate;
 use common\models\Room;
 use yii\base\Widget;
+use yii\helpers\Url;
+use yii\web\UrlManager;
 
 /**
  * Class CategoryWidget 左侧菜单的下级菜单
@@ -59,7 +61,7 @@ class CategoryWidget extends Widget
         if ($this->model === null) {
             $this->model = Cate::find()
                 ->select(['icon','id','name'])
-                ->where(['pre_cate'=>$this->precate,'status'=>Cate::$STATUS_AOLLOW])
+                ->where(['status'=>Cate::$STATUS_AOLLOW,'type'=>Cate::TYPE_list])
                 ->orderBy(['level' => SORT_DESC])
                 //->asArray()
                 ->all();//new Room();//'Hello World';
@@ -69,29 +71,69 @@ class CategoryWidget extends Widget
         foreach($this->model as $k=>$v){
             $items[] = [
                 'label' =>$v['name'],
-                //'icon' => $v['icon'],
+                'icon' => 'fa',
 
                 'url' =>["/$this->precate_name/index?DocumentSearch%5Bcate%5D=".$v['id']]
             ];
         }
         return $items;
     }
+
     public function getCate(){
+
         $this->model = Cate::find()
             ->select(['uri','id','name'])
-            ->where(['pre_cate'=>0,'status'=>Cate::$STATUS_AOLLOW,])
+            ->where(['pre_cate'=>1,'status'=>Cate::$STATUS_AOLLOW,])
             ->andWhere(['>=', 'level', 0])
             ->orderBy(['level' => SORT_ASC])
             //->asArray()
             ->all();//new Room();//'Hello World';
         $items=[];
-        foreach($this->model as $k=>$v){
-            $items[] = [
-                'label' =>$v['name'],
-                //'icon' => $v['icon'],
 
-                'url' =>$v['uri']
+        $sonCate = new Cate();
+        foreach($this->model as $k=>$v){
+            $item =  [
+                'label' =>$v['name'] ,
+                //'icon' => $v['icon'],
+                'url' =>Url::toRoute($v['uri']),
+                /*'items' => [
+                    ['label' => 'Level 1 - Dropdown A', 'url' => '#'],
+                  ['label' => 'Level 1 - Dropdown B', 'url' => '#'],
+              ],*/
+
             ];
+            $flag_active =false;                //是否高亮
+            $uri = \Yii::$app->request->absoluteUrl;  //当前完整url
+
+            $hostinfo = \Yii::$app->request->hostInfo; // 域名
+
+
+            if($uri == $hostinfo.$v['uri']){
+                $flag_active =true;
+            }
+
+            $sonCate = Cate::findAll(['pre_cate'=>$v->id]);
+            if(isset($sonCate)){
+                $sonitems = [];
+                foreach($sonCate as $k2=>$v2){
+                    $sonitems[] = [
+                        'label' =>$v2['name'] ,
+                        //'icon' => $v['icon'],
+                        //'options' => ['class'=>'cc'],
+                        'url' =>Url::toRoute($v2['uri']),
+                    ];
+                    if($uri == $hostinfo.$v2['uri']){
+                        $flag_active = true;
+                    }
+                }
+                $item['items'] = $sonitems;
+
+            }
+
+            //foreach
+            $item['active'] = $flag_active;
+
+            $items[] = $item;
         }
         return $items;
     }

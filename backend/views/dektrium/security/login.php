@@ -26,7 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <?= $this->render('/_alert', ['module' => Yii::$app->getModule('user')]) ?>
 <div class="login-box">
     <div class="login-logo">
-        <a href="/">灰雀教务</a>
+        <h3 href="/">西南交通大学国际教育学院</h3>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
@@ -60,19 +60,7 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
         <!-- /.social-auth-links -->
 
-        <?php if ($module->enableConfirmation): ?>
-            <p class="text-center">
-                <?= Html::a(Yii::t('user', 'Didn\'t receive confirmation message?'), ['/user/registration/resend']) ?>
-            </p>
-        <?php endif ?>
-        <?php if ($module->enableRegistration): ?>
-            <p class="text-center">
-                <?= Html::a(Yii::t('user', 'Don\'t have an account? Sign up!'), ['/user/registration/register']) ?>
-            </p>
-        <?php endif ?>
-        <?= Connect::widget([
-            'baseAuthUrl' => ['/user/security/auth'],
-        ]) ?>
+
 
     </div>
     <!-- /.login-box-body -->

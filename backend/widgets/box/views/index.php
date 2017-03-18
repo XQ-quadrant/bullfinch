@@ -9,16 +9,16 @@ use yii\helpers\Url;
  ?>
 <!-- About Me Box -->
 <div class="box <?=$css['warper']?>">
- <div class="box-header <?=$css['title']?>">
-  <h3 class="box-title"><?=$title?></h3>
+ <a href="<?=$url?>" >
+ <div class="box-header <?=$css['header']?>" style="">
+  <i class="<?=$css['icon']?>"></i>
+
+  <h3 class="box-title <?=$css['title']?>"><?=$title?> </h3>
   <div class="box-tools pull-right">
-   <!--<span data-toggle="tooltip" title="3 New Messages" class="badge bg-light-blue">3</span>-->
-   <!--<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-   </button>-->
-   <!--<button type="button" class="btn btn-box-tool"  title="" >
-    <i class="fa fa-comments"></i>更多</button>-->
+   <span data-toggle="tooltip"  class="badge  index-box-more" ><?= Yii::t('common','more')?></span>
+
   </div>
- </div>
+ </div></a>
  <!-- /.box-header -->
  <div class="box-body">
   <ul class="list-group list-group-unbordered">
@@ -34,10 +34,7 @@ use yii\helpers\Url;
    <?php endforeach; ?>
   </ul>
 
+ </div>
 
- </div>
- <div class="box-footer text-center">
-  <a href="<?=$url?>" class="uppercase"> 更 多... </a>
- </div>
  <!-- /.box-body -->
 </div>
