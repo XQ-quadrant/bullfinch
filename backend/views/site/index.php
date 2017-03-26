@@ -109,7 +109,7 @@ position: relative;
                     <strong><i class="fa fa-book margin-r-5"></i> 个人中心</strong>
 
                     <p class="text-muted">
-                        B.S. in Computer Science from the University of Tennessee at Knoxville
+                        测试用例B.S. in Computer Science from the University of Tennessee at Knoxville
                     </p>
 
                     <hr>
