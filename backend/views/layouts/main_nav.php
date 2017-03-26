@@ -95,8 +95,6 @@ if (Yii::$app->controller->action->id === 'login') {
 
                         </div>
                     </div>
-
-
                     <div class="clearfix"></div>
                 </div>
             </div>
