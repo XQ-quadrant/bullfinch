@@ -64,13 +64,21 @@ class BoxWidget extends Widget
             'url'=>$this->url,
             'cate'=>$this->cate,
         ];
-        switch($this->type){
+        if (isset($this->type)){  //渲染视图模板
+
+            return $this->render($this->type,$renderArray);
+
+        }else{
+            return $this->render('index',$renderArray); //渲染默认视图模板
+        }
+
+        /*switch($this->type){
             case 'pic': return $this->render('listPic',$renderArray);break;
 
             case 'products-list':return $this->render('products-list',$renderArray);break;
 
             default:  return $this->render('index',$renderArray);
-        }
+        }*/
         /*if(!isset($this->pic)){
             return $this->render('index',['model'=>$this->model,'ac'=>$this->activeRecord,'css'=>$this->css,'title'=>$this->title]);
 

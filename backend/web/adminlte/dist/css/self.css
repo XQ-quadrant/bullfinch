@@ -199,12 +199,12 @@ overflow: hidden;
     position: absolute;
     width: 185px;
     height: 39px;
-    background: #3bc0ce;
+    background: rgba(95, 155, 183, 0);
     top: 0px;
     left: 0px;
     z-index: 0;
-    border-right: 43px solid rgb(213, 242, 255);
-    border-bottom: 39px solid #3bc0ce;
+    border-right: 43px solid rgba(234, 240, 255, 0);
+    border-bottom: 39px solid rgb(95, 155, 183);
 
 }
 .bicon-laba{

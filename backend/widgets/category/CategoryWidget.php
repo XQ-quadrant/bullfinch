@@ -120,7 +120,7 @@ class CategoryWidget extends Widget
                         'label' =>$v2['name'] ,
                         //'icon' => $v['icon'],
                         //'options' => ['class'=>'cc'],
-                        'url' =>Url::toRoute($v2['uri']),
+                        'url' =>Url::toRoute([$v2['uri']]),
                     ];
                     if($uri == $hostinfo.$v2['uri']){
                         $flag_active = true;

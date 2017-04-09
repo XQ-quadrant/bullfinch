@@ -1,139 +1,156 @@
 <?php
+use yii\helpers\Html;
+use yii\grid\GridView;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
-$this->params['banner'] = 'index';
+$this->title = Yii::t('common','School of International Education');
+$this->params['index'] = true;//$this->title;
+$this->params['breadcrumbs'] = null;//$this->title;
+$this->blocks['content-header'] = '';
+//$this->registerCssFile('@web/css/pluging.css',['depends'=>['backend\assets\KodeAsset']]);
+
+//$this->registerJsFile('@web/js/jquery.cslider.js',['depends'=>['backend\assets\KodeAsset']]);
+/*$this->registerCss('.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12  .wbox{
+    position: relative;
+    min-height: 1px;
+    padding-right: 8px;
+    padding-left: 8px;
+
+}
+.normal{
+position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+');*/
+
 ?>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" >
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
 
-<div class="best">
-    <div class="container">
-        <article class="">
-            <figure class="float-left"><img src="home/images/xicai.jpg" alt="Placeholder"></figure>
-            <h3><span>西南财经大学</span>周边 </h3>
-            <p >consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.<span class="quotes-down"></span></p>
-            <ul class="srevicesgrid_info">
-                <li class="tick">Best hardware around the world</li>
-                <li class="tick">10 TB Storage for all our clients</li>
-                <li class="tick">Easy powerfull control panel with special tools</li>
-            </ul>
+    </ol>
+    <div class="carousel-inner slider-items">
+        <?php foreach($pic as $k=>$v){
+            if($k==0){
+                ?>
+                <div class="item active">
+                    <a href="<?= $v->url?>">
+                        <img src="<?= $v->savepath?>" alt="<?= $v->content?>">
+                    </a>
+                </div>
+            <?php   }else{ ?>
+                <div class="item">
+                    <a href="<?= $v->url?>">
+                        <img src="<?= $v->savepath?>" alt="<?= $v->content?>">
+                    </a>
+                </div>
+            <?php }
+        }?>
 
-        </article>
     </div>
-</div>
-<!--services-->
-<div class="services">
-    <div class="container">
-        <h3>我们能为您提供什么...<span>服务?</span></h3>
-        <div class="col-md-6 services-grids">
-            <ul class="srevicesgrid_info">
-                <li class="tick">获取便宜的租房</li>
-                <li class="tick">享受美好的校外住宿生活</li>
-                <li class="tick">随时随地的专属生活空间</li>
-            </ul>
-        </div>
-        <div class="col-md-6 services-grids">
-            <ul class="srevicesgrid_info">
-                <li class="tick">成为房东出售自己的闲置空间</li>
-                <li class="tick">贴心的商务服务管理</li>
-                <li class="tick">为你祈祷</li>
-            </ul>
-        </div>
-    </div>
-</div>
-<!--/srvices-->
-<div class="service-section" id="service">
-    <div class="container">
-        <div class="service-section-head text-center wow fadeInRight" data-wow-delay="0.4s">
-            <h3>玩在宿宿</h3>
-            <p>You will get lot of features with flathost</p>
-        </div>
-        <div class="service-section-grids">
-            <div class="col-md-6 service-grid">
-                <div class="service-section-grid wow bounceIn" data-wow-delay="0.4s">
-                    <div class="icon">
-                        <i class="s1"></i>
-                    </div>
-                    <div class="icon-text">
-                        <h4>个人独居</h4>
-                        <p>Lors standard dummy text ever since the 1500s, when an unknown printer.</p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="service-section-grid wow bounceIn" data-wow-delay="0.4s">
-                    <div class="icon">
-                        <i class="s2"></i>
-                    </div>
-                    <div class="icon-text">
-                        <h4>考研租房</h4>
-                        <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy</p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="service-section-grid wow bounceIn" data-wow-delay="0.4s">
-                    <div class="icon">
-                        <i class="s3"></i>
-                    </div>
-                    <div class="icon-text">
-                        <h4>聚会活动</h4>
-                        <p>Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham</p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-            <div class="col-md-6 service-grid">
-                <div class="service-section-grid wow bounceIn" data-wow-delay="0.4s">
-                    <div class="icon">
-                        <i class="s4"></i>
-                    </div>
-                    <div class="icon-text">
-                        <h4>自选室友</h4>
-                        <p>Many desktop del text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy</p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="service-section-grid wow bounceIn" data-wow-delay="0.4s">
-                    <div class="icon">
-                        <i class="s5"></i>
-                    </div>
-                    <div class="icon-text">
-                        <h4>开展项目</h4>
-                        <p>There are many variations of passages of Lorem Ipsum available, suffered alteration in some form, by injected humouror randomised words which don't look even slightly believable.</p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="service-section-grid wow bounceIn" data-wow-delay="0.4s">
-                    <div class="icon">
-                        <i class="s6"></i>
-                    </div>
-                    <div class="icon-text">
-                        <h4>周边游玩</h4>
-                        <p>Lorem Ipsum is simply  the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
+    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+        <span class="fa fa-angle-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+        <span class="fa fa-angle-right"></span>
+    </a>
 </div>
 
-<div class="fullwidth-section semi-background">
-    <div class="fullwidth-bg">
-        <div class="overlay left-aligned">
-            <div class="dt-sc-one-half column first">
-                <div class="dt-support">
-                    <h2><span>dedicated</span> to dedicated</h2>
-                    <p>As a dedicated customer, enjoy direct support from specialists who know our most powerful servers best. Call the exclusive support line anytime.</p>
-                    <span>(855) 503-0450</span>
-                </div>
+<div class="container" style="padding-left: 0px;padding-right: 0px">
+
+
+<hr style="    border-top:1px solid #D9E0E6;margin-top: 20px;margin-bottom: 20px;">
+    <div class="row" style="    margin-bottom: 7px;">
+        <div class="col-md-8" style="">
+            <?= backend\widgets\box\BoxWidget::widget([
+                'type'=>'listPic_m','cate' => 14, 'pic' => true, 'title' => Yii::t('common','News'),
+                'url' => Url::toRoute(['document/list', 'cate' => 14]),
+                'liNum'=>4,
+                'css'=>['warper'=>'box-widget index-box ','header'=>'with-border index-box-header','title'=>'index-box-title','icon'=>'index-box-icon bicon-news','body'=>'box-profile blue-border',],
+            ]) ?>
+            <?= backend\widgets\box\BoxWidget::widget([
+                'type'=>'indexBanner','cate' => 32, 'title' => Yii::t('common','Notices'), 'liNum' => 7,
+                'url' => Url::toRoute(['document/list', 'cate' => 32]),
+                'css'=>['warper'=>'box-widget index-box blue-border','title'=>'index-box-title','header'=>'with-border index-box-header','icon'=>'index-box-icon bicon-laba','body'=>'box-profile',]]) ?>
+        </div>
+        <div class="col-md-4 wbox">
+            <?= backend\widgets\box\BoxWidget::widget([
+                'type'=>'bigDateList','cate' => 31, 'title' => Yii::t('common','学术讲座'), 'liNum' => 7,
+                'url' => Url::toRoute(['document/list', 'cate' => 32]),
+                'css'=>['warper'=>'box-widget index-box blue-border','title'=>'index-box-title','header'=>'with-border index-box-header','icon'=>'index-box-icon bicon-laba','body'=>'box-profile',]]) ?>
+
+            <?= backend\widgets\box\BoxWidget::widget([
+                'type'=>'index','cate' => 67, 'title' => Yii::t('common','学子风采'), 'liNum' => 7,
+                'url' => Url::toRoute(['document/list', 'cate' => 67]),
+                'css'=>['warper'=>'box-widget index-box blue-border','title'=>'index-box-title','header'=>'with-border index-box-header','icon'=>'index-box-icon bicon-laba','body'=>'box-profile',]]) ?>
+
+        </div>
+    </div>
+
+    <div class="row">
+
+<?php foreach($pic_bottom as $v) { ?>
+        <div class="col-sm-3">
+            <div class="bottom-pic">
+                <a href="<?= $v->url ?>">
+                <img class="img-responsive bottom-img" src="<?= $v->savepath ?>" alt="Photo">
+                </a>
+
             </div>
         </div>
+<?php } ?>
+        </div>
+    <div class="row">
+        <div class="col-md-12 " style="margin-top: 1.5em">
+            <div class="box box-widget" style="background-image: url('/adminlte/dist/img/bg_header2.png');background-size:100%;" >
+                <div class="box-header" >
+                    <h3 class="box-title"><?= Yii::t('common','相关链接')?></h3>
+                </div>
+
+                <div class="box-body  index-link">
+                    <div class="row ">
+                        <?php for($i=0; $i<count($link_bottom); $i++){ ?>
+                        <div class="col-sm-3 normal">
+                            <address>
+                                <a href="<?= $link_bottom[$i]->uri?>"><?= $link_bottom[$i]->name?></a><br>
+                            </address>
+                        </div>
+                        <?php } ?>
+
+                        <!--
+                        <div class="col-sm-4 normal">
+
+                            <address>
+                                <a href="http://www.yanghua.net/">扬华素质网</a><br>
+                                <a href="http://sfl.swjtu.edu.cn/">外语学院</a>
+                            </address>
+                        </div>
+
+                        <div class="col-sm-4 normal">
+                            <address>
+                            <a href="http://civil.swjtu.edu.cn/civil/index.html">土木工程学院</a><br>
+                            <a href="http://civil.swjtu.edu.cn/civil/index.html">土木工程学院</a><br>
+                                </address>
+                        </div>
+                         -->
+                    </div>
+
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+
     </div>
 </div>
+<!-- End Presentation -->
 
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+<!-- START CONTAINER -->
 
-
-<div class="services-bottom">
-    <p>Our company have more than<span>200.000 customers</span>around the world!</p>
-</div>
+<!-- END CONTAINER -->

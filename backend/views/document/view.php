@@ -8,7 +8,7 @@ use yii\widgets\DetailView;
 
 $this->title = $model->title;
 $this->params['breadcrumbs'][] = ['label' => $cate->name, 'url' => ['document/list','cate'=>$cate->id]];
-$this->params['breadcrumbs'][] = $this->title;
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="document-view container">
 <div class="row">

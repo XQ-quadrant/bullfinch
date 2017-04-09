@@ -7,12 +7,12 @@ $params = array_merge(
 );
 
 return [
-    'id' => 'app-backend',
+    'id' => 'xncj2',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     //'bootstrap' => ['log'],
 
-    'name'=>'RIEM',
+    'name'=>'社会发展研究院 ',
     'language'=>'zh-CN',
     //'debug'=>false,
     'components' => [
@@ -91,11 +91,11 @@ return [
         ],
 
         'urlManager' => [
+            'class' => 'common\components\AppsUrlManage',
             'enablePrettyUrl' => true,
             "enableStrictParsing" => false,
             'showScriptName' => true,
-            'rules' => [
-            ],
+            'rules' => [],
         ],
 
         /*"urlManager" => [
