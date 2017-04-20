@@ -95,7 +95,7 @@ class CategoryWidget extends Widget
             $item =  [
                 'label' =>$v['name'] ,
                 //'icon' => $v['icon'],
-                'url' =>Url::toRoute($v['uri']),
+                'url' =>$v['uri'],
                 /*'items' => [
                     ['label' => 'Level 1 - Dropdown A', 'url' => '#'],
                   ['label' => 'Level 1 - Dropdown B', 'url' => '#'],
@@ -120,7 +120,7 @@ class CategoryWidget extends Widget
                         'label' =>$v2['name'] ,
                         //'icon' => $v['icon'],
                         //'options' => ['class'=>'cc'],
-                        'url' =>Url::toRoute([$v2['uri']]),
+                        'url' =>$v2['uri'],
                     ];
                     if($uri == $hostinfo.$v2['uri']){
                         $flag_active = true;

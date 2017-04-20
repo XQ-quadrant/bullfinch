@@ -32,8 +32,8 @@ class AdminLteAsset extends BaseAdminLteAsset
      * @see https://almsaeedstudio.com/themes/AdminLTE/documentation/index.html#layout
      */
     //public $skin = '_all-skins';
-    //public $skin = 'skin-blue';
-    public $skin = 'skin-silver-blue';
+    public $skin = 'skin-dark-blue';
+    //public $skin = 'skin-silver-blue';
 
     /**
      * @inheritdoc

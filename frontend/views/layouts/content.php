@@ -2,7 +2,7 @@
 use yii\widgets\Breadcrumbs;
 use dmstr\widgets\Alert;
 use yii\helpers\Url;
-
+use common\models\cate;
 ?>
 <div class="content-wrapper ">
     <?php if(!isset($this->params['index'])){ ?>
@@ -39,20 +39,79 @@ use yii\helpers\Url;
 
 </div>
 <footer id="footer" >
+    <div class="footer top-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="footer-content" style="border-right: 1px solid #d7d7d7;">
+                        <div class="row">
+                            <h5>相关链接</h5>
+                            <div class="col-sm-6">
+                                <ul class="social-links circle">
+                                <?php
+                                $link_bottom = Cate::findAll(['status'=>Cate::$STATUS_AOLLOW,'pre_cate'=>46]);
+                                for($i=0; $i<count($link_bottom); $i+=2){ ?>
+                                    <li class="">
+                                        <a href="<?= $link_bottom[$i]->uri?>"><?= $link_bottom[$i]->name?></a>
+                                    </li>
+                                <?php } ?>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul class="social-links circle">
+                                    <?php
+                                    $link_bottom = Cate::findAll(['status'=>Cate::$STATUS_AOLLOW,'pre_cate'=>46]);
+                                    for($i=1; $i<count($link_bottom); $i+=2){ ?>
+                                        <li class="">
+                                            <a href="<?= $link_bottom[$i]->uri?>"><?= $link_bottom[$i]->name?></a>
+                                        </li>
 
-    <div class="footer" style="height: auto;
-    background-color: rgb(95, 155, 183);">
+                                    <?php } ?>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="space-bottom hidden-lg hidden-xs"></div>
+                <div class="col-sm-6 col-md-2">
+                    <div class="footer-content" >
+                        <h5 >教务</h5>
+                        <nav>
+                            <ul class="nav nav-pills nav-stacked">
+
+                                <li class="jiaowu"><a href=<?= Url::toRoute('/user/login')?>>教师入口</a></li>
+
+                                <li class="jiaowu"><a href=<?= Url::toRoute('/user/login')?>>学生入口</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-md-offset-1">
+                    <div class="footer-content">
+
+                        <div class="text-center">
+                            <a class="btn btn-social-icon "><i class="fa  fa-weibo"></i></a>
+                            <a class="btn btn-social-icon"><i class="fa fa-weixin"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="space-bottom hidden-lg hidden-xs"></div>
+        </div>
+    </div>
+    <div class="footer sub-footer" style="height: auto;">
         <div class="container">
             <div class="row " style="color:white">
                 <div class="col-md-2 normal">
                     <div class="">
-                        <p class="simplenav">
-                            <a class="text-white" href="<?= Url::toRoute('/site/index')?>">Home</a> |
-                            <a class="text-white" href="<?=Url::toRoute('/frontend/info')?>">About</a> |
-                            <a class="text-white" href="">Service</a> |
-                            <a class="text-white" href="">Connect</a> |
-                            <a class="text-white" href="<?=Url::toRoute('/user/login')?>">Login</a> |
-                        </p>
+                       <!-- <p class="">
+                            <a class="simplenav" href="<?/*= Url::toRoute('/site/index')*/?>">Home</a> |
+                            <a class="simplenav" href="<?/*=Url::toRoute('/frontend/info')*/?>">About</a> |
+                            <a class="simplenav" href="<?/*=Url::toRoute('/user/login')*/?>">Login</a> |
+                        </p>-->
                     </div>
                 </div>
 

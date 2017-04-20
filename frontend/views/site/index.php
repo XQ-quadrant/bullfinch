@@ -28,41 +28,41 @@ position: relative;
 ');*/
 
 ?>
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" >
-    <ol class="carousel-indicators">
-        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
 
-    </ol>
-    <div class="carousel-inner slider-items">
-        <?php foreach($pic as $k=>$v){
-            if($k==0){
-                ?>
-                <div class="item active">
-                    <a href="<?= $v->url?>">
-                        <img src="<?= $v->savepath?>" alt="<?= $v->content?>">
-                    </a>
-                </div>
-            <?php   }else{ ?>
-                <div class="item">
-                    <a href="<?= $v->url?>">
-                        <img src="<?= $v->savepath?>" alt="<?= $v->content?>">
-                    </a>
-                </div>
-            <?php }
-        }?>
-
-    </div>
-    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-        <span class="fa fa-angle-left"></span>
-    </a>
-    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-        <span class="fa fa-angle-right"></span>
-    </a>
-</div>
 
 <div class="container" style="padding-left: 0px;padding-right: 0px">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="margin-top: 12px">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+        </ol>
+        <div class="carousel-inner slider-items">
+            <?php foreach($pic as $k=>$v){
+                if($k==0){
+                    ?>
+                    <div class="item active">
+                        <a href="<?= $v->url?>">
+                            <img src="<?= $v->savepath?>" alt="<?= $v->content?>">
+                        </a>
+                    </div>
+                <?php   }else{ ?>
+                    <div class="item">
+                        <a href="<?= $v->url?>">
+                            <img src="<?= $v->savepath?>" alt="<?= $v->content?>">
+                        </a>
+                    </div>
+                <?php }
+            }?>
 
+        </div>
+        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+            <span class="fa fa-angle-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+            <span class="fa fa-angle-right"></span>
+        </a>
+    </div>
 
 <hr style="    border-top:1px solid #D9E0E6;margin-top: 20px;margin-bottom: 20px;">
     <div class="row" style="    margin-bottom: 7px;">
@@ -73,80 +73,33 @@ position: relative;
                 'liNum'=>4,
                 'css'=>['warper'=>'box-widget index-box ','header'=>'with-border index-box-header','title'=>'index-box-title','icon'=>'index-box-icon bicon-news','body'=>'box-profile blue-border',],
             ]) ?>
-            <?= backend\widgets\box\BoxWidget::widget([
-                'type'=>'indexBanner','cate' => 32, 'title' => Yii::t('common','Notices'), 'liNum' => 7,
-                'url' => Url::toRoute(['document/list', 'cate' => 32]),
-                'css'=>['warper'=>'box-widget index-box blue-border','title'=>'index-box-title','header'=>'with-border index-box-header','icon'=>'index-box-icon bicon-laba','body'=>'box-profile',]]) ?>
+
+
         </div>
         <div class="col-md-4 wbox">
             <?= backend\widgets\box\BoxWidget::widget([
-                'type'=>'bigDateList','cate' => 31, 'title' => Yii::t('common','学术讲座'), 'liNum' => 7,
+                'type'=>'indexBanner','cate' => 32, 'title' => Yii::t('common','Notices'), 'liNum' => 7,
                 'url' => Url::toRoute(['document/list', 'cate' => 32]),
-                'css'=>['warper'=>'box-widget index-box blue-border','title'=>'index-box-title','header'=>'with-border index-box-header','icon'=>'index-box-icon bicon-laba','body'=>'box-profile',]]) ?>
+                'css'=>['warper'=>'box-widget index-box blue-border','title'=>'index-box-title','header'=>'with-border index-box-header','icon'=>'index-box-icon bicon-laba','body'=>'box-profile',]])
+            ?>
 
+</div>
+        <div class="col-md-4 wbox">
             <?= backend\widgets\box\BoxWidget::widget([
-                'type'=>'index','cate' => 67, 'title' => Yii::t('common','学子风采'), 'liNum' => 7,
+                'type'=>'listPic_m','cate' => 31, 'title' => Yii::t('common','学术讲座'), 'liNum' => 4,
+                'url' => Url::toRoute(['document/list', 'cate' => 31]),
+                'css'=>['warper'=>'box-widget index-box blue-border','title'=>'index-box-title','header'=>'with-border index-box-header','icon'=>'index-box-icon bicon-laba','body'=>'box-profile',]])
+            ?>
+            <?= backend\widgets\box\BoxWidget::widget([
+                'type'=>'products-list','cate' => 67, 'title' => Yii::t('common','学子风采'), 'liNum' => 7,
                 'url' => Url::toRoute(['document/list', 'cate' => 67]),
-                'css'=>['warper'=>'box-widget index-box blue-border','title'=>'index-box-title','header'=>'with-border index-box-header','icon'=>'index-box-icon bicon-laba','body'=>'box-profile',]]) ?>
+                'css'=>['warper'=>'box-widget index-box blue-border','title'=>'index-box-title','header'=>'with-border index-box-header','icon'=>'index-box-icon bicon-laba','body'=>'box-profile',]])
+            ?>
 
         </div>
     </div>
 
-    <div class="row">
 
-<?php foreach($pic_bottom as $v) { ?>
-        <div class="col-sm-3">
-            <div class="bottom-pic">
-                <a href="<?= $v->url ?>">
-                <img class="img-responsive bottom-img" src="<?= $v->savepath ?>" alt="Photo">
-                </a>
-
-            </div>
-        </div>
-<?php } ?>
-        </div>
-    <div class="row">
-        <div class="col-md-12 " style="margin-top: 1.5em">
-            <div class="box box-widget" style="background-image: url('/adminlte/dist/img/bg_header2.png');background-size:100%;" >
-                <div class="box-header" >
-                    <h3 class="box-title"><?= Yii::t('common','相关链接')?></h3>
-                </div>
-
-                <div class="box-body  index-link">
-                    <div class="row ">
-                        <?php for($i=0; $i<count($link_bottom); $i++){ ?>
-                        <div class="col-sm-3 normal">
-                            <address>
-                                <a href="<?= $link_bottom[$i]->uri?>"><?= $link_bottom[$i]->name?></a><br>
-                            </address>
-                        </div>
-                        <?php } ?>
-
-                        <!--
-                        <div class="col-sm-4 normal">
-
-                            <address>
-                                <a href="http://www.yanghua.net/">扬华素质网</a><br>
-                                <a href="http://sfl.swjtu.edu.cn/">外语学院</a>
-                            </address>
-                        </div>
-
-                        <div class="col-sm-4 normal">
-                            <address>
-                            <a href="http://civil.swjtu.edu.cn/civil/index.html">土木工程学院</a><br>
-                            <a href="http://civil.swjtu.edu.cn/civil/index.html">土木工程学院</a><br>
-                                </address>
-                        </div>
-                         -->
-                    </div>
-
-                </div>
-                <!-- /.box-body -->
-            </div>
-            <!-- /.box -->
-        </div>
-
-    </div>
 </div>
 <!-- End Presentation -->
 

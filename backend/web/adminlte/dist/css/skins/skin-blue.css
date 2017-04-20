@@ -8,6 +8,9 @@
 .skin-blue .main-header .navbar .nav > li > a {
   color: #ffffff;
 }
+/*.skin-pblue-light .main-header .site-index {
+  background-color: rgb(59, 192, 206);
+}*/
 .skin-blue .main-header .navbar .nav > li > a:hover,
 .skin-blue .main-header .navbar .nav > li > a:active,
 .skin-blue .main-header .navbar .nav > li > a:focus,

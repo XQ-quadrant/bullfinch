@@ -18,7 +18,7 @@ class AppsUrlManage extends UrlManager {
             'password' => '',
             'charset' => 'utf8',
         ]);
-        Yii::$app->language = 'en-US';
+        Yii::$app->language = 'zh-CN';
         Yii::$app->id = 'en-US';
         //\Yii::configure('language',['language'=>'zh-CN']);
     }

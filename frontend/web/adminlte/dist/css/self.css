@@ -1,3 +1,22 @@
+.text-center{
+    text-align: center;
+}
+.heading{
+    letter-spacing: 1.4px;
+    font-size: 27px;
+    border-bottom: 1px solid #dadada;
+}
+.heading .divider-center {
+    margin: 10px auto -2px;
+}
+.heading .divider-left, .heading .divider-center {
+    height: 4px;
+    width: 70px;
+    background: rgb(63, 205, 247);
+    display: block;
+}
+
+
 .list-group-unbordered > .list-group-item {
     border-left: 0;
     border-right: 0;
@@ -16,8 +35,11 @@
     border: 0px solid #f2f2f2;
 }
 .list-group {
-
     margin-bottom: 0px;
+}
+.footer{
+    height: auto;
+    background-color: rgba(48, 94, 123, 0.86);
 }
 .summary{
     padding: 0 15px;
@@ -90,6 +112,16 @@
     margin-left: auto;
     margin-right: auto;
 }
+.leader-username{
+    text-align: center;
+    padding-bottom: 15px;
+    margin-top: 40px;
+
+}
+.leader-info{
+    text-align: center;
+    padding-bottom: 15px;
+}
 /************box******************/
 .box-item{
     width:85%;
@@ -119,7 +151,8 @@
     padding-bottom:7px
 }
 .index-box .products-list .item{
-    background: #e5ebf8;
+    background: rgba(255, 255, 255, 0);
+
 }
 .index-box .attachment-block {
     min-height: 90px;
@@ -295,27 +328,45 @@ overflow: hidden;
     padding-right: 0px;
     padding-left: 0px;
 }
-.container-self{
+.container-self,.container-single{
     margin-left: auto;
     margin-right: auto ;
     padding-right: 0px;
     padding-left: 0px;
 }
+.single-page{
+    margin-right: 5em;
+    margin-left: 5em;
+}
 @media (min-width: 1300px){
     .container {
 
-         width: 1080px;
+         width: 1127px;
     }
     .container-self{
-        width: 1260px;
+        width: 1160px;
+    }
+    .container-single{
+        width: 1027px;
+    }
+}
+
+@media (min-width: 1200px){
+    .container {
+        width: 1117px;
+    }
+    .container-single{
+        width: 1017px;
     }
 }
 @media (min-width: 1400px){
     .container {
         width: 1280px;
     }
+    .container-single{
+        width: 1117px;
+    }
 }
-
 @media screen and (min-width: 768px) {
     .sm-input {
         width: 33% !important;
@@ -347,11 +398,11 @@ overflow: hidden;
     .carousel-inner img{
         /*border-top: 1px solid rgba(204, 204, 204, 0.12);
         padding: 1em 1em;*/
-        min-height: 340px;
+        min-height: 355px;
     }
     .slider-items{
-        min-height: 340px;
-        max-height: 340px;
+        min-height: 354px;
+        max-height: 355px;
     }
 
 }
@@ -382,7 +433,96 @@ overflow: hidden;
         border: 1px solid #ddd;
     }
 }
+/*************** footer ***************/
+.sub-footer{
+    background-color: rgb(52, 52, 52);
+}
+.footer-content .nav-pills > li > a {
+    padding: 4px 0px;
+    border-color: transparent;
+    color: #999;
+    font-weight: 400;
+}
+.footer-content .nav-pills > li:last-child > a {
+    border-bottom: none;
+}
+.footer-content .nav-pills > li.active > a,
+.footer-content .nav-pills > li.active > a:focus,
+.footer-content .nav-pills > li > a:focus {
+    color: #999;
+    background-color: transparent;
+    border-color: transparent;
+}
+.footer-content .nav-pills > li.active > a:hover,
+.footer-content .nav-pills > li > a:hover {
+    color: #fff;
+    background-color: transparent;
+    border-color: transparent;
+}
+.footer-content .nav-pills.nav-stacked > li > a:after {
+    top: 3px;
+}
+.footer-content .nav-pills.nav-stacked > li > a:after,
+.footer-content .nav-pills > li.active > a:after,
+.footer-content .nav-pills > li.active > a:hover:after,
+.footer-content .nav-pills > li.active > a:focus:after,
+.footer-content .nav-pills > li > a:hover:after,
+.footer-content .nav-pills > li > a:focus:after {
+    color: #999
+}
+ .footer-content .nav-pills > li > a,
+ .footer-content .nav-pills > li.active > a,
+ .footer-content .nav-pills > li.active > a:focus,
+ .footer-content .nav-pills > li > a:focus {
+   /* color: #666;*/
+     padding: 12px 5px 0px !important;
+     font-size: 16px;
+     color: #3c9ee9;
+     font-weight: 600;
+     letter-spacing: .9px;
+}
+ .footer-content .nav-pills > li.active > a:hover,
+ .footer-content .nav-pills > li > a:hover {
+     color: #125786;
+}
+ .footer-content .nav-pills.nav-stacked > li > a:after,
+ .footer-content .nav-pills > li.active > a:after,
+ .footer-content .nav-pills > li.active > a:hover:after,
+ .footer-content .nav-pills > li.active > a:focus:after,
+ .footer-content .nav-pills > li > a:hover:after,
+ .footer-content .nav-pills > li > a:focus:after {
+    color: #666
+}
+.footer-content .social-links {
+    margin: 20px 0;
+    padding-left: 0px;
+    list-style-type:none;
+    letter-spacing: .2px;
 
+}
+.footer-content h5{
+    padding: 0 15px;
+}
+.footer-content .jiaowu a{
+    padding: 12px 5px 5px !important;
+    font-size: 16px;
+    color: #00a0e9;
+}
+
+.footer-content .social-links li {
+    margin: 0 5px 5px 0;
+}
+.footer-content .social-links li a {
+    color: #0079b6;
+    background-color: transparent;
+    border-color: #666;
+}
+.footer-content .social-links li a:hover {
+    color: #fff;
+    background-color: #666;
+    border-color: #666;
+}
+/*************** footer end ***************/
 #breadcrumb_wrapper {
     width: 100%;
     padding: 25px 0;
@@ -401,10 +541,10 @@ overflow: hidden;
 }
 .main-header .navbar .nav > li > a{
     font-size: 17px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
     font-weight: 500;
-    letter-spacing: .4px;
+    letter-spacing: .5px;
 }
 .breadcrumb_banner{
    /* background: url('../img/gray.jpg') no-repeat center;*/
@@ -488,3 +628,34 @@ overflow: hidden;
                 }
             }
 
+/*********** particuler  ****************/
+.staff{
+    padding: 15px 5px;
+}
+.staff .user-icon{
+    margin: auto 10px auto auto;
+    width: 40px;
+    height: 40px;
+}
+.staff a p{
+    margin: 0 0 0 45px;
+    font-size: 14px;
+    color: #888888;
+}
+
+.staff small{
+    padding: 0 15px;
+}
+.staff-info,.staff-info p{
+    font-size: 15px;
+    letter-spacing: .4px;
+}
+
+.staff-view{
+    padding: 0 20px;
+}
+.staff-icon{
+    margin-left: auto;
+    margin-right: auto;
+}
+/*********** particuler - end ****************/

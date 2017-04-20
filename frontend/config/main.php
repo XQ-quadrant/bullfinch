@@ -91,11 +91,14 @@ return [
         ],
 
         'urlManager' => [
-            'class' => 'common\components\AppsUrlManage',
+            //'class' => 'common\components\AppsUrlManage',
             'enablePrettyUrl' => true,
             "enableStrictParsing" => false,
             'showScriptName' => true,
-            'rules' => [],
+            'rules' => [
+
+                '/riem/<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+            ],
         ],
 
         /*"urlManager" => [

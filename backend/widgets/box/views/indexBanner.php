@@ -24,7 +24,7 @@ use yii\helpers\Url;
   <ul class="list-group list-group-unbordered">
    <?php foreach ( $ac as $m):?>
    <li class="list-group-item">
-    <a class="box-item " style="font-size: 15px" href=" <?=Url::to(['/'.$model->tableName().'/view/','id'=>$m->id])?>">
+    <a class="box-item " style="" href=" <?=Url::to(['/'.$model->tableName().'/view/','id'=>$m->id])?>">
       <?=$m->title?>
 
      </a>

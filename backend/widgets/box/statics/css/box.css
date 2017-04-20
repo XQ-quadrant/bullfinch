@@ -1,5 +1,8 @@
 .index-box{
-    min-height: 375px;
+    min-height: 285px;
+}
+.bg-font .index-box{
+    min-height: 285px;
 }
 .box-item{
     overflow: hidden;

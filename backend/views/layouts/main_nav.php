@@ -53,7 +53,7 @@ if (Yii::$app->controller->action->id === 'login') {
                 <div class="container">
                     <div class="row">
                         <a class="col-md-7 normal" href="<?= Yii::$app->homeUrl ?>" style="display: inline-block;">
-                            <img src="/images/top.png" style="    width: 100%;float: left;padding: 0 1em;"/>
+                            <img src="/images/top.png" class="top-img" />
                         </a>
                         <div class="col-md-5 normal">
                             <div class="row" style="margin-top: 1em;">

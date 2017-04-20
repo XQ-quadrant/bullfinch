@@ -76,7 +76,7 @@ class User extends ActiveRecord implements IdentityInterface
     private $_profile;
 
     /** @var string Default username regexp */
-    public static $usernameRegexp = '/^[-a-zA-Z0-9_\.@]+$/';
+    public static $usernameRegexp = "/^[\x{4e00}-\x{9fa5}A-Za-z0-9_]+$/u";
 
     /**
      * @return Finder

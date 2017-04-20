@@ -61,7 +61,7 @@ use yii\helpers\Url;
 
                         <address >
                             <ul>
-                                <li><?= Yii::t('common','柳林校区地址:成都市温江区柳台大道555号通博楼A502')?></li>
+                                <li><?= Yii::t('common','柳林校区地址:四川成都温江柳台大道555号格致楼12层')?></li>
                                 <li><?= Yii::t('common','Tel')?>： 028-87092257  </li>
                                 <li><?= Yii::t('common','PC')?>： 611130</li>
                             </ul>
@@ -73,7 +73,7 @@ use yii\helpers\Url;
 
                         <address >
                             <ul>
-                                <li><?= Yii::t('common',' 光华校区地址：成都市光华村街55号西南财经大学光华楼1101')?></li>
+                                <li><?= Yii::t('common',' 光华校区地址：四川成都光华村街55号')?></li>
                                 <li><?= Yii::t('common','Tel')?>： 028-87092257  </li>
                                 <li><?= Yii::t('common','PC')?>： 610074</li>
                             </ul>
