@@ -5,6 +5,7 @@
     letter-spacing: 1.4px;
     font-size: 27px;
     border-bottom: 1px solid #dadada;
+    margin-bottom: 40px;
 }
 .heading .divider-center {
     margin: 10px auto -2px;
@@ -112,16 +113,65 @@
     margin-left: auto;
     margin-right: auto;
 }
+/********** leader ***************/
+.leader-block{
+    padding: 0 20px 18px;
+}
 .leader-username{
     text-align: center;
     padding-bottom: 15px;
-    margin-top: 40px;
+    margin-top: 20px;
 
+}
+.leader-title{
+    font-size: 15px;
+    color: #1a5f8c;
+    padding-left: 10px;
 }
 .leader-info{
     text-align: center;
     padding-bottom: 15px;
 }
+/************ office *************/
+.office .box-header {
+    color: #03111f;
+}
+.office-ul{
+    list-style-type: none;
+    padding: 0;
+}
+.office-username{
+    text-align: center;
+    padding-bottom: 15px;
+    margin-top: 20px;
+
+}
+.office-info{
+    text-align: center;
+    padding-bottom: 6px;
+    padding-top: 6px;
+}
+.office-title{
+    text-align: center;
+    padding-bottom: 5px;
+    margin-top: 21px;
+    color: #1a5f8c;
+}
+.office .caption {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+}
+.office  .caption-desc{
+    text-align: center;
+}
+.office .widget-user-2 .widget-user-header {
+    padding: 31px ;
+}
+    /*************** office end ***********/
 /************box******************/
 .box-item{
     width:85%;
@@ -361,7 +411,7 @@ overflow: hidden;
 }
 @media (min-width: 1400px){
     .container {
-        width: 1280px;
+        width: 1200px;
     }
     .container-single{
         width: 1117px;

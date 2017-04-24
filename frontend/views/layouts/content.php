@@ -81,7 +81,7 @@ use common\models\cate;
                         <nav>
                             <ul class="nav nav-pills nav-stacked">
 
-                                <li class="jiaowu"><a href=<?= Url::toRoute('/user/login')?>>教师入口</a></li>
+                                <li class="jiaowu"><a href=<?= Url::toRoute('user/security/login')?>>教师入口</a></li>
 
                                 <li class="jiaowu"><a href=<?= Url::toRoute('/user/login')?>>学生入口</a></li>
                             </ul>
@@ -91,9 +91,15 @@ use common\models\cate;
                 <div class="col-sm-6 col-md-3 col-md-offset-1">
                     <div class="footer-content">
 
+
+
                         <div class="text-center">
-                            <a class="btn btn-social-icon "><i class="fa  fa-weibo"></i></a>
-                            <a class="btn btn-social-icon"><i class="fa fa-weixin"></i></a>
+                            <!--<a class="btn btn-social-icon"><i class="fa fa-weixin"></i></a>-->
+                            <div >
+                                <img src=<?= Url::to('@web/images/qr.png') ?>  style="width: 100px">
+                            </div>
+
+
 
                         </div>
                     </div>

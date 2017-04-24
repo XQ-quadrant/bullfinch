@@ -4,7 +4,7 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Achievement */
+/* @var $model frontend\models\Achievement */
 
 $this->title = Yii::t('common', 'Create Achievement');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('common', 'Achievements'), 'url' => ['index']];

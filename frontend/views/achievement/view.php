@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Achievement */
+/* @var $model frontend\models\Achievement */
 
 $this->title = $model->id;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('common', 'Achievements'), 'url' => ['index']];
@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'author',
-            'subject:ntext',
+            'title:ntext',
             'periodical',
             'year',
             'address',

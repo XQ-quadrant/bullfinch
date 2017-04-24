@@ -23,7 +23,7 @@ use yii\helpers\Url;
                         </span>
                 </div>
                 <div class="product-img">
-                    <img src="<?= empty($m->pic)?'/images/icon/icon1.png':$m->pic?>" alt="<?=$m->title?>">
+                    <img src="<?=  empty($m->pic)?Url::to('@web'.'/images/icon/icon1.png'):Url::to('@web'.$m->pic) ?>" alt="<?=$m->title?>">
                 </div>
 
             </li>

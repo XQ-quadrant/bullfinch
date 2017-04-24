@@ -36,6 +36,7 @@ position: relative;
                 <ol class="carousel-indicators">
                     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                     <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+
                 </ol>
                 <div class="carousel-inner slider-items">
                     <?php foreach($pic as $k=>$v){

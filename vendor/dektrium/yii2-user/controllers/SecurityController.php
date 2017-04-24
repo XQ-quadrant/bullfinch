@@ -147,8 +147,8 @@ class SecurityController extends Controller
     public function actionLogin()
     {
         if (!Yii::$app->user->isGuest) {
-            //$this->goHome();
-            $this->redirect('/dashboard/');
+            $this->goHome();
+            //$this->redirect('/dashboard/');
         }
 
         /** @var LoginForm $model */
@@ -161,7 +161,8 @@ class SecurityController extends Controller
         if ($model->load(Yii::$app->getRequest()->post()) && $model->login()) {
             $this->trigger(self::EVENT_AFTER_LOGIN, $event);
             SocialTool::login();     //连接信件服务
-            return $this->redirect('/dashboard/');
+            return $this->goHome();
+            //return $this->redirect('/dashboard/');
         }
 
         return $this->render('login', [

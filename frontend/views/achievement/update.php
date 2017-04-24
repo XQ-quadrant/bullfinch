@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Achievement */
+/* @var $model frontend\models\Achievement */
 
 $this->title = Yii::t('common', 'Update {modelClass}: ', [
     'modelClass' => 'Achievement',

@@ -20,6 +20,7 @@ class AppsUrlManage extends UrlManager {
         ]);
         Yii::$app->language = 'zh-CN';
         Yii::$app->id = 'en-US';
+
         //\Yii::configure('language',['language'=>'zh-CN']);
     }
 

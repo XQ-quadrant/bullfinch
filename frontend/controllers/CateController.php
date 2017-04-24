@@ -5,6 +5,7 @@ namespace frontend\controllers;
 use Yii;
 use common\models\Cate;
 use common\models\CateSearch;
+use yii\helpers\Url;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -71,7 +72,7 @@ class CateController extends Controller
                 foreach($cates as $v2){
 
                     $next['text']= $v2->name;
-                    $next['href'] = 'update?id='.$v2->id;
+                    $next['href'] = Url::toRoute(['update','id'=>$v2->id]);
 
                     /*$next['tags'] = ['<a href="/site">cc</a>'];*/
                     $node = catetree($v2->id);

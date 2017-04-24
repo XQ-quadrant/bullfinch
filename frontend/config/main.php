@@ -11,7 +11,7 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'frontend\controllers',
     //'bootstrap' => ['log'],
-
+    //'HomeUrl'=>'index.php?r=admin',
     'name'=>'经济与管理研究院 ',
     'language'=>'zh-CN',
     //'debug'=>false,
@@ -94,10 +94,13 @@ return [
             //'class' => 'common\components\AppsUrlManage',
             'enablePrettyUrl' => true,
             "enableStrictParsing" => false,
-            'showScriptName' => true,
+            'showScriptName' => false,
+            //
             'rules' => [
-
-                '/riem/<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+                //'prefix' => 'riem',
+                'riem<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                //'/riem/<prefix:\w+>/<controller:\w+>/<action:\w+>'=>'<module>/<controller>/<action>',
             ],
         ],
 
@@ -120,7 +123,6 @@ return [
                 //['class' => 'yii\rest\UrlRule', 'controller' => 'backend\modules\rest\controllers\UserController'],
             ],
         ],*/
-
         "view" => [
             "theme" => [
                 "pathMap" => [
@@ -129,8 +131,6 @@ return [
                 ],
             ],
         ],
-
-
     ],
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
@@ -160,7 +160,19 @@ return [
             'confirmWithin' => 21600,
             'cost' => 12,
             'admins' => ['admin','xq1024'],
+            //'enablePrettyUrl' => false,
             //'layout' => 'left-menu',
+            //'urlPrefix' => 'user',
+            /*'urlRules' => [
+                '<id:\d+>'                               => 'profile/show',
+                '<action:(login|logout)>'                => 'security/<action>',
+                '<action:(register|resend)>'             => 'registration/<action>',
+                'confirm/<id:\d+>/<code:[A-Za-z0-9_-]+>' => 'registration/confirm',
+                'forgot'                                 => 'recovery/request',
+                'recover/<id:\d+>/<code:[A-Za-z0-9_-]+>' => 'recovery/reset',
+                'settings/<action:\w+>'                  => 'settings/<action>',
+                '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+            ],*/
         ],
         'frontend' => [
             'class' => 'backend\modules\frontend\Frontend',
@@ -191,8 +203,10 @@ return [
                     'idField' => 'id'
                 ],
                 ///'userClassName' => 'common\models\User',
-                'other' => [
-                    'class' => 'path\to\OtherController', // add another controller
+                'route' => [
+                    'class' => 'mdm\admin\controllers\RouteController', // add another controller
+                    //'userClassName' => 'common\models\User',
+
                 ],
             ],
             'mainLayout' => '@app/views/layouts/main.php',
@@ -200,7 +214,10 @@ return [
                 'assignment' => [
                     'label' => 'Grand Access' // 更改label
                 ],
-                'route' => null, // 禁用菜单
+                'route' => [
+                    'label' => '路由' // 更改label
+                ],
+                //'route' => null, // 禁用菜单
             ]
         ],
         'treemanager' =>  [

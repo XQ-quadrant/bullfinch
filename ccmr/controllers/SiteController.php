@@ -1,5 +1,5 @@
 <?php
-namespace frontend\controllers;
+namespace ccmr\controllers;
 
 use backend\models\Pic;
 use common\models\Cate;
@@ -57,7 +57,7 @@ class SiteController extends Controller
         ];
     }
 
-    public function actionIndex()
+    public function actionYdyl()
     {
         $pic = Pic::findAll(['status'=>1,'category'=>39]);
         $pic_bottom = Pic::findAll(['status'=>1,'category'=>41]);
@@ -72,7 +72,7 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionYdyl()
+    public function actionIndex()
     {
         $pic = Pic::findAll(['status'=>1,'category'=>39]);
         $pic_bottom = Pic::findAll(['status'=>1,'category'=>41]);

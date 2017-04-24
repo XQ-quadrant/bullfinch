@@ -54,6 +54,7 @@ class BoxWidget extends Widget
                 ->find()
                 ->where($this->where)
                 ->orderBy(['level' => SORT_DESC])->limit($this->liNum)->all();
+
         }
         //$room =
         $renderArray = [

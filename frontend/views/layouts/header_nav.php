@@ -30,8 +30,8 @@ use backend\widgets\category\CategoryWidget;
 
         $menu = new CategoryWidget(['precate_name'=>'document']);
         $menuItemsCenter = $menu->getCate();  //获取树状栏目
-
-
+        //$menuItemsCenter = \mdm\admin\components\MenuHelper::getAssignedMenu(Yii::$app->user->id,$menuItemsCenter);
+        //var_dump($menuItemsCenter);die();
         echo Nav::widget([
             'options' => ['class' => 'nav navbar-nav'],
             'encodeLabels' => false,

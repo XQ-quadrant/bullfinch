@@ -28,7 +28,7 @@
   background-color: #ecedef;
 }
 .skin-pblue-light .index-box-title {
-  color: #516f7d;
+  color: #3fcdf7;
 }
 .skin-pblue-light .text-white{
   color: #ffffff;
@@ -70,7 +70,15 @@
   border-bottom: 0 solid transparent;*/
   border-right: 1px solid rgb(5, 174, 224);;;
 }
-.navbar-toggle {
+
+.skin-pblue-light .bg-silver-blue, .callout.callout-warning, .alert-warning, .label-warning, .modal-warning .modal-body{
+  background-color: rgb(63, 205, 247) !important;
+}
+.bg-silver-blue{
+    color: #fff !important;
+}
+
+.skin-pblue-light .navbar-toggle {
   color: #399BFF;
 }
 .skin-pblue-light .main-header #navbar-search-input.form-control {

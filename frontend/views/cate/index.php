@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use common\models\Cate;
-
+use yii\helpers\Url;
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\CateSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -36,12 +36,12 @@ $this->registerJsFile('@web/adminlte/plugins/treeview/treeview-demo.js',['depend
                 <div class="box-body no-padding">
                     <ul class="nav nav-pills nav-stacked">
                         <li class="active">
-                            <a href="/cate/index?pre_cate=1"><i class="fa fa-inbox"></i> 顶部栏目
+                            <a href=<?=Url::toRoute(['cate/index','pre_cate'=>1]) ?>><i class="fa fa-inbox"></i> 顶部栏目
                                 <!--<span class="label label-primary pull-right">3</span>-->
                             </a></li>
-                        <li><a href="/cate/index?pre_cate=3">
+                        <li><a href=<?=Url::toRoute(['cate/index','pre_cate'=>3]) ?>>
                                 <i class="fa fa-envelope-o"></i> 底部栏目</a></li>
-                        <li><a href="/cate/index?pre_cate=2">
+                        <li><a href="<?=Url::toRoute(['cate/index','pre_cate'=>2]) ?>">
                                 <i class="fa fa-file-text-o"></i> 图片栏目</a></li>
                     </ul>
                 </div>

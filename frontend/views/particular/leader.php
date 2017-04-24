@@ -13,72 +13,71 @@ $this->params['breadcrumbs'][] = $this->title;
 $category = isset($a)?$a:39;*/
 $positions = [];
 
-foreach ($positions as $position){
-    $dataProvider= $searchModel->search(['position'=>$position]);
+foreach ($positions as $position) {
+    $dataProvider = $searchModel->search(['position' => $position]);
     $models = $dataProvider->getModels();
-    foreach ($models as $model){
+    foreach ($models as $model) {
 
     }
 }
 ?>
 
 <div class="container">
-    <div class=" text-center" >
+    <div class=" text-center">
         <h2 class="heading">学院领导 <span class="divider-center"></span></h2>
     </div>
-    <div class="row leader-block" style="padding: 20px">
+    <div class="row leader-block" >
 
-        <div class="col-md-5 col-md-offset-4 col-sm-3 ">
+        <div class="col-md-4 col-md-offset-4 col-sm-3 ">
 
             <div class="box box-solid">
-                <div class="box-footer with-border" >
+                <div class="box-body with-border">
                     <div class="col-sm-6"><img class="img-responsive " src="/images/staff/t1.jpg" alt="Photo"></div>
-                    <div class="col-sm-6">
-                        <h4 class="leader-username " >院长-甘犁</h4>
-                        <h5 class="leader-info ">柳林校区格致楼12楼1202室</h5>
+                    <div class="col-sm-6" style="padding: 5px">
+                        <h4 class="leader-username ">甘犁<span class="leader-title">院长</span></h4>
+                        <h6 class="leader-info ">柳林校区格致楼12楼1202室</h6>
                         <p class="leader-info">gucoyu@cc.com</p>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
-        <div class="row leader-block" style="padding: 20px">
-        <div class="col-md-5 col-md-offset-1 col-sm-3 fgrids">
 
+    </div>
+    <div class="row leader-block" >
+        <div class="col-md-4  col-sm-3 fgrids">
             <div class="box box-solid">
-                <div class="box-footer with-border" >
+                <div class="box-body with-border">
                     <div class="col-sm-6"><img class="img-responsive " src="/images/staff/t1.jpg" alt="Photo"></div>
-                    <div class="col-sm-6" >
-                        <h4 class="leader-username " >党总支书记-董艳</h4>
-                        <h5 class="leader-info ">柳林校区格致楼12楼1210B室</h5>
+                    <div class="col-sm-6" style="padding: 5px">
+                        <h4 class="leader-username ">董艳<span class="leader-title">党总支书记</span></h4>
+                        <h6 class="leader-info ">柳林校区格致楼12楼1210B室</h6>
                         <p class="leader-info">gucoyu@cc.com</p>
                     </div>
                 </div>
             </div>
 
-
         </div>
-        <div class="col-md-5  col-sm-3 fgrids">
+        <div class="col-md-4  col-sm-3 fgrids">
             <div class="box box-solid">
-                <div class="box-footer with-border" >
+                <div class="box-body with-border" >
                     <div class="col-sm-6"><img class="img-responsive " src="/images/staff/t1.jpg" alt="Photo"></div>
-                    <div class="col-sm-6" >
-                        <h4 class="leader-username " >常务副院长-李涵
-                            </h4>
-                        <h5 class="leader-info ">柳林校区格致楼12楼1209室</h5>
+                    <div class="col-sm-6" style="padding: 5px">
+                        <h4 class="leader-username ">李涵<span class="leader-title">常务副院长</span>
+                        </h4>
+                        <h6 class="leader-info ">柳林校区格致楼12楼1209室</h6>
                         <p class="leader-info">gucoyu@cc.com</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-5 col-md-offset-1 col-sm-3 fgrids">
+        <div class="col-md-4  col-sm-3 fgrids">
 
             <div class="box box-solid">
-                <div class="box-footer with-border" >
+                <div class="box-body with-border">
                     <div class="col-sm-6"><img class="img-responsive " src="/images/staff/t1.jpg" alt="Photo"></div>
-                    <div class="col-sm-6" >
-                        <h4 class="leader-username " >党总支副书记-周高蓉</h4>
-                        <h5 class="leader-info ">柳林校区格致楼12楼1203A</h5>
+                    <div class="col-sm-6" style="padding: 5px">
+                        <h4 class="leader-username ">周高蓉<span class="leader-title">党总支副书记</span></h4>
+                        <h6 class="leader-info ">柳林校区格致楼12楼1203A</h6>
                         <p class="leader-info">gucoyu@cc.com</p>
                     </div>
                 </div>

@@ -57,6 +57,7 @@ class Module extends \yii\base\Module
      * @var array 
      * @see [[menus]]
      */
+
     private $_coreItems = [
         'user' => 'Users',
         'assignment' => 'Assignments',

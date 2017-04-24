@@ -2,24 +2,21 @@
 
 namespace frontend\controllers;
 
-use frontend\models\search\StaffSearch;
 use Yii;
-use common\models\Report;
-use common\models\search\ReportSearch;
-use yii\data\Sort;
+use frontend\models\Achievement;
+use frontend\models\search\AchievementSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * ReportController implements the CRUD actions for Report model.
+ * AchievementController implements the CRUD actions for Achievement model.
  */
-class ParticularController extends Controller
+class AchievementController extends Controller
 {
     /**
      * @inheritdoc
      */
-
     public function behaviors()
     {
         return [
@@ -31,78 +28,35 @@ class ParticularController extends Controller
             ],
         ];
     }
-    public function actions()
-    {
-        return [
-            'upload'=>[
-                'class' => 'common\widgets\icon_upload\UploadAction',     //这里扩展地址别写错
-                'config' => [
-                    'imagePathFormat' => "/images/upload/{yyyy}{mm}{dd}/{time}{rand:6}",
-                ]
-            ]
-        ];
-    }
-
-    public $layout = '//main_nav.php';
 
     /**
-     * Lists all Report models.
+     * Lists all Achievement models.
      * @return mixed
      */
-    public function actionLeader(){
-        return $this->render('leader', [
-            /*'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,*/
-        ]);
-    }
-    public function actionStaff()
+    public function actionIndex()
     {
-        /*$sort = new Sort([
-            'attributes' => [
-                'age',
-                'name' => [
-                    'asc' => ['first_name' => SORT_ASC, 'last_name' => SORT_ASC],
-                    'desc' => ['first_name' => SORT_DESC, 'last_name' => SORT_DESC],
-                    'default' => SORT_DESC,
-                    'label' => 'Name',
-                ],
-            ],
-        ]);*/
-
-        $searchModel = new StaffSearch();
-        //$searchModel ->orderBy($sort->orders);
+        $searchModel = new AchievementSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        //$dataProvider->sort = $sort;
 
-        return $this->render('staff', [
+        return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
-
-    public function actionOffice(){
-
-        return $this->render('office', []);
-    }
-    public function actionCenter(){
-
-        return $this->render('center', []);
-    }
-
-
-    public function actionListAll()
+    public function actionList()
     {
-        $searchModel = new ReportSearch();
+        $this->layout = 'main_nav.php';
+        $searchModel = new AchievementSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        return $this->render('list-all', [
+        return $this->render('list', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
 
     /**
-     * Displays a single Report model.
+     * Displays a single Achievement model.
      * @param integer $id
      * @return mixed
      */
@@ -114,20 +68,16 @@ class ParticularController extends Controller
     }
 
     /**
-     * Creates a new Report model.
+     * Creates a new Achievement model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        //var_dump(Yii::$app->user->can('发布报告'));die();
-        $model = new Report();
-        $model->user_id=Yii::$app->user->id;
-        $model->username=Yii::$app->user->identity->username;
-        $model->score= $model::SCORE_DEFAULT;
-        //$model->username=Yii::$app->user->identity->username;
+        $model = new Achievement();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) && $model->create()) {
+
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
@@ -137,7 +87,7 @@ class ParticularController extends Controller
     }
 
     /**
-     * Updates an existing Report model.
+     * Updates an existing Achievement model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -156,7 +106,7 @@ class ParticularController extends Controller
     }
 
     /**
-     * Deletes an existing Report model.
+     * Deletes an existing Achievement model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -169,15 +119,15 @@ class ParticularController extends Controller
     }
 
     /**
-     * Finds the Report model based on its primary key value.
+     * Finds the Achievement model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Report the loaded model
+     * @return Achievement the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Report::findOne($id)) !== null) {
+        if (($model = Achievement::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

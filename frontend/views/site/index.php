@@ -43,13 +43,13 @@ position: relative;
                     ?>
                     <div class="item active">
                         <a href="<?= $v->url?>">
-                            <img src="<?= $v->savepath?>" alt="<?= $v->content?>">
+                            <img src="<?= Url::to("@web".$v->savepath)?>" alt="<?= $v->content?>">
                         </a>
                     </div>
                 <?php   }else{ ?>
                     <div class="item">
                         <a href="<?= $v->url?>">
-                            <img src="<?= $v->savepath?>" alt="<?= $v->content?>">
+                            <img src="<?= Url::to("@web".$v->savepath) ?>" alt="<?= $v->content?>">
                         </a>
                     </div>
                 <?php }
@@ -66,35 +66,42 @@ position: relative;
 
 <hr style="    border-top:1px solid #D9E0E6;margin-top: 20px;margin-bottom: 20px;">
     <div class="row" style="    margin-bottom: 7px;">
-        <div class="col-md-8" style="">
+        <div class="col-md-7" style="">
             <?= backend\widgets\box\BoxWidget::widget([
                 'type'=>'listPic_m','cate' => 14, 'pic' => true, 'title' => Yii::t('common','News'),
                 'url' => Url::toRoute(['document/list', 'cate' => 14]),
                 'liNum'=>4,
                 'css'=>['warper'=>'box-widget index-box ','header'=>'with-border index-box-header','title'=>'index-box-title','icon'=>'index-box-icon bicon-news','body'=>'box-profile blue-border',],
             ]) ?>
-
-
-        </div>
-        <div class="col-md-4 wbox">
+            </div>
+            <div class="col-md-5 wbox">
             <?= backend\widgets\box\BoxWidget::widget([
                 'type'=>'indexBanner','cate' => 32, 'title' => Yii::t('common','Notices'), 'liNum' => 7,
                 'url' => Url::toRoute(['document/list', 'cate' => 32]),
                 'css'=>['warper'=>'box-widget index-box blue-border','title'=>'index-box-title','header'=>'with-border index-box-header','icon'=>'index-box-icon bicon-laba','body'=>'box-profile',]])
             ?>
 
-</div>
-        <div class="col-md-4 wbox">
-            <?= backend\widgets\box\BoxWidget::widget([
-                'type'=>'listPic_m','cate' => 31, 'title' => Yii::t('common','学术讲座'), 'liNum' => 4,
-                'url' => Url::toRoute(['document/list', 'cate' => 31]),
-                'css'=>['warper'=>'box-widget index-box blue-border','title'=>'index-box-title','header'=>'with-border index-box-header','icon'=>'index-box-icon bicon-laba','body'=>'box-profile',]])
-            ?>
-            <?= backend\widgets\box\BoxWidget::widget([
-                'type'=>'products-list','cate' => 67, 'title' => Yii::t('common','学子风采'), 'liNum' => 7,
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-7" style="">
+            <?php
+            $achieve  = new \frontend\models\Achievement();
+            echo backend\widgets\box\BoxWidget::widget([
+                'model' => $achieve,
+                'type'=>'achievement-list','cate' => 67, 'title' => Yii::t('common','科研成果'), 'liNum' => 5,
                 'url' => Url::toRoute(['document/list', 'cate' => 67]),
                 'css'=>['warper'=>'box-widget index-box blue-border','title'=>'index-box-title','header'=>'with-border index-box-header','icon'=>'index-box-icon bicon-laba','body'=>'box-profile',]])
             ?>
+
+
+            </div>
+            <div class="col-md-5 wbox">
+                <?= backend\widgets\box\BoxWidget::widget([
+                    'type'=>'listPic_m','cate' => 79, 'title' => Yii::t('common','学术讲座'), 'liNum' => 4,
+                    'url' => Url::toRoute(['document/list', 'cate' => 79]),
+                    'css'=>['warper'=>'box-widget index-box blue-border','title'=>'index-box-title','header'=>'with-border index-box-header','icon'=>'index-box-icon bicon-laba','body'=>'box-profile',]])
+                ?>
 
         </div>
     </div>

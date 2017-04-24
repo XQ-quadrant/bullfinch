@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Achievement */
+/* @var $model frontend\models\Achievement */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -14,7 +14,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'author')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'subject')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'title')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'periodical')->textInput(['maxlength' => true]) ?>
 

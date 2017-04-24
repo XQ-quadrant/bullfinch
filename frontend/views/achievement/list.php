@@ -15,9 +15,9 @@ $totalCount = $dataProvider->getTotalCount();
 $pages = new Pagination([ 'totalCount' =>$totalCount, 'pageSize' => 10]);
 $data = $dataProvider->getModels();
 ?>
-<div class="row container">
+<div class="container" style="padding: 15px 45px;">
 
-
+<div class="row" >
         <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
                 <li class="active tab-title"><a href="#tab_1" data-toggle="tab" aria-expanded="true">论文</a></li>
@@ -46,26 +46,28 @@ $data = $dataProvider->getModels();
             </ul>
             <div class="tab-content">
                 <div class="tab-pane active" id="tab_1">
-
-
-                        <!-- /.box-header -->
                         <div class="box-body table-responsive no-padding">
                             <table class="table table-hover table-tab">
                                 <tbody><tr >
+                                    <th class="tab-th"> </th>
                                     <th class="tab-th">题目</th>
                                     <th class="tab-th">作者</th>
                                     <th class="tab-th">期刊/会议名称</th>
-                                    <th class="tab-th">卷期页码</th>
-                                    <th class="tab-th">发表时间</th>
+
+
                                     <th class="tab-th">备注</th>
                                 </tr>
                                 <?php foreach($data as $v){ ?>
                                     <tr>
-                                        <td><?= $v['subject'] ?></td>
-                                        <td><?= $v['author'] ?></td>
-                                        <td><?= $v['periodical'] ?></td>
-                                        <td><?= $v['serial_number'] ?></td>
                                         <td><?= $v['publish_at'] ?></td>
+
+                                        <td><?= $v['title'] ?></td>
+                                        <td><?= $v['author'] ?></td>
+                                        <td><?= $v['periodical'] ?>
+                                            <br><?= $v['serial_number'] ?>
+                                        </td>
+
+
                                         <td><?= $v['hint'] ?></td>
                                     </tr>
                                 <?php } ?>
@@ -98,7 +100,7 @@ $data = $dataProvider->getModels();
             <!-- /.tab-content -->
         </div>
 
-        <!-- /.box -->
+</div>
 
 
 </div>

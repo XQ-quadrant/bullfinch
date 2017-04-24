@@ -1,6 +1,7 @@
 $(function () {
     inputname = 'CateSearch[pre_cate]';
     var pre_cate = $("input[name='CateSearch[pre_cate]']").val();
+    //$.getJSON('index.php?r=cate%2Ftree&pre_cate='+pre_cate,function(result){
     $.getJSON('/cate/tree?pre_cate='+pre_cate,function(result){
     var defaultData = [
         {

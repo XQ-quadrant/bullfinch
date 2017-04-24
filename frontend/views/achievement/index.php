@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel common\models\search\AchievementSearch */
+/* @var $searchModel frontend\models\search\AchievementSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = Yii::t('common', 'Achievements');
@@ -27,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             //'id',
             'author',
-            'subject:ntext',
+            'title:ntext',
             'periodical',
             //'year',
             // 'address',

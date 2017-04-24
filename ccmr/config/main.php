@@ -9,7 +9,7 @@ $params = array_merge(
 return [
     'id' => 'xncj2',
     'basePath' => dirname(__DIR__),
-    'controllerNamespace' => 'frontend\controllers',
+    'controllerNamespace' => 'ccmr\controllers',
     //'bootstrap' => ['log'],
 
     'name'=>'西财经管院资本市场研究中心',
@@ -164,6 +164,7 @@ return [
             'viewPath'=>'@app/views',
             //'layout' => '@app/views/layouts/main_nav.php',
         ],
+
         'rest' => [
             'class' => 'backend\modules\rest\Rest',
         ],
