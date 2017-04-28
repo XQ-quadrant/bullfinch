@@ -5,7 +5,7 @@ use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 
-$this->title = Yii::t('common','School of International Education');
+$this->title = Yii::t('common','社会发展研究院');
 $this->params['index'] = true;//$this->title;
 $this->params['breadcrumbs'] = null;//$this->title;
 $this->blocks['content-header'] = '';
@@ -170,7 +170,7 @@ position: relative;
         <div class="col-md-4 wbox">
             <?= backend\widgets\box\BoxWidget::widget([
                 'type'=>'bigDateList','cate' => 31, 'title' => Yii::t('common','学术讲座'), 'liNum' => 7,
-                'url' => Url::toRoute(['document/list', 'cate' => 32]),
+                'url' => Url::toRoute(['document/list', 'cate' => 31]),
                 'css'=>['warper'=>'box-widget index-box blue-border','title'=>'index-box-title','header'=>'with-border index-box-header','icon'=>'index-box-icon bicon-laba','body'=>'box-profile',]]) ?>
 
             <?= backend\widgets\box\BoxWidget::widget([

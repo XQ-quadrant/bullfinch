@@ -55,18 +55,26 @@ if (Yii::$app->controller->action->id === 'login') {
                         <a class="col-md-7 normal" href="<?= Yii::$app->homeUrl ?>" style=" padding: 25px 0;display: inline-block;">
                             <img src="<?= Url::to('@web/images/top.png')?>" style="width: 100%;float: left;padding: 0 20px 0 40px;"/>
                         </a>
-                        <div class="col-md-5 normal">
+                        <div class="col-md-3 pull-right normal">
                             <div class="row" style="margin-top: 1em;">
-                                <div class="col-md-5 pull-right">
-                                    <form class="navbar-form navbar-right" role="search" style="margin-right: 0;padding: 0px 0px;display: inline-block;">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="navbar-search-input" placeholder="<?= Yii::t('common', 'search')?>" style="width: 196px; height: 27px; background-color: rgb(240, 240, 240);color:#fff">
-                                        </div>
-                                    </form>
+
+                                <div class="col-md-5 ">
+                                    <a href="<?= Yii::t('common', 'http://sie.swjtu.edu.cn/indexe.php') ?>" class=" index-top-tip">
+                                        <i class="fa fa-rotate-right"></i> <?= Yii::t('common', '中文') ?></a>
                                 </div>
-                                <div class="col-md-3 pull-right normal" style="padding-right: 0;border-right: 1px solid #ccc;">
-                                    <a href="<?= Yii::t('common', 'http://sie.swjtu.edu.cn/indexe.php') ?>" class="btn btn-block  btn-flat  index-top-tip"><?= Yii::t('common', '中文') ?></a>
+                                <div class="col-md-5 ">
+                                    <a href="" class=" index-top-tip"><i class="fa fa-fw fa-user"></i> 登录</a>
                                 </div>
+                            </div>
+                            <div class="row" style="margin-top: 1em;">
+                                <div class="input-group">
+                                    <input class="form-control" placeholder="搜索">
+
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn "><i class="fa fa-search"></i></button>
+                                    </div>
+                                </div>
+
                             </div>
 
                             <!--<div class="row">

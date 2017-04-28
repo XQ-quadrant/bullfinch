@@ -112,7 +112,10 @@ class CategoryWidget extends Widget
                 $flag_active =true;
             }
 
-            $sonCate = Cate::findAll(['pre_cate'=>$v->id]);
+            //$sonCate = Cate::findAll(['pre_cate'=>$v->id]);
+            //$sonCate = Cate::findAll(['pre_cate'=>$v->id])->orderby('level');
+            $model = new Cate();
+            $sonCate = $model->find()->where(['pre_cate'=>$v->id])->orderBy('level')->all();
             if(isset($sonCate)){
                 $sonitems = [];
                 foreach($sonCate as $k2=>$v2){

@@ -58,10 +58,10 @@ if (Yii::$app->controller->action->id === 'login') {
                         <div class="col-md-5 normal">
                             <div class="row" style="margin-top: 1em;">
                                 <div class="col-md-2 pull-right normal" style="padding-left: 0;    padding-right: 0;    margin-right: 11px;">
-                                    <a href="<?= Yii::t('common','http://iso.swjtu.edu.cn/index.php?l=en')?>" class="btn btn-block  btn-flat  index-top-tip2" ><!--Apply Now!--><?= Yii::t('common', 'Apply Now') ?></a>
+                                    <a href="" class="btn btn-block  btn-flat  index-top-tip2" ><!--Apply Now!--><?= Yii::t('common', 'Apply Now') ?></a>
                                 </div>
                                 <div class="col-md-3 pull-right normal" style="padding-right: 0;border-right: 1px solid #ccc;">
-                                    <a href="<?= Yii::t('common', 'http://sie.swjtu.edu.cn/indexe.php') ?>" class="btn btn-block  btn-flat  index-top-tip"><?= Yii::t('common', '中文') ?></a>
+                                    <a href="<?= Url::to('http://10.8.100.89/en') ?>" class="btn btn-block  btn-flat  index-top-tip"><?= Yii::t('common', '中文') ?></a>
                                 </div>
                             </div>
                             <div class="row">

@@ -20,7 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="widget-user-header bg-silver-blue">
                     <h3 class="caption">行政办公室
                     </h3>
-                    <h5 class="caption-desc">XXX Office</h5>
+                    <h5 class="caption-desc"></h5>
                 </div>
 
                 <div class="box-header no-padding">
@@ -76,7 +76,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>-->
                     <h3 class="caption">教学办公室
                     </h3>
-                    <h5 class="caption-desc">XXX Office</h5>
+                    <h5 class="caption-desc"></h5>
                 </div>
                 <!--<div class="widget-user-image">
                     <img class="img-circle" src="/adminlte/dist/img/user1-128x128.jpg" alt="User Avatar">
@@ -135,7 +135,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="widget-user-header bg-silver-blue">
                     <h3 class="caption">总支办公室
                     </h3>
-                    <h5 class="caption-desc">XXX Office</h5>
+                    <h5 class="caption-desc"></h5>
                 </div>
                 <div class="box-header no-padding">
                     <div class="box box-solid">
@@ -186,35 +186,74 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="col-md-4">
 
             <div class="box box-widget widget-user-2">
-
                 <div class="widget-user-header bg-silver-blue">
-                    <div class="widget-user-image">
-                        <img class="img-circle" src="../dist/img/user7-128x128.jpg" alt="User Avatar">
-                    </div>
-
-                    <h3 class="widget-user-username">总支办公室
+                    <h3 class="caption">海外学习交流中心
                     </h3>
-                    <h5 class="caption-desc">XXX Office</h5>
+                    <h4 class="caption-desc">（OSEC）</h4>
                 </div>
+
                 <div class="box-header no-padding">
                     <div class="box box-solid">
                         <div class="box-header with-border">
                             <div class="col-sm-4">
-                                <h5 class="office-title">XXX</h5>
-                                <h5 class="office-username">XXX</h5>
+                                <h5 class="office-title">院长秘书/ OSEC项目/ 财务</h5>
+                                <h5 class="office-username">吴菲</h5>
                             </div>
                             <div class="col-sm-8" style="padding: 5px">
-                                <h6 class="office-info ">柳林校区格致楼12楼1212B</h6>
-                                <p class="office-info">+86 (0)28 87092826</p>
-                                <p class="office-info">sumingtao@swufe.edu.cn</p>
+                                <h6 class="office-info ">柳林校区格致楼12楼1224室</h6>
+                                <p class="office-info">+86 (0)28 87092829</p>
+                                <p class="office-info">wufei@swufe.edu.cn</p>
                             </div>
                         </div>
                     </div>
+                    <div class="box box-solid">
+                        <div class="box-header with-border">
+                            <div class="col-sm-4">
+                                <h5 class="office-title">项目干事</h5>
+                                <h5 class="office-username">倪倩</h5>
+                            </div>
+                            <div class="col-sm-8" style="padding: 5px">
+                                <h6 class="office-info ">柳林校区格致楼12楼1224室</h6>
+                                <p class="office-info"> +86 (0)28 87092471
+                                    </p>
+                                <p class="office-info">niqian@swufe.edu.cn</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box box-solid">
+                        <div class="box-header with-border">
+                            <div class="col-sm-4">
+                                <h5 class="office-title">项目干事</h5>
+                                <h5 class="office-username">吴蓉婧</h5>
+                            </div>
+                            <div class="col-sm-8" style="padding: 5px">
+                                <h6 class="office-info ">柳林校区格致楼12楼1224室A</h6>
+                                <p class="office-info"> +86 (0)28 87092548</p>
+                                <p class="office-info">xiaojingwu@swufe.edu.cn</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box box-solid">
+                        <div class="box-header with-border">
+                            <div class="col-sm-4">
+                                <h5 class="office-title">项目干事</h5>
+                                <h5 class="office-username"> 苏之航
+                                </h5>
+                            </div>
+                            <div class="col-sm-8" style="padding: 5px">
+                                <h6 class="office-info ">柳林校区格致楼12楼1224室</h6>
+                                <p class="office-info"> +86 (0)28 87092529</p>
+                                <p class="office-info">suzh@swufe.edu.cn</p>
+                            </div>
+                        </div>
+                    </div>
+
 
 
                 </div>
             </div>
 
         </div>
+
     </div>
 </div>

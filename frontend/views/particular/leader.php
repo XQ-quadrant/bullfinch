@@ -36,7 +36,8 @@ foreach ($positions as $position) {
                     <div class="col-sm-6" style="padding: 5px">
                         <h4 class="leader-username ">甘犁<span class="leader-title">院长</span></h4>
                         <h6 class="leader-info ">柳林校区格致楼12楼1202室</h6>
-                        <p class="leader-info">gucoyu@cc.com</p>
+                        <p class="leader-info-p">ganl@swufe.edu.cn</p>
+                        <p class="leader-info-p">（028）87099193</p>
                     </div>
                 </div>
             </div>
@@ -44,20 +45,8 @@ foreach ($positions as $position) {
 
     </div>
     <div class="row leader-block" >
-        <div class="col-md-4  col-sm-3 fgrids">
-            <div class="box box-solid">
-                <div class="box-body with-border">
-                    <div class="col-sm-6"><img class="img-responsive " src="/images/staff/t1.jpg" alt="Photo"></div>
-                    <div class="col-sm-6" style="padding: 5px">
-                        <h4 class="leader-username ">董艳<span class="leader-title">党总支书记</span></h4>
-                        <h6 class="leader-info ">柳林校区格致楼12楼1210B室</h6>
-                        <p class="leader-info">gucoyu@cc.com</p>
-                    </div>
-                </div>
-            </div>
 
-        </div>
-        <div class="col-md-4  col-sm-3 fgrids">
+        <div class="col-md-4 col-md-offset-2 col-sm-3 fgrids">
             <div class="box box-solid">
                 <div class="box-body with-border" >
                     <div class="col-sm-6"><img class="img-responsive " src="/images/staff/t1.jpg" alt="Photo"></div>
@@ -65,12 +54,27 @@ foreach ($positions as $position) {
                         <h4 class="leader-username ">李涵<span class="leader-title">常务副院长</span>
                         </h4>
                         <h6 class="leader-info ">柳林校区格致楼12楼1209室</h6>
-                        <p class="leader-info">gucoyu@cc.com</p>
+                        <p class="leader-info-p">hli@swufe.edu.cn</p>
+                        <p class="leader-info-p">（028）87092106</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-md-4  col-sm-3 fgrids">
+            <div class="box box-solid">
+                <div class="box-body with-border">
+                    <div class="col-sm-6"><img class="img-responsive " src="/images/staff/t1.jpg" alt="Photo"></div>
+                    <div class="col-sm-6" style="padding: 5px">
+                        <h4 class="leader-username ">董艳<span class="leader-title">党总支书记</span></h4>
+                        <h6 class="leader-info">柳林校区格致楼12楼1210B室</h6>
+                        <p class="leader-info-p">ydong@swufe.edu.cn</p>
+                        <p class="leader-info-p">（028）87092167</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-md-offset-2 col-sm-3 fgrids">
 
             <div class="box box-solid">
                 <div class="box-body with-border">
@@ -78,7 +82,8 @@ foreach ($positions as $position) {
                     <div class="col-sm-6" style="padding: 5px">
                         <h4 class="leader-username ">周高蓉<span class="leader-title">党总支副书记</span></h4>
                         <h6 class="leader-info ">柳林校区格致楼12楼1203A</h6>
-                        <p class="leader-info">gucoyu@cc.com</p>
+                        <p class="leader-info-p">zhougr@swufe.edu.cn</p>
+                        <p class="leader-info-p">（028）87092099</p>
                     </div>
                 </div>
             </div>

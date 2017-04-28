@@ -98,9 +98,9 @@ return [
             //
             'rules' => [
                 //'prefix' => 'riem',
-                'riem<controller:\w+>/<action:\w+>' => '<controller>/<action>',
-                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
-                //'/riem/<prefix:\w+>/<controller:\w+>/<action:\w+>'=>'<module>/<controller>/<action>',
+                //'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                //'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                '/riem/<prefix:\w+>/<controller:\w+>/<action:\w+>'=>'<module>/<controller>/<action>',
             ],
         ],
 

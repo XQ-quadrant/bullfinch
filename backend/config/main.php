@@ -13,7 +13,8 @@ return [
     //'bootstrap' => ['log'],
 
     'name'=>'社会发展研究院 ',
-    'language'=>'zh-CN',
+    //'language'=>'zh-CN',
+    'language'=>'en-US',
     //'debug'=>false,
     'components' => [
         'user' => [

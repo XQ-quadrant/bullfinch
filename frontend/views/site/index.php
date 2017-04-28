@@ -5,7 +5,7 @@ use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 
-$this->title = Yii::t('common','School of International Education');
+$this->title = Yii::t('common', 'School of International Education');
 $this->params['index'] = true;//$this->title;
 $this->params['breadcrumbs'] = null;//$this->title;
 $this->blocks['content-header'] = '';
@@ -31,29 +31,31 @@ position: relative;
 
 
 <div class="container" style="padding-left: 0px;padding-right: 0px">
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="margin-top: 12px">
+    <div id="carousel-example-generic" data-id="124gh2345" data-edit="t" class="carousel slide" data-ride="carousel" style="margin-top: 12px">
         <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+            <li data-target="#carousel-example-generic" data-id="1242345" data-edit="text" data-slide-to="0" class="active">
+                hallow fsd
+            </li>
+            <li data-target="#carousel-example-generic" data-id="1242345" data-edit="text" data-slide-to="1" class=""></li>
             <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
         </ol>
         <div class="carousel-inner slider-items">
-            <?php foreach($pic as $k=>$v){
-                if($k==0){
+            <?php foreach ($pic as $k => $v) {
+                if ($k == 0) {
                     ?>
                     <div class="item active">
-                        <a href="<?= $v->url?>">
-                            <img src="<?= Url::to("@web".$v->savepath)?>" alt="<?= $v->content?>">
+                        <a href="<?= $v->url ?>">
+                            <img src="<?= Url::to("@web" . $v->savepath) ?>" alt="<?= $v->content ?>">
                         </a>
                     </div>
-                <?php   }else{ ?>
+                <?php } else { ?>
                     <div class="item">
-                        <a href="<?= $v->url?>">
-                            <img src="<?= Url::to("@web".$v->savepath) ?>" alt="<?= $v->content?>">
+                        <a href="<?= $v->url ?>">
+                            <img src="<?= Url::to("@web" . $v->savepath) ?>" alt="<?= $v->content ?>">
                         </a>
                     </div>
                 <?php }
-            }?>
+            } ?>
 
         </div>
         <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
@@ -64,44 +66,44 @@ position: relative;
         </a>
     </div>
 
-<hr style="    border-top:1px solid #D9E0E6;margin-top: 20px;margin-bottom: 20px;">
+    <hr style="    border-top:1px solid #D9E0E6;margin-top: 20px;margin-bottom: 20px;">
     <div class="row" style="    margin-bottom: 7px;">
-        <div class="col-md-7" style="">
+        <div class="col-md-8" style="">
             <?= backend\widgets\box\BoxWidget::widget([
-                'type'=>'listPic_m','cate' => 14, 'pic' => true, 'title' => Yii::t('common','News'),
+                'type' => 'listPic_m', 'cate' => 14, 'pic' => true, 'title' => Yii::t('common', 'News'),
                 'url' => Url::toRoute(['document/list', 'cate' => 14]),
-                'liNum'=>4,
-                'css'=>['warper'=>'box-widget index-box ','header'=>'with-border index-box-header','title'=>'index-box-title','icon'=>'index-box-icon bicon-news','body'=>'box-profile blue-border',],
+                'liNum' => 4,
+                'css' => ['warper' => 'box-widget index-box ', 'header' => 'with-border index-box-header', 'title' => 'index-box-title', 'icon' => 'index-box-icon bicon-news', 'body' => 'box-profile blue-border',],
             ]) ?>
-            </div>
-            <div class="col-md-5 wbox">
+        </div>
+        <div class="col-md-4 wbox" style="height: 446px;">
             <?= backend\widgets\box\BoxWidget::widget([
-                'type'=>'indexBanner','cate' => 32, 'title' => Yii::t('common','Notices'), 'liNum' => 7,
+                'type' => 'indexBanner', 'cate' => 32, 'title' => Yii::t('common', 'Notices'), 'liNum' => 7,
                 'url' => Url::toRoute(['document/list', 'cate' => 32]),
-                'css'=>['warper'=>'box-widget index-box blue-border','title'=>'index-box-title','header'=>'with-border index-box-header','icon'=>'index-box-icon bicon-laba','body'=>'box-profile',]])
+                'css' => ['warper' => 'box-widget index-box blue-border', 'title' => 'index-box-title', 'header' => 'with-border index-box-header', 'icon' => 'index-box-icon bicon-laba', 'body' => 'box-profile',]])
             ?>
 
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-7" style="">
+    <div class="row" style="margin-bottom: 25px;">
+        <div class="col-md-8" style="    height: 506px;">
             <?php
-            $achieve  = new \frontend\models\Achievement();
+            $achieve = new \frontend\models\Achievement();
             echo backend\widgets\box\BoxWidget::widget([
                 'model' => $achieve,
-                'type'=>'achievement-list','cate' => 67, 'title' => Yii::t('common','科研成果'), 'liNum' => 5,
-                'url' => Url::toRoute(['document/list', 'cate' => 67]),
-                'css'=>['warper'=>'box-widget index-box blue-border','title'=>'index-box-title','header'=>'with-border index-box-header','icon'=>'index-box-icon bicon-laba','body'=>'box-profile',]])
+                'type' => 'achievement-list', 'cate' => 67, 'title' => Yii::t('common', '科研成果'), 'liNum' => 5,
+                'url' => Url::toRoute(['/achievement/list']),
+                'css' => ['warper' => 'box-widget index-box blue-border', 'title' => 'index-box-title', 'header' => 'with-border index-box-header', 'icon' => 'index-box-icon bicon-bookmark', 'body' => 'box-profile',]])
             ?>
 
 
-            </div>
-            <div class="col-md-5 wbox">
-                <?= backend\widgets\box\BoxWidget::widget([
-                    'type'=>'listPic_m','cate' => 79, 'title' => Yii::t('common','学术讲座'), 'liNum' => 4,
-                    'url' => Url::toRoute(['document/list', 'cate' => 79]),
-                    'css'=>['warper'=>'box-widget index-box blue-border','title'=>'index-box-title','header'=>'with-border index-box-header','icon'=>'index-box-icon bicon-laba','body'=>'box-profile',]])
-                ?>
+        </div>
+        <div class="col-md-4 wbox" style="height: 506px;">
+            <?= backend\widgets\box\BoxWidget::widget([
+                'type' => 'listPic_m', 'cate' => 79, 'title' => Yii::t('common', '学术活动'), 'liNum' => 4,
+                'url' => Url::toRoute(['document/list', 'cate' => 79]),
+                'css' => ['warper' => 'box-widget index-box blue-border', 'title' => 'index-box-title', 'header' => 'with-border index-box-header', 'icon' => 'index-box-icon bicon-laba', 'body' => 'box-profile',]])
+            ?>
 
         </div>
     </div>

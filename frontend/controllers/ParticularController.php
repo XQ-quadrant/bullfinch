@@ -88,6 +88,10 @@ class ParticularController extends Controller
 
         return $this->render('center', []);
     }
+    public function actionAssistant(){
+
+        return $this->render('assistant', []);
+    }
 
 
     public function actionListAll()

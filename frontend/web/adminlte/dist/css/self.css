@@ -120,7 +120,7 @@
 .leader-username{
     text-align: center;
     padding-bottom: 15px;
-    margin-top: 20px;
+    margin-top: 13px;
 
 }
 .leader-title{
@@ -130,8 +130,14 @@
 }
 .leader-info{
     text-align: center;
-    padding-bottom: 15px;
+    padding-bottom: 7px;
 }
+.leader-info-p {
+    text-align: center;
+    margin: 0;
+    padding: 3px 0;
+}
+
 /************ office *************/
 .office .box-header {
     color: #03111f;
@@ -178,7 +184,7 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-
+    display: inline-block;
     font-size: 14px;
 }
 .box-icon{
@@ -191,6 +197,7 @@
     background-size:100%;
 }
 .index-box {
+    height: 100%;
     background: #eef3fd;
     border: 1px solid #def1f3;
 }
@@ -290,6 +297,17 @@ overflow: hidden;
     border-bottom: 39px solid rgb(95, 155, 183);
 
 }
+.list-white-bg {
+    position: absolute;
+    width: 185px;
+    height: 39px;
+    background: rgba(95, 155, 183, 0);
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    border-right: 43px solid rgba(234, 240, 255, 0);
+    border-top: 40px solid rgb(255, 255, 255);
+}
 .bicon-laba{
     background-image: url('/images/icon/megaphone.png');
 }
@@ -298,6 +316,13 @@ overflow: hidden;
 }
 .bicon-school{
     background-image: url('/images/icon/calendar.png');
+}
+.bicon-bookmark{
+    background-image: url('/images/icon/bookmark.png');
+    width: 13px;
+
+    top: 10px;
+    left: 23px;
 }
 .index-top-tip2{
     color: #fff;
@@ -388,35 +413,64 @@ overflow: hidden;
     margin-right: 5em;
     margin-left: 5em;
 }
-@media (min-width: 1300px){
-    .container {
-
-         width: 1127px;
-    }
-    .container-self{
-        width: 1160px;
-    }
-    .container-single{
-        width: 1027px;
-    }
-}
-
-@media (min-width: 1200px){
-    .container {
-        width: 1117px;
-    }
-    .container-single{
-        width: 1017px;
-    }
-}
-@media (min-width: 1400px){
+@media (min-width: 1441px){
     .container {
         width: 1200px;
     }
     .container-single{
         width: 1117px;
     }
+    .container-self{
+        width: 1290px;
+    }
 }
+@media (max-width: 1440px){
+    .container {
+        width: 1200px;
+    }
+    .container-single{
+        width: 1117px;
+    }
+    .container-self{
+        width: 1290px;
+    }
+}
+@media (min-width: 1430px){
+    .container {
+        width: 1200px;
+    }
+    .container-self{
+        width: 1290px;
+    }
+    .container-single{
+        width: 1117px;
+    }
+
+}
+@media (max-width: 1366px){
+    .container {
+         width: 1127px;
+    }
+    .container-self{
+        width: 1190px;
+    }
+    .container-single{
+        width: 1027px;
+    }
+}
+
+@media (max-width: 1200px){
+    .container {
+        width: 1117px;
+    }
+    .container-self{
+        width: 1180px;
+    }
+    .container-single{
+        width: 1017px;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .sm-input {
         width: 33% !important;

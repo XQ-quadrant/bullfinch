@@ -20,14 +20,17 @@ $data = $ac;
 
 
 <div class="box <?=$css['warper']?>">
-    <a href="<?= $url ?>">
-        <div class="box-header <?= $css['header'] ?>" style="">
+    <a href="<?= $url ?>" class="uppercase">
+        <div class="box-header <?= $css['header'] ?>">
             <i class="<?= $css['icon'] ?>"></i>
 
-            <h3 class="box-title <?= $css['title'] ?>"><?= $title ?> </h3>
+            <h3 class="box-title <?= $css['title'] ?> text-blue"><?= $title ?> </h3>
+            <div class="list-white-bg"></div>
             <div class="box-tools pull-right">
-                <span data-toggle="tooltip" class="badge  index-box-more"><?= Yii::t('common', 'more') ?></span>
-
+                <!--<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>-->
+                <!--<button type="button" class="btn btn-box-tool"  title="" >
+                    <i class="fa fa-comments"></i>更多</button>-->
             </div>
         </div>
     </a>

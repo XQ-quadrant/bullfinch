@@ -21,8 +21,7 @@ $data = $dataProvider->getModels();
         <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
                 <li class="active tab-title"><a href="#tab_1" data-toggle="tab" aria-expanded="true">论文</a></li>
-                <li class="tab-title"><a href="#tab_2" data-toggle="tab" aria-expanded="false">专利</a></li>
-                <li class="tab-title"><a href="http://www.sklse.whu.edu.cn/index.php/detail/fblw/58" aria-expanded="false">获奖</a></li>
+                <li class="tab-title"><a href="" aria-expanded="false">获奖</a></li>
                 <li class="tab-title"><a href="#tab_3" data-toggle="tab" aria-expanded="false" >项目</a></li>
                 <!--<li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
@@ -52,8 +51,7 @@ $data = $dataProvider->getModels();
                                     <th class="tab-th"> </th>
                                     <th class="tab-th">题目</th>
                                     <th class="tab-th">作者</th>
-                                    <th class="tab-th">期刊/会议名称</th>
-
+                                    <th class="tab-th">期刊</th>
 
                                     <th class="tab-th">备注</th>
                                 </tr>
@@ -87,17 +85,15 @@ $data = $dataProvider->getModels();
                 </div>
                 <!-- /.tab-pane -->
                 <div class="tab-pane" id="tab_2">
-                    The European languages are members of the same family. Their separate existence is a myth.
-             f the resulting language is more simple
-                    and regular than that of the individual languages.
+                   待补充
                 </div>
                 <!-- /.tab-pane -->
                 <div class="tab-pane" id="tab_3">
-
+                    待补充
                 </div>
-                <!-- /.tab-pane -->
+
             </div>
-            <!-- /.tab-content -->
+
         </div>
 
 </div>

@@ -81,17 +81,15 @@ use common\models\cate;
                         <nav>
                             <ul class="nav nav-pills nav-stacked">
 
-                                <li class="jiaowu"><a href=<?= Url::toRoute('user/security/login')?>>教师入口</a></li>
+                                <li class="jiaowu"><a href=<?= Url::toRoute('user/security/login')?>>人员招聘</a></li>
 
-                                <li class="jiaowu"><a href=<?= Url::toRoute('/user/login')?>>学生入口</a></li>
+                                <li class="jiaowu"><a href=<?= Url::toRoute('/user/login')?>>联系我们</a></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3 col-md-offset-1">
                     <div class="footer-content">
-
-
 
                         <div class="text-center">
                             <!--<a class="btn btn-social-icon"><i class="fa fa-weixin"></i></a>-->
@@ -126,8 +124,8 @@ use common\models\cate;
 
                         <address >
                             <ul>
-                                <li><?= Yii::t('common','柳林校区地址:成都市温江区柳台大道555号通博楼A502')?></li>
-                                <li><?= Yii::t('common','Tel')?>： 028-87092257  </li>
+                                <li><?= Yii::t('common','柳林校区地址：成都市温江区柳台大道555号格致楼12楼')?></li>
+                                <li><?= Yii::t('common','Tel')?>： 028-87092099  </li>
                                 <li><?= Yii::t('common','PC')?>： 611130</li>
                             </ul>
                         </address>
@@ -138,8 +136,8 @@ use common\models\cate;
 
                         <address >
                             <ul>
-                                <li><?= Yii::t('common',' 光华校区地址：成都市光华村街55号西南财经大学光华楼1101')?></li>
-                                <li><?= Yii::t('common','Tel')?>： 028-87092257  </li>
+                                <li><?= Yii::t('common',' 光华校区地址：成都市光华村街55号北三门经管楼')?></li>
+                                <li><?= Yii::t('common','Tel')?>： 028-87092099  </li>
                                 <li><?= Yii::t('common','PC')?>： 610074</li>
                             </ul>
                         </address>

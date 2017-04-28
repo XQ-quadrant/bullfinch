@@ -16,7 +16,6 @@ use yii\helpers\Url;
 
             <h3 class="box-title <?= $css['title'] ?>"><?= $title ?> </h3>
             <div class="box-tools pull-right">
-                <span data-toggle="tooltip" class="badge  index-box-more"><?= Yii::t('common', 'more') ?></span>
 
             </div>
         </div>
@@ -31,11 +30,11 @@ use yii\helpers\Url;
                     <a class=" " href=" <?= Url::to(['/' . $model->tableName() . '/view/', 'id' => $m->id]) ?>"
                        style="display: inline;float: left;width: 85%;">
                         <p class="attachment-text listpic-text"
-                           style="padding-left: 7px;  text-overflow: ellipsis;
-    overflow: hidden;"> <?= $m->title ?></p>
+                           style="padding-left: 7px;  text-overflow: ellipsis;overflow: hidden;">
+                            <?= $m->title ?></p>
                     </a>
                     <span class="text-muted pull-right big-date">
-     <?= Yii::$app->formatter->asDate($m->create_at, 'M/dd') ?></span>
+                    <?= Yii::$app->formatter->asDate($m->create_at, 'M/dd') ?></span>
                 </li>
             <?php endforeach; ?>
         </ul>
