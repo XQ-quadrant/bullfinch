@@ -63,15 +63,12 @@ use common\models\cate;
                                     $link_bottom = Cate::findAll(['status'=>Cate::$STATUS_AOLLOW,'pre_cate'=>46]);
                                     for($i=1; $i<count($link_bottom); $i+=2){ ?>
                                         <li class="">
-                                            <a href="<?= $link_bottom[$i]->uri?>"><?= $link_bottom[$i]->name?></a>
+                                            <a href=<?= $link_bottom[$i]->uri?>><?= $link_bottom[$i]->name?> </a>
                                         </li>
-
                                     <?php } ?>
-
                                 </ul>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <div class="space-bottom hidden-lg hidden-xs"></div>
@@ -80,9 +77,7 @@ use common\models\cate;
                         <h5 >教务</h5>
                         <nav>
                             <ul class="nav nav-pills nav-stacked">
-
                                 <li class="jiaowu"><a href=<?= Url::toRoute('user/security/login')?>>人员招聘</a></li>
-
                                 <li class="jiaowu"><a href=<?= Url::toRoute('/user/login')?>>联系我们</a></li>
                             </ul>
                         </nav>
@@ -92,7 +87,7 @@ use common\models\cate;
                     <div class="footer-content">
 
                         <div class="text-center">
-                            <!--<a class="btn btn-social-icon"><i class="fa fa-weixin"></i></a>-->
+                            <!-- <a class="btn btn-social-icon"><i class="fa fa-weixin"></i></a>-->
                             <div >
                                 <img src=<?= Url::to('@web/images/qr.png') ?>  style="width: 100px">
                             </div>

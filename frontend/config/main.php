@@ -99,8 +99,35 @@ return [
             'rules' => [
                 //'prefix' => 'riem',
                 //'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
-                //'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
-                '/riem/<prefix:\w+>/<controller:\w+>/<action:\w+>'=>'<module>/<controller>/<action>',
+                '/<app:\w+>/<controller:\w+>/<action:\w+>' => '/<controller>/<action>',
+                //'/riem/<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                //'/riem/user/<action:(login|logout)>'               => 'user/security/<action>',
+                /************ user rules ******************/
+                'riem/user/<controller:\w+>/<action:\w+>'          => 'user/<controller>/<action>',
+
+                'riem/user/<id:\d+>'                               => 'user/profile/show',
+                'riem/user/<action:(login|logout)>'                => 'user/security/<action>',
+
+                'riem/user/<action:(register|resend)>'             => 'user/registration/<action>',
+                'riem/user/confirm/<id:\d+>/<code:[A-Za-z0-9_-]+>' => 'user/registration/confirm',
+                'riem/user/forgot'                                 => 'user/recovery/request',
+                'riem/user/recover/<id:\d+>/<code:[A-Za-z0-9_-]+>' => 'user/recovery/reset',
+                'riem/user/settings/<action:\w+>'                  => 'user/settings/<action>',
+
+
+                //'/riem/user/<action:(login|logout)>'               => 'user/security/<action>',
+                //'riem/user'               => 'user',
+                '/riem/admin/<controller:\w+>/<action:\w+>'     => '/admin/<controller>/<action>',
+                /*'/riem/admin/assignment/index'     => '/admin/assignment/index',
+                '/<app:\w+>/admin'                                   => '/admin',
+
+                '/<app:\w+>/admin/<controller:\w+>'                  => '/admin/<controller>/index',*/
+                //'/riem/user/admin/<action:\w+>'                   => 'user/admin/<action>',
+                //'/riem/user/admin/index'                          => 'user/admin/index',
+
+
+                '/riem/user/login' => 'user/login',
+                //'/riem/<prefix:\w+>/<controller:\w+>/<action:\w+>'=>'<module>/<controller>/<action>',
             ],
         ],
 

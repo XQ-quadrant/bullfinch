@@ -12,14 +12,18 @@ use Yii;
 class AppsUrlManage extends UrlManager {
 //'language'=>'zh-CN'
     function init(){
-        $db = Yii::createObject('yii\db\Connection', [
+        parent::init();
+        /*$db = Yii::createObject('yii\db\Connection', [
             'dsn' => 'mysql:host=127.0.0.1;dbname=demo',
             'username' => 'root',
             'password' => '',
             'charset' => 'utf8',
-        ]);
+        ]);*/
         Yii::$app->language = 'zh-CN';
         Yii::$app->id = 'en-US';
+        var_dump(Yii::$app->request->absoluteUrl);
+        var_dump(Yii::$app->request->get('route') );
+        var_dump(Yii::$app->request->getScriptUrl());die();
 
         //\Yii::configure('language',['language'=>'zh-CN']);
     }

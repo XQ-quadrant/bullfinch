@@ -63,7 +63,7 @@ if (Yii::$app->controller->action->id === 'login') {
                                         <i class="fa fa-rotate-right"></i> <?= Yii::t('common', '中文') ?></a>
                                 </div>
                                 <div class="col-md-5 ">
-                                    <a href="" class=" index-top-tip"><i class="fa fa-fw fa-user"></i> 登录</a>
+                                    <a href=<?= Url::toRoute('user/security/login') ?> class=" index-top-tip"><i class="fa fa-fw fa-user"></i> 登录</a>
                                 </div>
                             </div>
                             <div class="row" style="margin-top: 1em;">
