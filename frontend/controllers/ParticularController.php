@@ -59,18 +59,18 @@ class ParticularController extends Controller
     {
         /*$sort = new Sort([
             'attributes' => [
-                'age',
                 'name' => [
-                    'asc' => ['first_name' => SORT_ASC, 'last_name' => SORT_ASC],
-                    'desc' => ['first_name' => SORT_DESC, 'last_name' => SORT_DESC],
-                    'default' => SORT_DESC,
+                    'asc' => ['CONVERT(name USING gbk)' => SORT_ASC, 'level'=>SORT_ASC],
+                    'desc' => ['CONVERT(name USING gbk)' => SORT_DESC, 'level'=>SORT_DESC],
+                    'default' => SORT_ASC,
                     'label' => 'Name',
                 ],
             ],
         ]);*/
 
-        $searchModel = new StaffSearch();
-        //$searchModel ->orderBy($sort->orders);
+        $searchModel = new StaffSearch([]);
+
+        //$searchModel->query ->orderBy($sort->orders);
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         //$dataProvider->sort = $sort;
 

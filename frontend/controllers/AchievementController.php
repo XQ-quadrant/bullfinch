@@ -8,6 +8,7 @@ use frontend\models\search\AchievementSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\db\Connection;
 
 /**
  * AchievementController implements the CRUD actions for Achievement model.
@@ -36,19 +37,25 @@ class AchievementController extends Controller
     public function actionIndex()
     {
         $searchModel = new AchievementSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
+        //Yii::$app->request->queryParams['sort']='-id';
+        $t = Yii::$app->request->queryParams;
+        $t['sort']='-id';
+        $dataProvider = $searchModel->search($t);
+        /*var_dump(Yii::$app->request->queryParams);
+        var_dump($t);
+        die();*/
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
-    public function actionList()
+    public function actionList($sort='-id')
     {
         $this->layout = 'main_nav.php';
         $searchModel = new AchievementSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
+        //var_dump($dataProvider->sort);die();
         return $this->render('list', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
@@ -132,5 +139,41 @@ class AchievementController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+
+    public function actionTool(){
+        $temp_data = new Connection([
+            'dsn' => 'mysql:host=localhost;dbname=temp_date',
+            'username' => 'gb',
+            'password' => 'gb',
+            'charset' => 'utf8',
+        ]);
+        $temp_data->open();
+        $news = $temp_data->createCommand("SELECT * FROM paper ORDER BY id DESC")->queryAll();
+        foreach ($news as $key=>$v){
+            $new = new Achievement();
+            $new->title = $v['Title'];
+            $new->periodical = $v['Journal'];
+            $new->author = $v['Author(s)'];
+            $new->year_id = $v['Year-Number'] ;
+
+            //die();
+            /*echo $new->year_id ;
+            echo $new->title ;
+            echo $new->author.'<br><br>';*/
+            if($new->insert()){
+                echo $new->year_id ;
+                echo $new->title ;
+                echo $new->author.'<br><br>';
+            }else{
+                echo "FAIL";
+                echo $new->year_id .'<br><br>';
+            }
+            $new->refresh();
+
+        }
+
+        $temp_data->close();
+
     }
 }

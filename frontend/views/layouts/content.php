@@ -2,7 +2,7 @@
 use yii\widgets\Breadcrumbs;
 use dmstr\widgets\Alert;
 use yii\helpers\Url;
-use common\models\cate;
+use common\models\Cate;
 ?>
 <div class="content-wrapper ">
     <?php if(!isset($this->params['index'])){ ?>
@@ -42,8 +42,18 @@ use common\models\cate;
     <div class="footer top-footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="footer-content" style="border-right: 1px solid #d7d7d7;">
+                <div class="col-md-4   ">
+                    <div class="footer-content">
+                        <div class="text-center">
+                            <a class="" href="http://www.swufe.edu.cn/">
+                                <img src="/images/top.jpg" style="padding-top: 21px;height: 99px;" class="img-responsive bottom-img"
+                                     alt="swufe">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5" style="border-right: 1px solid #d7d7d7;padding:0 20px">
+                    <div class="footer-content" style="padding:0 20px">
                         <div class="row">
                             <h5>相关链接</h5>
                             <div class="col-sm-6">
@@ -71,32 +81,25 @@ use common\models\cate;
                         </div>
                     </div>
                 </div>
-                <div class="space-bottom hidden-lg hidden-xs"></div>
-                <div class="col-sm-6 col-md-2">
-                    <div class="footer-content" >
-                        <h5 >教务</h5>
+                <div class="col-md-2" >
+                    <div class="footer-content" style="margin-right: 49px;">
                         <nav>
-                            <ul class="nav nav-pills nav-stacked">
-                                <li class="jiaowu"><a href=<?= Url::toRoute('user/security/login')?>>人员招聘</a></li>
-                                <li class="jiaowu"><a href=<?= Url::toRoute('/user/login')?>>联系我们</a></li>
+                            <ul class="nav  nav-stacked">
+                                <li class="jiaowu">
+                                    <a href=<?= Url::toRoute('/frontend/info?id=675')?>>人员招聘</a>
+                                </li>
+                                <li class="jiaowu">
+                                    <a href=<?= Url::toRoute('/frontend/info?id=675')?>> 联系我们</a>
+                                </li>
                             </ul>
                         </nav>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3 col-md-offset-1">
-                    <div class="footer-content">
 
-                        <div class="text-center">
-                            <!-- <a class="btn btn-social-icon"><i class="fa fa-weixin"></i></a>-->
-                            <div >
-                                <img src=<?= Url::to('@web/images/qr.png') ?>  style="width: 100px">
-                            </div>
+                <div class="space-bottom hidden-lg hidden-xs"></div>
 
 
 
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="space-bottom hidden-lg hidden-xs"></div>
         </div>
@@ -104,8 +107,10 @@ use common\models\cate;
     <div class="footer sub-footer" style="height: auto;">
         <div class="container">
             <div class="row " style="color:white">
-                <div class="col-md-2 normal">
-                    <div class="">
+                <div class="col-md-3 normal">
+                    <div class="banquan">
+                        <p>版权所有：西南财经大学经济与管理研究院</p>
+                        <p>技术支持：归锋科技</p>
                        <!-- <p class="">
                             <a class="simplenav" href="<?/*= Url::toRoute('/site/index')*/?>">Home</a> |
                             <a class="simplenav" href="<?/*=Url::toRoute('/frontend/info')*/?>">About</a> |
@@ -114,29 +119,35 @@ use common\models\cate;
                     </div>
                 </div>
 
-                <div class="col-md-5 normal">
+                <div class="col-md-4 normal">
                     <div class="">
-
                         <address >
-                            <ul>
-                                <li><?= Yii::t('common','柳林校区地址：成都市温江区柳台大道555号格致楼12楼')?></li>
+                            <ul class="address">
+                                <li><?= Yii::t('common','柳林校区')?></li>
+                                <li><?= Yii::t('common','地址：成都市温江区柳台大道555号格致楼12楼')?></li>
                                 <li><?= Yii::t('common','Tel')?>： 028-87092099  </li>
                                 <li><?= Yii::t('common','PC')?>： 611130</li>
                             </ul>
                         </address>
                     </div>
                 </div>
-                <div class="col-md-5 normal">
+                <div class="col-md-4 normal">
                     <div class="">
 
                         <address >
-                            <ul>
-                                <li><?= Yii::t('common',' 光华校区地址：成都市光华村街55号北三门经管楼')?></li>
+                            <ul class="address">
+                                <li><?= Yii::t('common','光华校区')?></li>
+                                <li><?= Yii::t('common','地址：成都市光华村街55号北三门经管楼')?></li>
                                 <li><?= Yii::t('common','Tel')?>： 028-87092099  </li>
                                 <li><?= Yii::t('common','PC')?>： 610074</li>
                             </ul>
                         </address>
 
+                    </div>
+                </div>
+                <div class="col-md-1 normal">
+                    <div style="padding: 10px">
+                        <img src=<?= Url::to('@web/images/qr.jpg') ?>  style="width: 85px">
                     </div>
                 </div>
                 <!--<div class="col-md-4 normal">

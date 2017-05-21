@@ -5,7 +5,7 @@ use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 
-$this->title = Yii::t('common', 'School of International Education');
+$this->title = '经济与管理研究院';//Yii::t('common', 'School of International Education');
 $this->params['index'] = true;//$this->title;
 $this->params['breadcrumbs'] = null;//$this->title;
 $this->blocks['content-header'] = '';
@@ -33,11 +33,11 @@ position: relative;
 <div class="container" style="padding-left: 0px;padding-right: 0px">
     <div id="carousel-example-generic" data-id="124gh2345" data-edit="t" class="carousel slide" data-ride="carousel" style="margin-top: 12px">
         <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-id="1242345" data-edit="text" data-slide-to="0" class="active">
+            <!--<li data-target="#carousel-example-generic" data-id="1242345" data-edit="text" data-slide-to="0" class="active">
                 hallow fsd
             </li>
             <li data-target="#carousel-example-generic" data-id="1242345" data-edit="text" data-slide-to="1" class=""></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>-->
         </ol>
         <div class="carousel-inner slider-items">
             <?php foreach ($pic as $k => $v) {
@@ -77,31 +77,41 @@ position: relative;
             ]) ?>
         </div>
         <div class="col-md-4 wbox" style="height: 446px;">
-            <?= backend\widgets\box\BoxWidget::widget([
-                'type' => 'indexBanner', 'cate' => 32, 'title' => Yii::t('common', 'Notices'), 'liNum' => 7,
+            <?= common\widgets\box\BoxWidget::widget([
+                'type' => 'index-frame', 'cate' => 32, 'title' => Yii::t('common', 'Notices'), 'liNum' => 6,
                 'url' => Url::toRoute(['document/list', 'cate' => 32]),
                 'css' => ['warper' => 'box-widget index-box blue-border', 'title' => 'index-box-title', 'header' => 'with-border index-box-header', 'icon' => 'index-box-icon bicon-laba', 'body' => 'box-profile',]])
             ?>
 
         </div>
     </div>
+    <div class="row" style="margin-bottom: 23px">
+        <div class="col-md-6">
+            <a href="http://chfs.swufe.edu.cn/" target="_blank">
+                <img style="width: 100%" src="<?=Url::to('@web/images/portfolio/广告a(1).jpg') ?>">
+            </a>
+        </div>
+        <div class="col-md-6"><img style="width: 100%" src="<?=Url::to('@web/images/portfolio/广告b(1).jpg') ?>"></div>
+    </div>
     <div class="row" style="margin-bottom: 25px;">
         <div class="col-md-8" style="    height: 506px;">
             <?php
             $achieve = new \frontend\models\Achievement();
+
             echo backend\widgets\box\BoxWidget::widget([
                 'model' => $achieve,
-                'type' => 'achievement-list', 'cate' => 67, 'title' => Yii::t('common', '科研成果'), 'liNum' => 5,
+                'type' => 'achievement-list', 'cate' => 67, 'title' => Yii::t('common', '科研成果'), 'liNum' => 6,
                 'url' => Url::toRoute(['/achievement/list']),
-                'css' => ['warper' => 'box-widget index-box blue-border', 'title' => 'index-box-title', 'header' => 'with-border index-box-header', 'icon' => 'index-box-icon bicon-bookmark', 'body' => 'box-profile',]])
+                'sort' => ['id' => SORT_DESC],
+                'css' => ['warper' => 'box-widget index-box blue-border', 'title' => 'index-box-title', 'header' => 'with-border index-box-header', 'icon' => 'index-box-icon bicon-bookmark', 'body' => 'box-profile',]
+                ]
+            );
             ?>
-
-
         </div>
         <div class="col-md-4 wbox" style="height: 506px;">
             <?= backend\widgets\box\BoxWidget::widget([
-                'type' => 'listPic_m', 'cate' => 79, 'title' => Yii::t('common', '学术活动'), 'liNum' => 4,
-                'url' => Url::toRoute(['document/list', 'cate' => 79]),
+                'type' => 'listPic_m', 'cate' => 93, 'title' => Yii::t('common', '学术活动'), 'liNum' => 4,
+                'url' => Url::toRoute(['document/max-list', 'cate' => 93]),
                 'css' => ['warper' => 'box-widget index-box blue-border', 'title' => 'index-box-title', 'header' => 'with-border index-box-header', 'icon' => 'index-box-icon bicon-laba', 'body' => 'box-profile',]])
             ?>
 
