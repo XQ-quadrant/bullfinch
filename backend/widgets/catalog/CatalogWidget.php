@@ -17,12 +17,13 @@ class CatalogWidget extends Widget
     public $css = ['warper'=>'box-widget','title'=>'with-border','body'=>'box-profile'];
     public $model ;
     public $activeRecord ;
-    public $pre_cate = 1 ;
+    public $pre_cate = 1 ; //上级栏目id
     public $where ;
     public $liNum = 10;
     public $pic;
     public $title;
     public $url;
+    public $current_cate; //当前栏目
 
     /**
      * 初始化
@@ -36,7 +37,14 @@ class CatalogWidget extends Widget
     public function run(){
         if ($this->model === null) {
             $this->model = new Cate();
-            $this->activeRecord = $this->model
+
+            if($this->pre_cate==1 && isset($this->current_cate)){
+                $current_cate = Cate::findOne(['id'=>$this->current_cate]);
+                $this->pre_cate = $current_cate->pre_cate;
+                //var_dump($this->pre_cate);die();
+            }
+
+            $this->activeRecord = $this->model   //获取活动记录
                 ->find()
                 ->where(['status'=>Cate::STATUS_AOLLOW ,'pre_cate'=>$this->pre_cate])
                 ->orderBy(['level' => SORT_ASC])

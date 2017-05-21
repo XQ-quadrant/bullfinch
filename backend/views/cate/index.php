@@ -14,10 +14,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
 $this->registerJsFile('@web/adminlte/plugins/jstree/jstree.min.js',['depends'=>['yii\web\JqueryAsset']]);
 $this->registerJsFile('@web/adminlte/plugins/jstree/treedomian.js',['depends'=>['yii\web\JqueryAsset']]);*/
-$this->registerCssFile('@web/adminlte/plugins/treeview/bootstrap-treeview.css',['depends'=>['yii\bootstrap\BootstrapAsset']]);
+$this->registerCssFile('@web/lte/plugins/treeview/bootstrap-treeview.css',['depends'=>['yii\bootstrap\BootstrapAsset']]);
 
-$this->registerJsFile('@web/adminlte/plugins/treeview/bootstrap-treeview.js',['depends'=>['yii\web\JqueryAsset']]);
-$this->registerJsFile('@web/adminlte/plugins/treeview/treeview-demo.js',['depends'=>['yii\web\JqueryAsset']]);
+$this->registerJsFile('@web/lte/plugins/treeview/bootstrap-treeview.js',['depends'=>['yii\web\JqueryAsset']]);
+$this->registerJsFile('@web/lte/plugins/treeview/treeview-demo.js',['depends'=>['yii\web\JqueryAsset']]);
 
 ?>
 <div class="cate-index">

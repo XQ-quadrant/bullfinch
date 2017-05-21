@@ -17,19 +17,15 @@ if (Yii::$app->controller->action->id === 'login') {
     );
 } else {
 
-    if (class_exists('backend\assets\AppAsset')) {
         backend\assets\AppAsset::register($this);
-    } else {
-        app\assets\AppAsset::register($this);
-    }
+
 
     //dmstr\web\AdminLteAsset::register($this);
     backend\assets\AdminLteAsset::register($this);
 
     $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@app/web/adminlte/dist');
-    ?>
+    ?><!DOCTYPE html>
     <?php $this->beginPage() ?>
-    <!DOCTYPE html>
     <html lang="<?= Yii::$app->language ?>">
     <head>
         <meta name="renderer" content="webkit">
@@ -56,14 +52,6 @@ if (Yii::$app->controller->action->id === 'login') {
                             <img src="/images/top.png" class="top-img" />
                         </a>
                         <div class="col-md-5 normal">
-                            <div class="row" style="margin-top: 1em;">
-                                <div class="col-md-2 pull-right normal" style="padding-left: 0;    padding-right: 0;    margin-right: 11px;">
-                                    <a href="" class="btn btn-block  btn-flat  index-top-tip2" ><!--Apply Now!--><?= Yii::t('common', 'Apply Now') ?></a>
-                                </div>
-                                <div class="col-md-3 pull-right normal" style="padding-right: 0;border-right: 1px solid #ccc;">
-                                    <a href="<?= Url::to('http://10.8.100.89/en') ?>" class="btn btn-block  btn-flat  index-top-tip"><?= Yii::t('common', '中文') ?></a>
-                                </div>
-                            </div>
                             <div class="row">
                                 <div class="col-md-6 pull-right">
                                     <form class="navbar-form navbar-right" role="search" style="float: right;display: inline-block;margin-right: -10px;    margin-top: 20px;">

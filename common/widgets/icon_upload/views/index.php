@@ -12,14 +12,14 @@ use yii\helpers\Html;
     <input id='cc' up-id="<?=$attribute?>" type="hidden" name="<?=$inputName?>" upname='<?=$config['fileName']?>' value="<?=isset($inputValue)?$inputValue:''?>" filetype="img" />
 </div>
 <style>
-    .container {
+    .container-icon {
         width: 200px;
         margin: 40px 0 0 0;
         position: relative;
         font-family: 微软雅黑;
         font-size: 12px;
     }
-    .container p {
+    .container-icon p {
         line-height: 12px;
         line-height: 0px;
         height: 0px;
@@ -28,7 +28,7 @@ use yii\helpers\Html;
     }
     .action {
         width: 200px;
-        height: 30px;
+        height: 110px;
         margin: 10px 0;
     }
     .cropped {
@@ -142,7 +142,7 @@ use yii\helpers\Html;
     .tc{text-align:center;}
 
 </style>
-<div class="container">
+<div class="container-icon">
     <div class="imageBox">
         <div class="thumbBox"></div>
         <div class="spinner" style="display: none">Loading...</div>

@@ -9,10 +9,10 @@ use kartik\datetime\DateTimePicker;
 /* @var $this yii\web\View */
 /* @var $model common\models\Report */
 /* @var $form yii\widgets\ActiveForm */
-//$this->registerCssFile('@web/adminlte/plugins/bootstrap-datetimepicker/css/datetimepicker-custom.css');
+//$this->registerCssFile('@web/lte/plugins/bootstrap-datetimepicker/css/datetimepicker-custom.css');
 //$this->registerJsFile('@web/media/js/jquery-1.10.1.min.js',['depends'=>['yii\bootstrap\BootstrapAsset']],View::POS_END);
-//$this->registerJsFile('@web/adminlte/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js',['depends'=>['yii\bootstrap\BootstrapAsset']],View::POS_END);
-//$this->registerJsFile('@web/adminlte/dist/js/pickers-init.js',['depends'=>['yii\bootstrap\BootstrapAsset']],View::POS_READY);
+//$this->registerJsFile('@web/lte/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js',['depends'=>['yii\bootstrap\BootstrapAsset']],View::POS_END);
+//$this->registerJsFile('@web/lte/dist/js/pickers-init.js',['depends'=>['yii\bootstrap\BootstrapAsset']],View::POS_READY);
 $template = '{label}<div class="col-sm-10">{input}{error}{hint}</div>';
 $label = ['class' => "col-sm-2 text-c control-label form-label"];
 ?>

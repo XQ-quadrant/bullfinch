@@ -11,8 +11,8 @@ use yii\web\AssetBundle as BaseAdminLteAsset;
 class AdminLteAsset extends BaseAdminLteAsset
 {
     //public $sourcePath = '@app/web/adminlte/dist';
-    public $basePath = '@webroot/adminlte/dist';
-    public $baseUrl = '@web/adminlte/dist';
+    public $basePath = '@webroot/lte/dist';
+    public $baseUrl = '@web/lte/dist';
     public $css = [
         'css/AdminLTE.css',
         'css/self.css',

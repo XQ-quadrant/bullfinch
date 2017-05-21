@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\controllers;
+namespace ccmr\controllers;
 
 class DashboardController extends \yii\web\Controller
 {

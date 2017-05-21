@@ -19,11 +19,11 @@ class AppsUrlManage extends UrlManager {
             'password' => '',
             'charset' => 'utf8',
         ]);*/
-        Yii::$app->language = 'zh-CN';
-        Yii::$app->id = 'en-US';
-        var_dump(Yii::$app->request->absoluteUrl);
-        var_dump(Yii::$app->request->get('route') );
-        var_dump(Yii::$app->request->getScriptUrl());die();
+        //Yii::$app->language = 'zh-CN';
+        //Yii::$app->id = 'en-US';
+        //var_dump(Yii::$app->request->absoluteUrl);
+        //var_dump(Yii::$app->request->get('route') );
+        //var_dump(Yii::$app->request->getScriptUrl());die();
 
         //\Yii::configure('language',['language'=>'zh-CN']);
     }

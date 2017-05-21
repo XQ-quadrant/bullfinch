@@ -18,7 +18,7 @@ use yii\helpers\Html;
 
 $this->title = empty($profile->name) ? Html::encode($profile->user->username) : Html::encode($profile->name);
 $this->params['breadcrumbs'][] = $this->title;
-$this->registerJsFile('/adminlte/plugins/social/friend.js',['depends'=>'backend\assets\AdminLteAsset','position'=>\yii\web\View::POS_END]);
+$this->registerJsFile('/lte/plugins/social/friend.js',['depends'=>'backend\assets\AdminLteAsset','position'=>\yii\web\View::POS_END]);
 ?>
 <div class="row">
     <div class="col-md-3">

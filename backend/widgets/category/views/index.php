@@ -12,8 +12,11 @@ use yii\helpers\Url;
 
  <?php foreach($model as $li){
   //$view_date = json_decode($li->view_index); //定向到具体后台页面
+  if($li->id==Yii::$app->request->get('cate')){
+    $active = 'active';
+  }
   ?>
-  <li><a href="<?=Url::toRoute([$view_date['route'],$view_date['date']['search'] => ['cate'=>$li->id]])?>"><?=$li->name?></a></li>
+  <li class=<?=$active?>><a href="<?=Url::toRoute([$view_date['route'],$view_date['date']['search'] => ['cate'=>$li->id]])?>"><?=$li->name?></a></li>
  <?php } ?>
 
 </ul>

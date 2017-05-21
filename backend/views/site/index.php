@@ -104,21 +104,22 @@ position: relative;
                 <div class="description-block border-right" style="color: #0a4b69;">
 
                     <a href="/document/list?cate=65">
-                    <h5 class="description-header" style="font-weight: 900"><i class="fa  fa-university"></i> 学生日常工作</h5>
+                    <h4 class="description-header" style="font-weight: 900"><i class="fa  fa-university"></i> 学生日常工作</h4>
                     <span class="description-text">STUDENT DAILY WORK</span></a>
                 </div>
             </div>
             <div class="col-sm-4 col-xs-6" style="margin-top: 13px">
                 <div class="description-block border-right" style="color: #0a4b69;">
-                    <span class="description-percentage text-green"></span>
-                    <h5 class="description-header" style="font-weight: 900"><i class="fa  fa-mortar-board "></i> 学术成果</h5>
-                    <span class="description-text">ACADEMIC ACHIEVEMENTS</span>
+                    <a href="/document/list?cate=65">
+                    <h4 class="description-header" style="font-weight: 900"><i class="fa  fa-mortar-board "></i> 学术成果</h4>
+                    <span class="description-text">ACADEMIC ACHIEVEMENTS</span></a>
                 </div>
             </div>
             <div class="col-sm-4 col-xs-6" style="margin-top: 13px">
                 <div class="description-block" style="color: #0a4b69;">
-                    <h5 class="description-header" style="font-weight: 900"><i class="fa fa-recycle"></i> 社会服务</h5>
-                    <span class="description-text">COMMUNITY SERVICE</span>
+                    <a href="/document/list?cate=65">
+                    <h4 class="description-header" style="font-weight: 900"><i class="fa fa-recycle"></i> 社会服务</h4>
+                    <span class="description-text">COMMUNITY SERVICE</span></a>
                 </div>
             </div>
         </div>
@@ -169,7 +170,7 @@ position: relative;
         </div>
         <div class="col-md-4 wbox">
             <?= backend\widgets\box\BoxWidget::widget([
-                'type'=>'bigDateList','cate' => 31, 'title' => Yii::t('common','学术讲座'), 'liNum' => 7,
+                'type'=>'bigDateList','cate' => 31, 'title' => Yii::t('common','学术讲座'), 'liNum' => 6,
                 'url' => Url::toRoute(['document/list', 'cate' => 31]),
                 'css'=>['warper'=>'box-widget index-box blue-border','title'=>'index-box-title','header'=>'with-border index-box-header','icon'=>'index-box-icon bicon-laba','body'=>'box-profile',]]) ?>
 

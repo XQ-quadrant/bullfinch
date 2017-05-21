@@ -267,4 +267,50 @@ class DocumentController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+
+    public function actionTool(){
+            die('喵');
+        $data =  Yii::$app->db->createCommand('SELECT * FROM xicai2')
+            ->queryAll();
+        foreach ($data as $row){
+            $document = new Document();
+            //"(发布于：2017-03-20 ）"
+            $create_at = strtotime(substr($row['post_time'],13,10)); //创建时间
+            $cate =0;
+           switch (trim($row['cate'])){
+               case '新闻资讯': $cate = 14;break;
+               case '通知公告': $cate = 32;break;
+               case '师资队伍': $cate = 70;break;
+               case '招生就业': $cate = 64;break;
+               case '中心简介': $cate = 37;break;
+               //default :$cate = 70;
+           }
+
+            $document->title =$row['title'];     //标题
+            $document->create_at = substr($row['post_time'],13,10);
+            $document->cate = $cate;
+            $document->content = $row['body'];   //内容
+
+            if(!isset($document->cate) ){
+                echo $document->title ;
+                die('fail');
+            }
+            /*echo $document->title .'[|]';
+
+            //echo $document->create_at ;
+            //echo $document->title ;
+            echo $document->cate;*/
+            if($document->save()){
+                echo $document->id.'   '.$document->title;
+                echo '[|]'.$document->cate ;
+                //echo '<br>';
+            }else{
+                echo 'fail';
+            }
+            echo '<br>';
+            $document->refresh();
+
+        }
+
+    }
 }

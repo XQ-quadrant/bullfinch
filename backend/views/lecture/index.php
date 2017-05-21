@@ -2,24 +2,23 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-
+use yii\widgets\Pjax;
 /* @var $this yii\web\View */
-/* @var $searchModel common\models\search\LectureSearch */
+/* @var $searchModel backend\models\search\LectureSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Lectures');
+$this->title = 'Lectures';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="lecture-index row">
+<div class="lecture-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Create Lecture'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Lecture', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-    <div class="col-lg-12">
-    <?= GridView::widget([
+<?php Pjax::begin(); ?>    <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
@@ -30,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'address',
             'subject',
             'content:ntext',
-            // 'lecturer',
+            // 'speaker',
             // 'lecturer_info:ntext',
             // 'hint:ntext',
             // 'poster:ntext',
@@ -39,5 +38,4 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-    </div>
-</div>
+<?php Pjax::end(); ?></div>

@@ -1,5 +1,5 @@
 <?php
-namespace models\models;
+namespace ccmr\models;
 /**
  * @author Xianan Huang
  *

@@ -9,6 +9,18 @@ use yii\widgets\DetailView;
 $this->title = $model->title;
 $this->params['breadcrumbs'][] = ['label' => $cate->name, 'url' => ['document/list','cate'=>$cate->id]];
 //$this->params['breadcrumbs'][] = $this->title;
+function shtm($design_str)
+{
+    $str=$design_str; // 取得字串同时去掉头尾空格和空回车
+    //$str=str_replace("<br>","",$str); // 去掉<br>标签
+    //$str="<p>".$str; // 在文本头加入<p>
+    $str=str_replace("\r\n","<br>",$str); // 用p标签取代换行符
+    //$str.="</p>\n"; // 文本尾加入</p>
+    $str=str_replace("<p></p>","",$str); // 去除空段落
+    $str=str_replace("\n","",$str); // 去掉空行并连成一行
+    $str=str_replace("</p>","</p>\n",$str); //整理html代码
+    return $str;
+}
 ?>
 <div class="document-view container">
 <div class="row">
@@ -25,16 +37,23 @@ $this->params['breadcrumbs'][] = ['label' => $cate->name, 'url' => ['document/li
                     <div class="author clearfix author-right">
                         <!--<img src="img/profileimg4.png" alt="img">-->
                         <span class="name" style="margin-right: 1em;"><?= $model->author ?> </span>
-                        <span class="from"><?= Yii::$app->formatter->asDate($model->create_at) ?></span>
+                        <span class="from"><?= Yii::$app->formatter->asDate($model->create_at, 'yyyy - M - dd') ?></span>
                     </div>
                     <hr>
-                    <?= htmlspecialchars_decode($model->content) ?>
+                    <pre style="white-space: normal;     word-break: none;
+     word-wrap: break-word;
+     background: none;
+     border: none;
+     border-radius: none; ">
+                        <?= shtm($model->content) ?>
+                    </pre>
+
 
 
                 </div>
 
             </div>
-            <div class="panel-footer"></div>
+
 
         </div>
     </div>

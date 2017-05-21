@@ -1,5 +1,5 @@
 <?php
-namespace frontend\models;
+namespace ccmr\models;
 
 use common\models\User;
 use Yii;

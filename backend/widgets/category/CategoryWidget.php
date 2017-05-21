@@ -92,10 +92,16 @@ class CategoryWidget extends Widget
 
         $sonCate = new Cate();
         foreach($this->model as $k=>$v){
+            $prefix = substr($v['uri'],0,3);  //识别前缀
+            if($prefix=='htt' && $prefix=='www'){
+                $url = $v['uri'];
+            }else{
+                $url = Url::to($v['uri']);
+            }
             $item =  [
                 'label' =>$v['name'] ,
                 //'icon' => $v['icon'],
-                'url' =>Url::to($v['uri']),
+                'url' =>$url,
                 /*'items' => [
                     ['label' => 'Level 1 - Dropdown A', 'url' => '#'],
                   ['label' => 'Level 1 - Dropdown B', 'url' => '#'],
@@ -115,15 +121,22 @@ class CategoryWidget extends Widget
             //$sonCate = Cate::findAll(['pre_cate'=>$v->id]);
             //$sonCate = Cate::findAll(['pre_cate'=>$v->id])->orderby('level');
             $model = new Cate();
-            $sonCate = $model->find()->where(['pre_cate'=>$v->id])->orderBy('level')->all();
+            $sonCate = $model->find()->where(['pre_cate'=>$v->id,'status'=>Cate::$STATUS_AOLLOW])->orderBy('level')->all();
             if(isset($sonCate)){
                 $sonitems = [];
                 foreach($sonCate as $k2=>$v2){
+
+                    $prefix = substr($v2['uri'],0,3);  //识别前缀
+                    if($prefix=='htt' && $prefix=='www'){
+                        $url = $v2['uri'];
+                    }else{
+                        $url = Url::to($v2['uri']);
+                    }
                     $sonitems[] = [
                         'label' =>$v2['name'] ,
                         //'icon' => $v['icon'],
                         //'options' => ['class'=>'cc'],
-                        'url' =>Url::to($v2['uri']),
+                        'url' =>$url,
                     ];
                     if($uri == $hostinfo.$v2['uri']){
                         $flag_active = true;

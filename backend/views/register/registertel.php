@@ -11,7 +11,7 @@ use yii\widgets\ActiveForm;
 
 $this->title = Yii::t('user', 'Sign up');
 $this->params['breadcrumbs'][] = $this->title;
-$this->registerJsFile('/adminlte/plugins/msg/verify.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
+$this->registerJsFile('/lte/plugins/msg/verify.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
 
 
 ?>

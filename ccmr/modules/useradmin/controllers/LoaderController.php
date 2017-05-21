@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\useradmin\controllers;
+namespace ccmr\modules\useradmin\controllers;
 
 use common\models\User;
 use Yii;

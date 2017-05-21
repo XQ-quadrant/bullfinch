@@ -24,6 +24,7 @@ class BoxWidget extends Widget
     public $type;
     public $title;
     public $url;
+    public $sort; //顺序
 
     /**
      * 初始化
@@ -53,7 +54,7 @@ class BoxWidget extends Widget
             $this->activeRecord = $this->model
                 ->find()
                 ->where($this->where)
-                ->orderBy(['level' => SORT_DESC])->limit($this->liNum)->all();
+                ->orderBy(['level' => SORT_DESC]+$this->sort)->limit($this->liNum)->all();
 
         }
         //$room =

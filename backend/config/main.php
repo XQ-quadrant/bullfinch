@@ -122,7 +122,7 @@ return [
         "view" => [
             "theme" => [
                 "pathMap" => [
-                    //"@app/views" => "@vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-app"
+                    //"@app/views" => "@vendor/dmstr/yii2-lte-asset/example-views/yiisoft/yii2-app"
                     "@vendor/dektrium/yii2-user/views" => "@app/views/dektrium"
                 ],
             ],

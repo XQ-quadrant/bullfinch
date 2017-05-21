@@ -11,7 +11,7 @@ use yii\helpers\Url;
 <ul class="nav nav-pills nav-stacked">
  <?php foreach($ac as $k=>$v){ ?>
   <li><a href="<?=$v->uri?>">
-    <i class="fa fa-angle-right"></i><?=$v->name?>
+    <!--<i class="fa fa-angle-right"></i>--><?=$v->name?>
    </a></li>
  <?php } ?>
  <!--<li class="active">

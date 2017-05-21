@@ -121,7 +121,7 @@ text-overflow: ellipsis;">
                     </div>
                     <div class="attachment-block " style="min-height: 80px">
                         <div style="overflow: hidden;height: 68px;display: inline">
-                            <img class="attachment-img" src="http://ccmr.com/images/upload/20170411/1491950878688669.jpg" alt="Attachment Image" style=" max-height: 68px;max-width: 95px;">
+                            <img class="attachment-img" src="/images/upload/20170411/1491950878688669.jpg" alt="Attachment Image" style=" max-height: 68px;max-width: 95px;">
                         </div>
                         <div class="attachment-pushed">
 

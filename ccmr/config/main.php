@@ -94,8 +94,35 @@ return [
             //'class' => 'common\components\AppsUrlManage',
             'enablePrettyUrl' => true,
             "enableStrictParsing" => false,
-            'showScriptName' => true,
-            'rules' => [],
+            'showScriptName' => false,
+            'rules' => [
+                '/<app:\w+>/<controller:\w+>/<action:\w+>' => '/<controller>/<action>',
+                //'/ccmr/<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                //'/ccmr/user/<action:(login|logout)>'               => 'user/security/<action>',
+                /************ user rules ******************/
+                'ccmr/user/<controller:\w+>/<action:\w+>'          => 'user/<controller>/<action>',
+
+                'ccmr/user/<id:\d+>'                               => 'user/profile/show',
+                'ccmr/user/<action:(login|logout)>'                => 'user/security/<action>',
+
+                'ccmr/user/<action:(register|resend)>'             => 'user/registration/<action>',
+                'ccmr/user/confirm/<id:\d+>/<code:[A-Za-z0-9_-]+>' => 'user/registration/confirm',
+                'ccmr/user/forgot'                                 => 'user/recovery/request',
+                'ccmr/user/recover/<id:\d+>/<code:[A-Za-z0-9_-]+>' => 'user/recovery/reset',
+                'ccmr/user/settings/<action:\w+>'                  => 'user/settings/<action>',
+
+
+
+                '/ccmr/admin/<controller:\w+>/<action:\w+>'     => '/admin/<controller>/<action>',
+
+
+                '/<app:\w+>/admin'                                   => '/admin',
+
+                '/<app:\w+>/admin/<controller:\w+>'                  => '/admin/<controller>/index',
+
+
+
+                '/ccmr/user/login' => 'user/login',],
         ],
 
         /*"urlManager" => [

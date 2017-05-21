@@ -47,10 +47,7 @@ use yii\helpers\Url;
                 <div class="col-md-2 normal">
                     <div class="">
                         <p class="simplenav">
-                            <a class="text-white" href="<?= Url::toRoute('/site/index')?>">Home</a> |
-                            <a class="text-white" href="<?=Url::toRoute('/frontend/info')?>">About</a> |
-                            <a class="text-white" href="">Service</a> |
-                            <a class="text-white" href="">Connect</a> |
+                             |
                             <a class="text-white" href="<?=Url::toRoute('/user/login')?>">Login</a> |
                         </p>
                     </div>
@@ -58,11 +55,10 @@ use yii\helpers\Url;
 
                 <div class="col-md-5 normal">
                     <div class="">
-
-                        <address >
+                        <address>
                             <ul>
-                                <li><?= Yii::t('common','柳林校区地址:四川成都温江柳台大道555号格致楼12层')?></li>
-                                <li><?= Yii::t('common','Tel')?>： 028-87092257  </li>
+                                <li><?= Yii::t('common','柳林校区地址:成都温江柳台大道555号通博楼')?></li>
+                                <li><?= Yii::t('common','Tel')?>： （028）87092257  </li>
                                 <li><?= Yii::t('common','PC')?>： 611130</li>
                             </ul>
                         </address>
@@ -70,8 +66,7 @@ use yii\helpers\Url;
                 </div>
                 <div class="col-md-5 normal">
                     <div class="">
-
-                        <address >
+                        <address>
                             <ul>
                                 <li><?= Yii::t('common',' 光华校区地址：四川成都光华村街55号')?></li>
                                 <li><?= Yii::t('common','Tel')?>： 028-87092257  </li>

@@ -3,8 +3,8 @@
 namespace backend\controllers;
 
 use Yii;
-use common\models\Lecture;
-use common\models\search\LectureSearch;
+use backend\models\Lecture;
+use backend\models\search\LectureSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -61,9 +61,10 @@ class LectureController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
+    public function actionCreate($cate)
     {
         $model = new Lecture();
+        $model->category = $cate;  //设置栏目 //Yii::$app->request->get('cate');
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
