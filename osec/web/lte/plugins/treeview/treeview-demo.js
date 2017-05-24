@@ -2,7 +2,7 @@ $(function () {
     inputname = 'CateSearch[pre_cate]';
     var pre_cate = $("input[name='CateSearch[pre_cate]']").val();
     //$.getJSON('index.php?r=cate%2Ftree&pre_cate='+pre_cate,function(result){
-    $.getJSON('/riem/cate/tree?pre_cate='+pre_cate,function(result){
+    $.getJSON('/osec/cate/tree?pre_cate='+pre_cate,function(result){
     var defaultData = [
         {
             text: '父节点 1',

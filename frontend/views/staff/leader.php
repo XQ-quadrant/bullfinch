@@ -35,7 +35,7 @@ foreach ($positions as $position) {
                 <div class="box-body with-border">
                     <div class="col-sm-5"><img class="img-responsive " src="<?= $leader->icon ?>" alt="Photo"></div>
                     <div class="col-sm-7" style="padding: 5px">
-                        <h4 class="leader-username "><?= $leader->name ?><span class="leader-title">院长</span></h4>
+                        <h4 class="leader-username "><?= $leader->name ?><span class="leader-title">特聘院长</span></h4>
                         <h6 class="leader-info "><?= $leader->location ?></h6>
                         <p class="leader-info-p"><?= $leader->public_email ?></p>
                         <p class="leader-info-p"><?= $leader->tel ?></p>

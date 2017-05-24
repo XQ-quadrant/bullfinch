@@ -23,9 +23,9 @@ if (Yii::$app->controller->action->id === 'login') {
     //dmstr\web\AdminLteAsset::register($this);
     frontend\assets\AdminLteAsset::register($this);
     $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');
-    ?>
+    ?><!DOCTYPE html>
     <?php $this->beginPage() ?>
-    <!DOCTYPE html>
+
     <html lang="<?= Yii::$app->language ?>">
     <head>
         <meta name="renderer" content="webkit|ie-comp|ie-stand">
@@ -57,7 +57,7 @@ if (Yii::$app->controller->action->id === 'login') {
         ?>
 
         <?= $this->render(
-            'content.php',
+            'content_main.php',
             ['content' => $content, 'directoryAsset' => $directoryAsset]
         ) ?>
 

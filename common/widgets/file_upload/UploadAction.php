@@ -26,6 +26,7 @@ class UploadAction extends Action
         Yii::$app->request->enableCsrfValidation = false;
         //默认设置
         $_config = require(__DIR__ . '/config.php');
+
         //load config file
         $this->config = ArrayHelper::merge($_config, $this->config);
         parent::init();

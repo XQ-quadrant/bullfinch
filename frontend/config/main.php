@@ -98,12 +98,12 @@ return [
             //
             'rules' => [
                 //'prefix' => 'riem',
-                //'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
-                '/<app:\w+>/<controller:\w+>/<action:\w+>' => '/<controller>/<action>',
-                '/riem/<controller:\w+>/<action:\w+>' => '/<controller>/<action>',
+                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                //'/<app:\w+>/<controller:\w+>/<action:\w+>' => '/<controller>/<action>',
+                //'/riem/<controller:\w+>/<action:\w+>' => '/<controller>/<action>',
                 //'/riem/user/<action:(login|logout)>'               => 'user/security/<action>',
                 /************ user rules ******************/
-                'riem/user/<controller:\w+>/<action:\w+>'          => 'user/<controller>/<action>',
+                /*'riem/user/<controller:\w+>/<action:\w+>'          => 'user/<controller>/<action>',
 
                 'riem/user/<id:\d+>'                               => 'user/profile/show',
                 'riem/user/<action:(login|logout)>'                => 'user/security/<action>',
@@ -125,7 +125,7 @@ return [
 
 
 
-                '/riem/user/login' => 'user/login',
+                '/riem/user/login' => 'user/login',*/
                 //'/riem/<prefix:\w+>/<controller:\w+>/<action:\w+>'=>'<module>/<controller>/<action>',
             ],
         ],

@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\models;
+namespace osec\models;
 
 use Yii;
 

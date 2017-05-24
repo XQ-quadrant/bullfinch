@@ -41,7 +41,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     <p class="text-muted"><strong><i class="fa fa-book margin-r-5"></i>学历</strong></p>
                     <p class="">
-                        <?= $model->education ?> <?= $model->resume ?>
+                        <?= $model->education ?>
                     </p>
 
                     <hr>

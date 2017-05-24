@@ -6,6 +6,7 @@ use common\models\Cate;
 use Yii;
 use backend\models\Pic;
 use backend\models\search\PicSearch;
+use yii\helpers\Url;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -35,7 +36,7 @@ class PicController extends Controller
             'upload'=>[
                 'class' => 'common\widgets\file_upload\UploadAction',     //这里扩展地址别写错
                 'config' => [
-                    'imagePathFormat' => "/images/upload/{yyyy}{mm}{dd}/{time}{rand:6}",
+                    'imagePathFormat' => Url::to('@web')."/images/upload/{yyyy}{mm}{dd}/{time}{rand:6}",
                 ]
             ]
         ];

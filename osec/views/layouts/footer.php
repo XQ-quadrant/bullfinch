@@ -8,9 +8,52 @@ use backend\widgets\category\CategoryWidget;
 /* @var $content string */
 
 ?>
+<!-- section start -->
+<!-- ================ -->
+<div class="section gray-bg text-muted footer-top clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                <div class="owl-carousel clients">
+                    <div class="client">
+                        <a href="#"><img src="/osec/images/icon/xiaohui/1.gif" alt=""></a>
+                    </div>
+                    <div class="client">
+                        <a href="#"><img src="/osec/images/icon/xiaohui/2.png" alt=""></a>
+                    </div>
+                    <div class="client">
+                        <a href="#"><img src="/osec/images/icon/xiaohui/4.png" alt=""></a>
+                    </div>
+                    <div class="client">
+                        <a href="#"><img src="/osec/images/icon/xiaohui/5.jpg" alt=""></a>
+                    </div>
+                    <div class="client">
+                        <a href="#"><img src="/osec/images/icon/xiaohui/6.png" alt=""></a>
+                    </div>
+                    <div class="client">
+                        <a href="#"><img src="/osec/images/icon/xiaohui/7.png" alt=""></a>
+                    </div>
+                    <div class="client">
+                        <a href="#"><img src="/osec/images/icon/xiaohui/8.png" alt=""></a>
+                    </div><div class="client">
+                        <a href="#"><img src="/osec/images/icon/xiaohui/9.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="col-md-6">
+                <blockquote class="inline">
+                    <p class="margin-clear">Design is not just what it looks like and feels like. Design is how it works.</p>
+                    <footer><cite title="Source Title">Steve Jobs </cite></footer>
+                </blockquote>
+            </div>-->
+        </div>
+    </div>
+</div>
+<!-- section end -->
 
 <!-- footer start (Add "light" class to #footer in order to enable light footer) -->
 <!-- ================ -->
+
 <footer id="footer">
 
     <!-- .footer start -->
@@ -18,126 +61,54 @@ use backend\widgets\category\CategoryWidget;
     <div class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-7">
                     <div class="footer-content">
-                        <div class="logo-footer"><img id="logo-footer" src="images/logo_red_footer.png" alt=""></div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <p>Lorem ipsum dolor sit amet, consect tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven.</p>
-                                <ul class="social-links circle">
-                                    <li class="facebook"><a target="_blank" href="http://www.cssmoban.com"><i class="fa fa-facebook"></i></a></li>
-                                    <li class="twitter"><a target="_blank" href="http://www.cssmoban.com"><i class="fa fa-twitter"></i></a></li>
-                                    <li class="googleplus"><a target="_blank" href="http://www.cssmoban.com"><i class="fa fa-google-plus"></i></a></li>
-                                    <li class="skype"><a target="_blank" href="http://www.cssmoban.com"><i class="fa fa-skype"></i></a></li>
-                                    <li class="linkedin"><a target="_blank" href="http://www.cssmoban.com"><i class="fa fa-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-6">
+                        <div class="" style="float: left;width: 130px;padding: 25px"><img id="logo-footer" src="<?= Url::to('@web/images/logo.png')?>" alt=""></div>
+                        <div class="row" style="    float: left;">
+                            <div class="col-sm-12">
+                                <h4 style=" margin-top: 2px;">西南财经大学经济与管理研究院海外学习交流中心</h4>
                                 <ul class="list-icons">
-                                    <li><i class="fa fa-map-marker pr-10"></i> One infinity loop, 54100</li>
-                                    <li><i class="fa fa-phone pr-10"></i> +00 1234567890</li>
-                                    <li><i class="fa fa-fax pr-10"></i> +00 1234567891 </li>
-                                    <li><i class="fa fa-envelope-o pr-10"></i> info@idea.com</li>
+                                    <li><i class="fa fa-map-marker pr-10"></i> 中国四川成都温江区柳台大道555号 西南财经大学柳林校区格致楼1224室</li>
+                                    <li><i class="fa fa-phone pr-10"></i> +86 (0)28 8709 2471</li>
+                                    <li><i class="fa fa-fax pr-10"></i> 611130</li>
+                                    <li><i class="fa fa-envelope-o pr-10"></i> osec@swufe.edu.cn  </li>
                                 </ul>
                             </div>
+
                         </div>
-                        <a href="page-about.html" class="link"><span>Read More</span></a>
+
                     </div>
                 </div>
                 <div class="space-bottom hidden-lg hidden-xs"></div>
                 <div class="col-sm-6 col-md-2">
                     <div class="footer-content">
-                        <h2>Links</h2>
+
                         <nav>
                             <ul class="nav nav-pills nav-stacked">
-                                <li><a href="index.html">Home</a></li>
-                                <li class="active"><a href="blog-right-sidebar.html">Blog</a></li>
-                                <li><a href="portfolio-3col.html">Portfolio</a></li>
-                                <li><a href="page-about.html">About</a></li>
-                                <li><a href="page-contact.html">Contact</a></li>
+                                <li><a href="index.html">西南财经大学</a></li>
+                                <li class="active"><a href="blog-right-sidebar.html">经济与管理研究院</a></li>
+                                <li><a href="portfolio-3col.html">美国德州A&M大学</a>
+                                <li><a href="page-about.html">英国埃塞克斯大学</a></li>
+                                <li><a href="page-contact.html">英国伯明翰大学</a></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3 col-md-offset-1">
+                <div class="col-sm-6 col-md-2">
                     <div class="footer-content">
-                        <h2>Latest Projects</h2>
-                        <div class="gallery row">
-                            <div class="gallery-item col-xs-4">
-                                <div class="overlay-container">
-                                    <img src="images/gallery-1.jpg" alt="">
-                                    <a href="portfolio-item.html" class="overlay small">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="gallery-item col-xs-4">
-                                <div class="overlay-container">
-                                    <img src="images/gallery-2.jpg" alt="">
-                                    <a href="portfolio-item.html" class="overlay small">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="gallery-item col-xs-4">
-                                <div class="overlay-container">
-                                    <img src="images/gallery-3.jpg" alt="">
-                                    <a href="portfolio-item.html" class="overlay small">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="gallery-item col-xs-4">
-                                <div class="overlay-container">
-                                    <img src="images/gallery-4.jpg" alt="">
-                                    <a href="portfolio-item.html" class="overlay small">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="gallery-item col-xs-4">
-                                <div class="overlay-container">
-                                    <img src="images/gallery-5.jpg" alt="">
-                                    <a href="portfolio-item.html" class="overlay small">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="gallery-item col-xs-4">
-                                <div class="overlay-container">
-                                    <img src="images/gallery-6.jpg" alt="">
-                                    <a href="portfolio-item.html" class="overlay small">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="gallery-item col-xs-4">
-                                <div class="overlay-container">
-                                    <img src="images/gallery-7.jpg" alt="">
-                                    <a href="portfolio-item.html" class="overlay small">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="gallery-item col-xs-4">
-                                <div class="overlay-container">
-                                    <img src="images/gallery-8.jpg" alt="">
-                                    <a href="portfolio-item.html" class="overlay small">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="gallery-item col-xs-4">
-                                <div class="overlay-container">
-                                    <img src="images/gallery-9.jpg" alt="">
-                                    <a href="portfolio-item.html" class="overlay small">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+
+                        <nav>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="index.html">新加坡管理大学</a></li>
+                                <li class="active"><a href="blog-right-sidebar.html">西澳大利亚大学</a></li>
+                                <li><a href="portfolio-3col.html">美国迈阿密大学</a>
+                                <li><a href="page-about.html">加拿大圭尔夫大学</a></li>
+                                <li><a href="page-contact.html">英国朴茨茅斯大学</a></li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
+
             </div>
             <div class="space-bottom hidden-lg hidden-xs"></div>
         </div>
@@ -150,14 +121,15 @@ use backend\widgets\category\CategoryWidget;
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <p>Copyright &copy; 2015.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
+                    <p>版权©2017 西南财经大学经济与管理研究院海外学习交流中心
                     </p>
                 </div>
                 <div class="col-md-6">
                     <nav class="navbar navbar-default" role="navigation">
                         <!-- Toggle get grouped for better mobile display -->
                         <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-2">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                    data-target="#navbar-collapse-2">
                                 <span class="sr-only">Toggle navigation</span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
@@ -166,11 +138,11 @@ use backend\widgets\category\CategoryWidget;
                         </div>
                         <div class="collapse navbar-collapse" id="navbar-collapse-2">
                             <ul class="nav navbar-nav">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="page-about.html">About</a></li>
-                                <li><a href="blog-right-sidebar.html">Blog</a></li>
-                                <li><a href="portfolio-3col.html">Portfolio</a></li>
-                                <li><a href="page-contact.html">Contact</a></li>
+                                <li><a href="index.html">首页</a></li>
+                                <li><a href="page-about.html">技术支持</a></li>
+
+                                <li><a href="portfolio-3col.html">数据统计</a></li>
+                                <li><a href="page-contact.html">联系我们</a></li>
                             </ul>
                         </div>
                     </nav>

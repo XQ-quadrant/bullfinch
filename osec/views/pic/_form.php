@@ -22,7 +22,8 @@ foreach($cates as $k=>$v){
 
     <?php $form = ActiveForm::begin(); ?>
     <?= $form->field($model, 'savepath')->widget('common\widgets\file_upload\FileUpload',[
-        'config'=>[]
+        'config'=>['imagePathFormat' => "/osec/images/upload/{yyyy}{mm}{dd}/{time}{rand:6}",]
+        //'imagePathFormat' => "/osec/images/upload/{yyyy}{mm}{dd}/{time}{rand:6}",
     ]) ?>
     <?= $form->field($model, 'content')->textarea(['rows' => 2]) ?>
     <?= $form->field($model, 'category')->dropDownList($list) ?>

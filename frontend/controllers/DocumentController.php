@@ -27,7 +27,7 @@ class DocumentController extends Controller
                 'class' => 'common\widgets\file_upload\UploadAction',     //这里扩展地址别写错
                 'config' => [
                     'imagePathFormat' => "/images/upload/{yyyy}{mm}{dd}/{time}{rand:6}",
-                    'imagePathFormat' => "/images/upload/{yyyy}{mm}{dd}/{time}{rand:6}",
+                    //'imagePathFormat' => "/images/upload/{yyyy}{mm}{dd}/{time}{rand:6}",
                 ]
             ],
             'ueditor'=>[

@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\controllers;
+namespace osec\controllers;
 
 use dektrium\user\models\User;
 use Yii;

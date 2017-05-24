@@ -53,6 +53,68 @@ if (Yii::$app->controller->action->id === 'login') {
                         </a>
                         <div class="col-md-5 normal">
                             <div class="row">
+                                <div class="navbar-custom-menu">
+                                    <div class="col-md-4 pull-right">
+                                        <nav class="navbar navbar-static-top site-index" role="navigation">
+                                            <div class="container-self" style="padding-right: 15px;padding-left: 15px;">
+                                    <ul class="nav navbar-nav">
+                                        <?php if (Yii::$app->user->isGuest) {
+
+                                            /*echo \yii\bootstrap\Nav::widget([
+                                                'options' => ['class' => 'nav navbar-nav'],
+                                                'encodeLabels' => false,
+                                                'items' => [
+
+                                                    ['label' => '登录', 'url' => Url::toRoute('user/security/login'), 'linkOptions' => ['target' => "_blank"]],
+                                                    ['label' => '旧版网站', 'url' => 'http://10.9.10.201:8082/', 'options' => ['target' => "_blank"]],
+                                                ],
+                                            ]);*/
+                                            ?>
+                                        <?php } else {
+
+                                            ?>
+                                            <li class="dropdown user user-menu">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
+                                                    <span class="hidden-xs">管理</span>
+                                                </a>
+                                                <ul class="dropdown-menu">
+
+                                                    <!-- User image -->
+
+
+                                                    <li>
+                                                        <div class="box box-widget ">
+                                                            <!-- Add the bg color to the header using any of the bg-* classes -->
+
+                                                            <div class="box-footer no-padding">
+                                                                <ul class="nav nav-stacked">
+                                                                    <li><a href="/dashboard/">控制台 </a></li>
+                                                                    <li><a href="#">设置 </a></li>
+                                                                    <li><?= Html::a(
+                                                                            '退出',
+                                                                            ['/site/logout'],
+                                                                            ['data-method' => 'post',]
+                                                                        ) ?></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <!-- Menu Body -->
+
+                                                    <!-- Menu Footer-->
+
+                                                </ul>
+                                            </li>
+                                        <?php } ?>
+
+                                    </ul>
+                                    </div></nav>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-md-6 pull-right">
                                     <form class="navbar-form navbar-right" role="search" style="float: right;display: inline-block;margin-right: -10px;    margin-top: 20px;">
                                         <div class="form-group">

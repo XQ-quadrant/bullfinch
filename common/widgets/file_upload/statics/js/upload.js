@@ -42,8 +42,8 @@
 			//验证文件大小
 			var fileSize = that[0].files[0].size;
 			if(fileSize > settings.maxSize){
-				alert(fileSize);
-				alert(settings.maxSize);
+				/*alert(fileSize);
+				alert(settings.maxSize);*/
 				alert('文件超出规定大小');
 				return false;
 			}

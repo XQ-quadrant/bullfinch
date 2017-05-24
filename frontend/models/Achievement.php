@@ -34,7 +34,7 @@ class Achievement extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['author', 'title', 'periodical',   ], 'required'],
+            [['author', 'title', 'year_id','periodical'  ], 'required'],
             [['title', 'serial_number', 'ei', 'hint','year_id'], 'string'],
             [['publish_at'], 'safe'],
             [['author',  'address'], 'string', 'max' => 255],

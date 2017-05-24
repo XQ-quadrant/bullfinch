@@ -69,7 +69,7 @@ position: relative;
     <hr style="    border-top:1px solid #D9E0E6;margin-top: 20px;margin-bottom: 20px;">
     <div class="row" style="    margin-bottom: 7px;">
         <div class="col-md-8" style="">
-            <?= backend\widgets\box\BoxWidget::widget([
+            <?= common\widgets\box\BoxWidget::widget([
                 'type' => 'listPic_m', 'cate' => 14, 'pic' => true, 'title' => Yii::t('common', 'News'),
                 'url' => Url::toRoute(['document/list', 'cate' => 14]),
                 'liNum' => 4,
@@ -98,7 +98,7 @@ position: relative;
             <?php
             $achieve = new \frontend\models\Achievement();
 
-            echo backend\widgets\box\BoxWidget::widget([
+            echo common\widgets\box\BoxWidget::widget([
                 'model' => $achieve,
                 'type' => 'achievement-list', 'cate' => 67, 'title' => Yii::t('common', '科研成果'), 'liNum' => 6,
                 'url' => Url::toRoute(['/achievement/list']),
@@ -109,9 +109,10 @@ position: relative;
             ?>
         </div>
         <div class="col-md-4 wbox" style="height: 506px;">
-            <?= backend\widgets\box\BoxWidget::widget([
-                'type' => 'listPic_m', 'cate' => 93, 'title' => Yii::t('common', '学术活动'), 'liNum' => 4,
-                'url' => Url::toRoute(['document/max-list', 'cate' => 93]),
+            <?= common\widgets\box\BoxWidget::widget([
+                'type' => 'listPic_m', 'cate' =>94, 'title' => Yii::t('common', '学术活动'), 'liNum' => 4,
+                'url' => Url::toRoute(['document/max-list', 'cate' => 94]),
+                //'sort' => ['id' => SORT_DESC],
                 'css' => ['warper' => 'box-widget index-box blue-border', 'title' => 'index-box-title', 'header' => 'with-border index-box-header', 'icon' => 'index-box-icon bicon-laba', 'body' => 'box-profile',]])
             ?>
 

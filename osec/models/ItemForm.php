@@ -1,5 +1,5 @@
 <?php
-namespace models\models;
+namespace osec\models;
 /**
  * @author Xianan Huang
  *

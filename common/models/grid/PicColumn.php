@@ -1,6 +1,8 @@
 <?php
 namespace common\models\grid;
 use yii\grid\Column;
+use yii\helpers\Url;
+
 /**
  * Created by PhpStorm.
  * User: xq
@@ -19,7 +21,7 @@ class PicColumn extends Column
     protected function renderDataCellContent($model, $key, $index)
     {
         $html = '';
-        $html.= "<a href='#'><img class='colum-pic' src='{$model->savepath}'></a>";
+        $html.= "<a href='#'><img class='colum-pic' src='".Url::to($model->savepath)."'></a>";
         /*$html.= '<p>'.(isset($model->user->profile)?$model->user->profile->name:null)."</p>";
         $html.= '<p>'.$model->tel."</p>";*/
 

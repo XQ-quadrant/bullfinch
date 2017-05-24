@@ -7,12 +7,12 @@ $params = array_merge(
 );
 
 return [
-    'id' => 'xncj2',
+    'id' => 'xncj_osec',
     'basePath' => dirname(__DIR__),
-    'controllerNamespace' => 'frontend\controllers',
+    'controllerNamespace' => 'osec\controllers',
     //'bootstrap' => ['log'],
     //'HomeUrl'=>'index.php?r=admin',
-    'name'=>'经济与管理研究院 ',
+    'name'=>'OSEC ',
     'language'=>'zh-CN',
     //'debug'=>false,
     'components' => [
@@ -98,25 +98,25 @@ return [
             //
             'rules' => [
                 //'prefix' => 'riem',
-                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
-                //'/<app:\w+>/<controller:\w+>/<action:\w+>' => '/<controller>/<action>',
+                //'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                '/<app:\w+>/<controller:\w+>/<action:\w+>' => '/<controller>/<action>',
                 //'/riem/<controller:\w+>/<action:\w+>' => '<controller>/<action>',
                 //'/riem/user/<action:(login|logout)>'               => 'user/security/<action>',
                 /************ user rules ******************/
-                'riem/user/<controller:\w+>/<action:\w+>'          => 'user/<controller>/<action>',
+                '<app:\w+>/user/<controller:\w+>/<action:\w+>'          => 'user/<controller>/<action>',
 
-                'riem/user/<id:\d+>'                               => 'user/profile/show',
-                'riem/user/<action:(login|logout)>'                => 'user/security/<action>',
+                '<app:\w+>/user/<id:\d+>'                               => 'user/profile/show',
+                '<app:\w+>/user/<action:(login|logout)>'                => 'user/security/<action>',
 
-                'riem/user/<action:(register|resend)>'             => 'user/registration/<action>',
-                'riem/user/confirm/<id:\d+>/<code:[A-Za-z0-9_-]+>' => 'user/registration/confirm',
-                'riem/user/forgot'                                 => 'user/recovery/request',
-                'riem/user/recover/<id:\d+>/<code:[A-Za-z0-9_-]+>' => 'user/recovery/reset',
-                'riem/user/settings/<action:\w+>'                  => 'user/settings/<action>',
+                '<app:\w+>/user/<action:(register|resend)>'             => 'user/registration/<action>',
+                '<app:\w+>/user/confirm/<id:\d+>/<code:[A-Za-z0-9_-]+>' => 'user/registration/confirm',
+                '<app:\w+>/user/forgot'                                 => 'user/recovery/request',
+                '<app:\w+>/user/recover/<id:\d+>/<code:[A-Za-z0-9_-]+>' => 'user/recovery/reset',
+                '<app:\w+>/user/settings/<action:\w+>'                  => 'user/settings/<action>',
 
 
 
-                '/riem/admin/<controller:\w+>/<action:\w+>'     => '/admin/<controller>/<action>',
+                '/<app:\w+>/admin/<controller:\w+>/<action:\w+>'     => '/admin/<controller>/<action>',
 
 
                 '/<app:\w+>/admin'                                   => '/admin',
@@ -125,7 +125,7 @@ return [
 
 
 
-                '/riem/user/login' => 'user/login',
+                '/<app:\w+>/user/login' => 'user/login',
                 //'/riem/<prefix:\w+>/<controller:\w+>/<action:\w+>'=>'<module>/<controller>/<action>',
             ],
         ],

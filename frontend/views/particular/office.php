@@ -27,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="box box-solid">
                         <div class="box-header with-border">
                             <div class="col-sm-4">
-                                <h5 class="office-title">本科辅导员</h5>
+                                <h5 class="office-title">团总支书记/本科辅导员</h5>
                                 <h5 class="office-username">苏明淘</h5>
                             </div>
                             <div class="col-sm-8" style="padding: 5px">
@@ -125,8 +125,6 @@ $this->params['breadcrumbs'][] = $this->title;
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
 
@@ -150,7 +148,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <h5 class="office-username">刘楠</h5>
                             </div>
                             <div class="col-sm-8" style="padding: 5px">
-                                <h6 class="office-info ">柳林校区格致楼12楼1213A室</h6>
+                                <h6 class="office-info ">柳林校区格致楼12楼1213A</h6>
                                 <p class="office-info">+86 (0)28 87092520</p>
                                 <p class="office-info">liunan@swufe.edu.cn</p>
                             </div>
@@ -176,7 +174,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <h5 class="office-username">伍筱婧</h5>
                             </div>
                             <div class="col-sm-8" style="padding: 5px">
-                                <h6 class="office-info ">柳林校区格致楼12楼1213A室</h6>
+                                <h6 class="office-info ">柳林校区格致楼12楼1213A</h6>
                                 <p class="office-info">+86 (0)28 87092522</p>
                                 <p class="office-info">xiaojingwu@swufe.edu.cn</p>
                             </div>
@@ -189,7 +187,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <h5 class="office-username">张丹</h5>
                             </div>
                             <div class="col-sm-8" style="padding: 5px">
-                                <h6 class="office-info ">柳林校区格致楼12楼1213A室</h6>
+                                <h6 class="office-info ">柳林校区格致楼12楼1213A</h6>
                                 <p class="office-info">+86 (028) 87081615</p>
                                 <p class="office-info">zhangdan@swufe.edu.cn</p>
                             </div>
@@ -209,7 +207,19 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
 
                 <div class="box-header no-padding">
-
+                    <div class="box box-solid">
+                        <div class="box-header with-border">
+                            <div class="col-sm-4">
+                                <h5 class="office-title">院长秘书/ OSEC项目/ 财务</h5>
+                                <h5 class="office-username">吴菲</h5>
+                            </div>
+                            <div class="col-sm-8" style="padding: 5px">
+                                <h6 class="office-info ">柳林校区格致楼12楼1224</h6>
+                                <p class="office-info">+86 (0)28 87092829</p>
+                                <p class="office-info">wufei@swufe.edu.cn</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="box box-solid">
                         <div class="box-header with-border">
                             <div class="col-sm-4">
@@ -217,7 +227,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <h5 class="office-username">倪倩</h5>
                             </div>
                             <div class="col-sm-8" style="padding: 5px">
-                                <h6 class="office-info ">柳林校区格致楼12楼1224室</h6>
+                                <h6 class="office-info ">柳林校区格致楼12楼1224</h6>
                                 <p class="office-info"> +86 (0)28 87092471
                                     </p>
                                 <p class="office-info">niqian@swufe.edu.cn</p>
@@ -231,7 +241,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <h5 class="office-username">吴蓉婧</h5>
                             </div>
                             <div class="col-sm-8" style="padding: 5px">
-                                <h6 class="office-info ">柳林校区格致楼12楼1224室</h6>
+                                <h6 class="office-info ">柳林校区格致楼12楼1224</h6>
                                 <p class="office-info"> +86 (0)28 87092548</p>
                                 <p class="office-info">wrjing@swufe.edu.cn</p>
                             </div>
@@ -245,7 +255,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 </h5>
                             </div>
                             <div class="col-sm-8" style="padding: 5px">
-                                <h6 class="office-info ">柳林校区格致楼12楼1224室</h6>
+                                <h6 class="office-info ">柳林校区格致楼12楼1224</h6>
                                 <p class="office-info"> +86 (0)28 87092529</p>
                                 <p class="office-info">suzh@swufe.edu.cn</p>
                             </div>

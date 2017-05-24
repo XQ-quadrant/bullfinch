@@ -26,12 +26,7 @@ $data = $ac;
 
             <h3 class="box-title <?= $css['title'] ?> text-blue"><?= $title ?> </h3>
             <div class="list-white-bg"></div>
-            <div class="box-tools pull-right">
-                <!--<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>-->
-                <!--<button type="button" class="btn btn-box-tool"  title="" >
-                    <i class="fa fa-comments"></i>更多</button>-->
-            </div>
+            <div class="box-tools pull-right"></div>
         </div>
     </a>
     <div class="box-body">

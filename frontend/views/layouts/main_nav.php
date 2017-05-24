@@ -18,7 +18,7 @@ if (Yii::$app->controller->action->id === 'login') {
 } else {
 
 
-        frontend\assets\AppAsset::register($this);
+    frontend\assets\AppAsset::register($this);
 
 
     //dmstr\web\AdminLteAsset::register($this);
@@ -51,7 +51,8 @@ if (Yii::$app->controller->action->id === 'login') {
                 <div class="container-self" style="padding-right: 15px;padding-left: 15px;">
 
 
-                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse" style="/*margin-left: -17px;*/">
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse"
+                         style="/*margin-left: -17px;*/">
                         <?php
                         /*if(Yii::$app->user->isGuest) {
                             $menuItemsCenter = [
@@ -87,48 +88,26 @@ if (Yii::$app->controller->action->id === 'login') {
                                     <input type="text" class="form-control" id="navbar-search-input" placeholder="搜索">
                                 </div>
                             </form>-->
-                            <?php if(Yii::$app->user->isGuest) {
-                        /*if(Yii::$app->user->isGuest) {
-                            $menuItemsCenter = [
-                                ['label' => '登录', 'url' => ['/site/login']],
-                                ['label' => '注册', 'url' => ['/site/registe']],
+                            <?php if (Yii::$app->user->isGuest) {
 
-                            ];
-                        }else{*/
+                                echo \yii\bootstrap\Nav::widget([
+                                    'options' => ['class' => 'nav navbar-nav'],
+                                    'encodeLabels' => false,
+                                    'items' => [
 
-                        //$menu = new CategoryWidget(['precate_name'=>'document']);
-                        //$menuItemsCenter = $menu->getCate();  //获取树状栏目
-                        //$menuItemsCenter = \mdm\admin\components\MenuHelper::getAssignedMenu(Yii::$app->user->id,$menuItemsCenter);
-                        //var_dump($menuItemsCenter);die();
-                        echo \yii\bootstrap\Nav::widget([
-                            'options' => ['class' => 'nav navbar-nav'],
-                            'encodeLabels' => false,
-                            'items' => [
+                                        ['label' => '登录', 'url' => Url::toRoute('user/security/login'), 'linkOptions' => ['target' => "_blank"]],
+                                        ['label' => '旧版网站', 'url' => 'http://10.9.10.201:8082/', 'options' => ['target' => "_blank"]],
+                                    ],
+                                ]);
 
-                                ['label' => '登录', 'url' =>  Url::toRoute('user/security/login'),'options'=>['target'=>"_blank"] ],
-                                ['label' => '旧版网站', 'url' => 'http://10.9.10.201:8082/','options'=>['target'=>"_blank"]],
-                            ],
-                        ]);
-
-                        ?>
-
-
-                                <!-- <li class="">
-                                     <a href="/user/login" >
-                                         登录
-                                     </a>
-                                 </li>
-                                 <li class="dropdown user user-menu">
-                                     <a href="/user/register" >
-                                         注册
-                                     </a>
-                                 </li>-->
-                            <?php }else{
+                                ?>
+                            <?php } else {
 
                                 ?>
                                 <li class="dropdown user user-menu">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                        <img src="<?= Yii::$app->user->identity->profile->gravatar_email ?>" class="user-image" alt="User Image"/>
+                                        <img src="<?= Yii::$app->user->identity->profile->gravatar_email ?>"
+                                             class="user-image" alt="User Image"/>
                                         <span class="hidden-xs"><?= Yii::$app->user->identity->username ?></span>
                                     </a>
                                     <ul class="dropdown-menu">
@@ -136,7 +115,7 @@ if (Yii::$app->controller->action->id === 'login') {
                                         <!-- User image -->
 
 
-                                        <li >
+                                        <li>
                                             <div class="box box-widget ">
                                                 <!-- Add the bg color to the header using any of the bg-* classes -->
 
@@ -147,7 +126,7 @@ if (Yii::$app->controller->action->id === 'login') {
                                                         <li><?= Html::a(
                                                                 '退出',
                                                                 ['/site/logout'],
-                                                                ['data-method' => 'post', ]
+                                                                ['data-method' => 'post',]
                                                             ) ?></li>
                                                     </ul>
                                                 </div>
@@ -171,8 +150,10 @@ if (Yii::$app->controller->action->id === 'login') {
             <div id="">
                 <div class="container">
                     <div class="row">
-                        <a class="col-md-7 normal" href="<?= Yii::$app->homeUrl ?>" style=" padding: 25px 0;display: inline-block;">
-                            <img src="<?= Url::to('@web/images/top.png')?>" style="width: 100%;float: left;padding: 0 20px 0 40px;"/>
+                        <a class="col-md-7 normal" href="<?= Yii::$app->homeUrl ?>"
+                           style=" padding: 25px 0;display: inline-block;">
+                            <img src="<?= Url::to('@web/images/top.png') ?>"
+                                 style="width: 100%;float: left;padding: 0 20px 0 40px;"/>
                         </a>
                         <div class="col-md-3 pull-right normal">
                             <div class="row" style="margin-top: 1em;">
@@ -184,13 +165,14 @@ if (Yii::$app->controller->action->id === 'login') {
                             </div>
                             <div class="row" style="margin-top: 20px;">
                                 <div class="col-md-12">
-                                <div class="input-group">
-                                    <input class="form-control" placeholder="搜索">
+                                    <div class="input-group">
+                                        <input class="form-control" placeholder="搜索">
 
-                                    <div class="input-group-btn">
-                                        <button type="button" class="btn "><i class="fa fa-search" style="color: #fff;"></i></button>
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn "><i class="fa fa-search"
+                                                                                  style="color: #fff;"></i></button>
+                                        </div>
                                     </div>
-                                </div>
                                 </div>
                             </div>
 

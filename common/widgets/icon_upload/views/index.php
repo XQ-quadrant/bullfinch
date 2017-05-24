@@ -157,7 +157,7 @@ use yii\helpers\Html;
 
         <input type="button" id="btnZoomIn" class="Btnsty_peyton" value="+"  >
         <input type="button" id="btnZoomOut" class="Btnsty_peyton" value="-" >
-        <input type="button" id="btnCrop"  class="Btnsty_peyton" value="裁切">
+        <input type="button" id="btnCrop"  class="Btnsty_peyton" value="裁切&保存图片">
 
     </div>
     <div class="cropped"></div>

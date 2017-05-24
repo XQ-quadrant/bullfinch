@@ -54,10 +54,15 @@ class IdeaAsset extends BaseAdminLteAsset
 
      */
     public $css = [
+        /*'plugins/rs-plugin/css/extralayers.css',
+        'plugins/rs-plugin/css/settings.css',
+        */
+        'plugins/magnific-popup/magnific-popup.css',
         'css/animations.css',
         'fonts/font-awesome/css/font-awesome.css',
         'fonts/fontello/css/fontello.css',
         'css/style.css',
+        'plugins/owl-carousel/owl.carousel.css',
        // 'css/nav.css',
         'css/custom.css',
     ];
@@ -124,7 +129,7 @@ class IdeaAsset extends BaseAdminLteAsset
     ];
 
     //public $skin = '_all-skins';
-    public $skin = 'blue';
+    public $skin = 'red';
 
     /**
      * @inheritdoc

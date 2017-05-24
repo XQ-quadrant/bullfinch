@@ -44,7 +44,7 @@ class Document extends \yii\db\ActiveRecord
             [['breviary', 'content', 'pic'], 'string'],
             [['cate', 'status', 'level', 'create_by'], 'integer'],
             [['create_at'], 'safe'],
-            [['title', 'view'], 'string', 'max' => 250],
+            [['title', 'view','breviary'], 'string', 'max' => 250],
             [['author'], 'string', 'max' => 100],
             [['level'], 'default', 'value'=>10],
         ];

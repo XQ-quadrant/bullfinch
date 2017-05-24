@@ -32,9 +32,10 @@ $list = [
     ]) ?>
 
 
-    <?= $form->field($model, 'tag')->widget('common\widgets\tags\Tags')->label('职称') ?>
+    <?= $form->field($model, 'tag')->widget('common\widgets\tags\Tags')->label('职务') ?>
 
 
+    <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
     <?= $form->field($model, 'location')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'tel')->textInput(['maxlength' => true]) ?>

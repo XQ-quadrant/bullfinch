@@ -301,7 +301,7 @@
 .skin-pblue-light .wrapper,
 .skin-pblue-light .main-sidebar,
 .skin-pblue-light .left-side {
-  background-color: #f0f0f0;
+  background-color: rgba(203, 210, 222, 0.55);
 }
 .skin-pblue-light .report-title a{
   color: #06517c;
@@ -325,7 +325,9 @@
 }
 .skin-pblue-light .sidebar-menu > li > a {
   border-left: 3px solid transparent;
-  font-weight: 600;
+  font-weight: 500;
+  letter-spacing: .7px;
+  font-size: 15px;
 }
 .skin-pblue-light .sidebar-menu > li:hover > a,
 .skin-pblue-light .sidebar-menu > li.active > a {
@@ -342,7 +344,7 @@
   background: #f4f4f5;
 }
 .skin-pblue-light .sidebar a {
-  color: #444444;
+  color: #32334a;
 }
 .skin-pblue-light .sidebar a:hover {
   text-decoration: none;

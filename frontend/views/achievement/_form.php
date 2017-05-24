@@ -16,12 +16,12 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'title')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'periodical')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'year_id')->textInput(['maxlength' => true]) ?>
 
 
-    <?= $form->field($model, 'serial_number')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'periodical')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'serial_number')->textInput(['maxlength' => true]) ?>
 
 
     <?= $form->field($model, 'publish_at' )

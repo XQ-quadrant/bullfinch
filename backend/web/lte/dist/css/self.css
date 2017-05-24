@@ -300,6 +300,42 @@ overflow: hidden;
     padding-right: 0px;
     padding-left: 0px;
 }
+/********** staff begin***********/
+.assistant-info h4 {
+    color: #0959a6;
+    text-align: center;
+    font-size: 17px;
+    letter-spacing: 2px;
+    padding-bottom: 12px;
+}
+.assistant-info h6 {
+    color: #566479;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding-bottom: 12px;
+}
+.assistant-block{
+    padding: 0px 40px;
+}
+.assistant-block img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 147px;
+    display: block;
+    margin-top: 24px;
+}
+.staff-icon {
+    /* padding-top: 17px; */
+    margin-left: auto;
+    margin-right: auto;
+}
+.staff-info, .staff-info p {
+    font-size: 15px;
+    letter-spacing: .4px;
+    text-align: center;
+}
+/********** staff end***********/
 @media (min-width: 1200px){
     .container {
 

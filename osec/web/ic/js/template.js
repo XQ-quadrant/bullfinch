@@ -969,7 +969,7 @@
 		// Parallax section
 		//-----------------------------------------------
 		if (($(".parallax").length>0)  && !Modernizr.touch ){
-			$(".parallax").parallax("50%", 0.2, false);
+			$(".parallax").parallax("50%", 0.1, false);
 		};
 
 		// Remove Button

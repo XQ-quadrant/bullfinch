@@ -286,7 +286,7 @@ tbody {
 	border-bottom: none;
 }
 .header {
-	padding: 20px 0;
+	padding: 6px 0;
 	border-bottom: 1px solid #eaeaea;
 	background-color: #fff;
 }
@@ -311,7 +311,7 @@ tbody {
 	z-index: 2;
 }
 .page-top {
-	padding: 40px 0;
+	padding: 0 0 30px;
 }
 .main-container {
 	padding: 40px 0;
@@ -3223,7 +3223,7 @@ a.overlay.small i {
 /* first level menu */
 .navbar.navbar-default {
 	border-radius: 0;
-	margin: 12px 0 5px;
+	margin: 17px 0 5px;
 	background-color: #fafafa;
 	border-color: #f1f1f1;
 }
@@ -3235,7 +3235,7 @@ a.overlay.small i {
 .navbar-default .navbar-nav > li > a {
 	color: #666666;
 	text-transform: uppercase;
-	font-size: 14px;
+	font-size: 18px;
 	font-weight: 700;
 	padding: 12px 20px 12px 19px;
 	z-index: 102;
@@ -3546,13 +3546,17 @@ a.overlay.small i {
 	.main-navigation .navbar-nav > li {
 		margin: 0 0 0 15px;
 	}
+
 	.main-navigation .navbar-nav > li:first-child {
 		margin: 0;
 	}
+
 	.col-md-3 + .col-md-9 .mega-menu .dropdown-menu {
 		left: -293px;
 		width: 1140px;
 	}
+
+
 }
 
 /* Small devices (tablets, phones less than 767px) */

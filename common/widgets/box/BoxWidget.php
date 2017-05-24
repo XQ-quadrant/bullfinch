@@ -24,7 +24,7 @@ class BoxWidget extends Widget
     public $type;
     public $title;
     public $url;
-    public $sort; //顺序
+    public $sort = []; //顺序
 
     /**
      * 初始化
@@ -42,7 +42,7 @@ class BoxWidget extends Widget
             $this->activeRecord = $this->model
                 ->find()
                 ->where(['status'=>Document::STATUS_AOLLOW ,'cate'=>$this->cate])
-                ->orderBy(['level' => SORT_DESC,'create_at'=>SORT_DESC])
+                ->orderBy(array_merge($this->sort,['level' => SORT_DESC,'create_at'=>SORT_DESC]))
                 ->limit($this->liNum)
                 ->all();
 
@@ -54,7 +54,7 @@ class BoxWidget extends Widget
             $this->activeRecord = $this->model
                 ->find()
                 ->where($this->where)
-                ->orderBy(['level' => SORT_DESC]+$this->sort)->limit($this->liNum)->all();
+                ->orderBy(array_merge($this->sort,['level' => SORT_DESC]))->limit($this->liNum)->all();
 
         }
         //$room =

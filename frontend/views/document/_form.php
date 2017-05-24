@@ -36,7 +36,7 @@ $label = ['class'=>"col-sm-2 text-c control-label form-label"];
 <?= $form->field($model, 'cate')->hiddenInput(['value'=>$cate['id']])->label(false) ?>
 
 
-    <?= $form->field($model, 'breviary',['template' => $template])->textarea(['rows' => 3,'class'=>'form-control md-input '])->label(null,$label) ?>
+    <?= $form->field($model, 'breviary',['template' => $template])->textarea(['maxlength' => true,'rows' => 3,'class'=>'form-control md-input '])->label(null,$label) ?>
 
     <?= $form->field($model, 'content',['template' => '{label}<div class="col-sm-8">{input}</div>{error}{hint}'])
         ->label(null,$label)->widget(Ueditor::className(),['class'=>'col-md-8 ','id'=>'content','name'=>'content', ])  ?>
@@ -75,7 +75,7 @@ $label = ['class'=>"col-sm-2 text-c control-label form-label"];
      </div>-->
 
 </div>
-    <?= $form->field($model, 'create_by',['template' => $template])->textInput()->label(null,$label) ?>
+
 
     <div class="form-group ">
         <div class="col-sm-2"></div>

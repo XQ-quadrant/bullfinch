@@ -9,7 +9,7 @@ use yii\helpers\Url;
 
 //use Yii;
 ?>
-<div class="box <?= $css['warper'] ?>">
+<div class="box list-pic <?= $css['warper'] ?>">
     <a href="<?= $url ?>" class="uppercase">
         <div class="box-header <?= $css['header'] ?>">
             <i class="<?= $css['icon'] ?>"></i>
@@ -29,10 +29,10 @@ use yii\helpers\Url;
             <div class="attachment-block " style="min-height: 80px">
                 <div style="overflow: hidden;height: 68px;display: inline">
                     <img class="attachment-img" src="<?= Url::to('@web' . $m->pic) ?>" alt=<?= $m->title ?>
-                    style=" max-height: 68px;max-width: 95px;">
+                    style="max-height:68px;max-width:95px;">
                 </div>
                 <div class="attachment-pushed">
-                    <h4 class="attachment-heading listpic-text" style="font-size: 15px; height: 22px;white-space: nowrap;
+                    <h4 class="attachment-heading listpic-text" style="font-size: 17px; height: 22px;white-space: nowrap;
 text-overflow: ellipsis;">
                         <a href="<?= Url::to(['/' . $model->tableName() . '/view/', 'id' => $m->id]) ?>"><?= $m->title ?></a>
                     </h4>
