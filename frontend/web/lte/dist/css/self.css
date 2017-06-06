@@ -6,6 +6,7 @@
     font-size: 27px;
     border-bottom: 1px solid #dadada;
     margin-bottom: 40px;
+    margin-top: 0;
 }
 .heading .divider-center {
     margin: 10px auto -2px;
@@ -39,7 +40,7 @@
     margin-bottom: 0px;
 }
 .breadcrumb{
-    border-bottom: 1px solid #e6e6e6;
+    /*border-bottom: 1px solid #e6e6e6;*/
     /* border-top: 1px solid #e6e6e6; */
     width: 71%;
 }
@@ -210,6 +211,36 @@
     padding: 31px ;
 }
     /*************** office end ***********/
+.student-list .dl-horizontal dd {
+    margin-left: 100px;
+    margin-bottom: 2px;
+}
+
+.student-list .dl-horizontal dt {
+        float: left;
+        width: 80px;
+        overflow: hidden;
+        clear: left;
+        text-align: left;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    padding-left: 15px;
+    font-weight: normal;
+    color:  rgb(63, 205, 247);
+    margin-bottom: 2px;
+    }
+.student-list .attachment-block .attachment-img {
+    max-width: 119px;
+}
+.student-list .attachment-block p{
+    padding-left: 135px;
+    color: rgb(124, 148, 160);
+}
+.student-list  .grade{
+    font-size: 14px;
+    color: rgb(124, 148, 160);
+    padding-left: 31px;
+}
 /************box******************/
 .box-item{
     width: 88%;
@@ -341,7 +372,7 @@ overflow: hidden;
     border-top: 40px solid rgb(255, 255, 255);
 }
 .bicon-laba{
-    background-image: url('/images/icon/megaphone.png');
+    background-image: url('/images/icon/volume_medium.png');
 }
 .bicon-news{
     background-image: url('/images/icon/calendar.png');
@@ -472,7 +503,7 @@ overflow: hidden;
         width: 1200px;
     }
     .container-self{
-        width: 1290px;
+        width: 1304px;
     }
     .container-single{
         width: 1117px;
@@ -794,16 +825,21 @@ overflow: hidden;
     font-size: 14px;
     color: #888888;
 }
-
+.staff p{
+    font-size: 14px;
+    color: #888888;
+}
 .staff small{
     padding: 0 15px;
 }
 .staff-info,.staff-info p{
     font-size: 15px;
     letter-spacing: .4px;
-    text-align: center;
+    /*text-align: center;*/
 }
-
+/*.box-body .staff-info{
+    padding: 33px;
+}*/
 .staff-view{
     padding: 0 20px;
 }
@@ -811,5 +847,12 @@ overflow: hidden;
     padding-top: 17px;
     margin-left: auto;
     margin-right: auto;
+}
+.gbkchart .btn-group-vertical{
+    padding: 5px;
+}
+.staff-view .nav-tabs-custom {
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.69);
 }
 /*********** particuler - end ****************/

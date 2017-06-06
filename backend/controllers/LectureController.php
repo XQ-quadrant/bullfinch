@@ -2,6 +2,7 @@
 
 namespace backend\controllers;
 
+use backend\models\ContentIndex;
 use Yii;
 use backend\models\Lecture;
 use backend\models\search\LectureSearch;
@@ -36,6 +37,7 @@ class LectureController extends Controller
     public function actionIndex()
     {
         $searchModel = new LectureSearch();
+        //
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -61,14 +63,18 @@ class LectureController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate($cate)
+    public function actionCreate()
     {
         $model = new Lecture();
-        $model->category = $cate;  //设置栏目 //Yii::$app->request->get('cate');
+        //var_dump($model->contentIndex);die();
+        //$model->category = $cate;  //设置栏目 //Yii::$app->request->get('cate');
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
+
+            //var_dump($model->contentIndex->model);
+            //var_dump($model->contentIndex->errors);die();
             return $this->render('create', [
                 'model' => $model,
             ]);
@@ -84,6 +90,11 @@ class LectureController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $t=ContentIndex::findOne(['body_id'=>16]);
+        //var_dump($model->contentIndex);
+        echo '<br>';
+        echo '<br>';
+        //var_dump($model);die();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);

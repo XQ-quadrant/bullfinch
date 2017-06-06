@@ -26,7 +26,7 @@ $this->params['search'] = $this->render('_search', ['model' => $searchModel]);
 
                     <div class="box-tools pull-right">
                         <div class="has-feedback">
-                            <input type="text" class="form-control input-sm" placeholder="Search Mail">
+                            <input type="text" class="form-control input-sm" placeholder="搜索">
                             <span class="glyphicon glyphicon-search form-control-feedback"></span>
                         </div>
                     </div>
@@ -70,7 +70,7 @@ $this->params['search'] = $this->render('_search', ['model' => $searchModel]);
                                 "attribute"=>'title',
                                 "format" => "raw",
                                 "value" => function ($model) {
-                                    return '<a href="/document/'.$model->id.'">'.$model->title.'</a>';
+                                    return '<a href="/document/view?id='.$model->id.'" target="_blank">'.$model->title.'</a>';
                                 }],
                             //'breviary:ntext',
                             //'content:ntext',

@@ -28,7 +28,8 @@ $cate = Cate::findOne(['id'=>Yii::$app->request->get('cate')])? Cate::findOne(['
             //'format' => 'dd-M-yyyy HH:ii A'
         ]
     ]) ?>
-    <?= $form->field($model, 'level')->input(['type'=>'number']) ?>
+    <?= $form->field($model->contentIndex, 'category')->textInput(['type'=>'number']) ?>
+    <?= $form->field($model->contentIndex, 'level')->textInput(['type'=>'number']) ?>
 
     <?= $form->field($model, 'address')->textInput(['maxlength' => true]) ?>
 
@@ -46,7 +47,7 @@ $cate = Cate::findOne(['id'=>Yii::$app->request->get('cate')])? Cate::findOne(['
     <?= $form->field($model, 'icon')->widget('common\widgets\file_upload\FileUpload',[
         'config'=>[]
     ]) ?>
-    <?= $form->field($model, 'status')->dropDownList([1=>'发布',2=>'隐藏']) ?>
+    <?= $form->field($model->contentIndex, 'status')->dropDownList([1=>'发布',2=>'隐藏']) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

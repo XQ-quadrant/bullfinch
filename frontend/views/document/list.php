@@ -60,6 +60,8 @@ $data = $dataProvider->getModels();
                 <div class="box-footer text-center">
                     <?= LinkPager::widget([
                         'pagination' => $pages,
+                        'firstPageLabel'=>'首页',
+                        'lastPageLabel'=>'末页',
                     ]);?>
                 </div>
                 <!-- /.box-body -->

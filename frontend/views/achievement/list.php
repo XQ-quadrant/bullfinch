@@ -18,6 +18,8 @@ $data = $dataProvider->getModels();
 <div class="container" style="padding: 15px 45px;">
 
 <div class="row" >
+    <!--<button type="button" class="btn btn-default btn-block col-md-6">.btn-block</button>
+    <button type="button" class="btn btn-default btn-block col-md-6">.btn-block</button>-->
         <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
                 <li class="active tab-title"><a href="#tab_1" data-toggle="tab" aria-expanded="true">论文</a></li>
@@ -81,6 +83,9 @@ $data = $dataProvider->getModels();
                         <div class="box-footer clearfix">
                             <?= LinkPager::widget([
                                 'pagination' => $pages,
+                                'firstPageLabel'=>'首页',
+                                'lastPageLabel'=>'末页',
+                                //'linkOptions' =>['frist']
                             ]);?>
                         </div>
 

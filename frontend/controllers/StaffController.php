@@ -110,8 +110,6 @@ class StaffController extends Controller
             if ($user->create()) {  //创建用户
                 $auth = \Yii::$app->authManager;
 
-
-
                 if($model->type == '全职教师' || $model->type == '客座教授' || $model->type == '兼职教授' ){
 
 
@@ -126,7 +124,6 @@ class StaffController extends Controller
                     $auth->assign($role, $user->id);
 
                 }
-
 
                 Yii::$app->getSession()->setFlash('success', Yii::t('user', 'User has been created'));
 
@@ -148,6 +145,7 @@ class StaffController extends Controller
     }
     public function actionAuth()
     {
+        die('喵');
         $model = new User();
 
         $d = $model->find()->all();
@@ -196,6 +194,7 @@ class StaffController extends Controller
     }
     public function actionDate()
     {
+        die('喵');
         $model = new Staff();
 
         $d = $model->find()->where('id <= 44')->all();
@@ -253,7 +252,27 @@ class StaffController extends Controller
             ]);
         }*/
     }
+public function actionChart(){
+    die('喵');
+    $staffs =new Staff();
+    $staffs = $staffs->find()->all();
+    //$staffs = Staff::findAll(['status'=>23]);
+    //var_dump($staffs);
+    foreach ($staffs as $staff){
 
+        $staff->name = trim($staff->name);
+        $staff->gbkchart = $staff->getFirstCharter($staff->name);
+        echo $staff->id;
+        if($staff->save()){
+
+            echo 'success';
+        }else{
+            echo 'fail';
+        }
+        echo '<br>';
+    }
+    return true;
+}
     /**
      * Updates an existing Staff model.
      * If update is successful, the browser will be redirected to the 'view' page.

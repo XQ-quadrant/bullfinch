@@ -36,7 +36,7 @@ class Lecture extends IndexAC
         return [
             [['time', 'address', 'subject'], 'required'],
             [['time'], 'safe'],
-            [['category','level','status'], 'integer'], //栏目
+            //[['level','status'], 'integer'], //栏目
             [['content', 'lecturer_info', 'hint', 'poster', 'icon'], 'string'],
             [['address', 'subject', 'speaker'], 'string', 'max' => 255],
         ];

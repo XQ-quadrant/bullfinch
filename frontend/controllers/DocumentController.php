@@ -286,21 +286,24 @@ class DocumentController extends Controller
     }
 
     public function actionTool(){
-
-        $temp_data = new Connection([
+die();
+        /*$temp_data = new Connection([
             'dsn' => 'mysql:host=localhost;dbname=temp_date',
             'username' => 'gb',
             'password' => 'gb',
             'charset' => 'utf8',
-  ]);
-        $temp_data->open();
-        $news = $temp_data->createCommand("SELECT * FROM xuezi")->queryAll();
+  ]);*/
+        //$temp_data->open();
+        $db = Yii::$app->db;
+        $news = $db->createCommand("SELECT * FROM work1")->queryAll();
+
         foreach ($news as $key=>$v){
             $new = new Document();
             $new->title = $v['title'];
             $new->content = $v['content'];
-            $new->create_at = $v['time'];
-            $new->cate = 96;
+            $new->author = $v['author'];
+            $new->create_at = $v['p_time'];
+            $new->cate = 94;
 
             //die();
             /*echo $new->create_at ;
@@ -312,14 +315,24 @@ class DocumentController extends Controller
                 echo $new->cate.'<br>';
             }else{
                 echo "FAIL";
-                echo $new->title ;
+                echo $new->title.'<br>' ;
             }
             $new->refresh();
 
         }
 
-        $temp_data->close();
+        //$temp_data->close();
 
+
+    }
+    public function actionClear(){
+        die();
+        $d = Document::findAll(['cate'=>94]);
+        foreach ($d as $v){
+            $v->delete();
+            echo $v->title;
+            echo '<br>';
+        }
 
     }
 }

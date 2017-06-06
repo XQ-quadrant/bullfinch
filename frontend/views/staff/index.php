@@ -38,6 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'created_at',
             // 'updated_at',
             // 'status',
+             'gbkchart',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

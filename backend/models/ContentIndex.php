@@ -8,7 +8,7 @@ use Yii;
  * This is the model class for table "content_index".
  *
  * @property integer $id
- * @property integer $model
+ * @property string $model
  * @property integer $body_id
  * @property integer $status
  * @property integer $views
@@ -34,8 +34,9 @@ class ContentIndex extends \yii\db\ActiveRecord
     {
         return [
             [['model', 'body_id'], 'required'],
-            [[ 'body_id', 'status', 'views', 'level', 'created_by', 'category'], 'integer'],
+            [['body_id', 'status', 'views', 'level', 'created_by', 'category'], 'integer'],
             [['created_at'], 'safe'],
+            [['model'], 'string', 'max' => 255],
         ];
     }
 
@@ -45,15 +46,15 @@ class ContentIndex extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => '唯一编号',
-            'model' => '模型',
-            'body_id' => '主体id',
-            'status' => '状态',
-            'views' => '浏览量',
-            'level' => '等级',
-            'created_at' => '创建时间',
-            'created_by' => '创建者',
-            'category' => '栏目',
+            'id' => Yii::t('app', '唯一编号'),
+            'model' => Yii::t('app', '模型'),
+            'body_id' => Yii::t('app', '主体id'),
+            'status' => Yii::t('app', '状态'),
+            'views' => Yii::t('app', '浏览量'),
+            'level' => Yii::t('app', '等级'),
+            'created_at' => Yii::t('app', '创建时间'),
+            'created_by' => Yii::t('app', '创建者'),
+            'category' => Yii::t('app', '栏目'),
         ];
     }
 

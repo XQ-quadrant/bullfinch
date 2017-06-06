@@ -3,6 +3,8 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\LinkPager;
+use yii\helpers\Url;
+
 //use Collator;
 
 /* @var $this yii\web\View */
@@ -62,7 +64,7 @@ $dataProvider->setPagination([
     //'pageSizeLimit'=>$dataProvider->getTotalCount()
 ]);
 $count = $dataProvider->count;
-$pages = new \yii\data\Pagination([ 'totalCount' =>$dataProvider->getTotalCount(), 'pageSize' => 20]);
+$pages = new \yii\data\Pagination(['totalCount' => $dataProvider->getTotalCount(), 'pageSize' => 20]);
 /*$sort = new \yii\data\Sort([
             'attributes' => [
                 //'title',
@@ -84,80 +86,201 @@ $models = $dataProvider->getModels();
         <h2 class="heading"><?= $this->title ?> <span class="divider-center"></span></h2>
     </div>
     <div class="row leader-block" style="padding: 20px">
-        <div class="col-md-3">
+        <div class="col-md-3 ">
             <div class="box box-solid">
-                <div class="box-header with-border">
-                    <h3 class="box-title"></h3>
-                    <div class="box-tools">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
-                                class="fa fa-minus"></i>
-                        </button>
-                    </div>
-                </div>
                 <div class="box-body no-padding">
                     <ul class="nav nav-pills nav-stacked">
                         <li class="active">
-                            <a href="#"><i class="fa fa-filter"></i> 总 共 <span
-                                    class="label label-warning pull-right"><?= $dataProvider->getTotalCount() ?></span></a>
+                            <a href="#" class=""><i class="fa fa-filter"></i> 总 共
+                                <span
+                                    class="label label-warning margin"><?= $dataProvider->getTotalCount() ?></span></a>
                         </li>
-                        <li class=""><a href="#"><i class="fa fa-inbox"></i> 全 职
+                        <li class=""><a class=""
+                                        href="<?= \yii\helpers\Url::toRoute(['/particular/staff', 'sort' => 'name', 'StaffSearch' => ['type' => '全职教师']]) ?>"><i
+                                    class="fa fa-inbox"></i> 全 职
                                 <!--<span class="label label-primary pull-right">12</span>--></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-envelope-o"></i> 兼 职</a></li>
-                        <li><a href="#"><i class="fa fa-file-text-o"></i> 客 座</a></li>
-
-
+                        <li><a class="" href="#"><i class="fa fa-envelope-o"></i> 兼 职</a></li>
+                        <li><a class="" href="#"><i class="fa fa-file-text-o"></i> 客 座</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="col-md-9">
-
-            <div class="row">
-                <div class="col-md-5 col-sm-3 ">
-                    <ul class="menu">
-                        <?php for ($i = 0; $i < $count; $i += 2) { ?>
-                            <li class="staff">
-                                <a href="<?= \yii\helpers\Url::to(['/staff/view', 'id' => $models[$i]->id]) ?>">
-                                    <!--<div class="pull-left">
-                                        <img src="/adminlte/dist/img/user3-128x128.jpg" class="img-circle user-icon" alt="User Image">
-                                    </div>-->
-                                    <h4>
-                                        <?= $models[$i]->name ?>
-                                        <small><?= $models[$i]->title ?></small>
-                                    </h4>
-                                    <p><?= $models[$i]->public_email ?></p>
-                                </a>
-                            </li>
-                            <?php
-                        } ?>
-                    </ul>
+        <div class="col-md-8 ">
+            <div class="box box-solid">
+                <div class="box-header">
+                    <h4 class="" style="padding: 0 5px;    color: #adadad;">按拼音查找</h4>
                 </div>
-                <div class="col-md-5 col-sm-3 ">
-                    <ul class="menu">
-                        <?php for ($i = 1; $i < $count; $i += 2) {
-                            ?>
-                            <li class="staff">
-                                <a href="<?= \yii\helpers\Url::to(['/staff/view', 'id' => $models[$i]->id]) ?>">
-                                    <!--<div class="pull-left">
-                                        <img src="/adminlte/dist/img/user3-128x128.jpg" class="img-circle user-icon" alt="User Image">
-                                    </div>-->
-                                    <h4>
-                                        <?= $models[$i]->name ?>
-                                        <small><?= $models[$i]->title ?></small>
-                                    </h4>
-                                    <p><?= $models[$i]->public_email ?></p>
-                                </a>
-                            </li>
-                            <?php
-                        } ?>
+                <div class="box-body table-responsive pad gbkchart ">
 
-                    </ul>
+                    <div class="btn-group ">
+                        <?php
+                        $staffType = Yii::$app->request->get('StaffSearch')['type'];
+                        $activeChart = isset(Yii::$app->request->get('StaffSearch')['gbkchart']) ? Yii::$app->request->get('StaffSearch')['gbkchart'] : null;
+                        //var_dump($activeChart);die();
+                        $status = 'btn-default';
+                        for ($i = 65; $i < 86; $i++) {
+                            $char = strtoupper(chr($i));
+                            if ($activeChart == $char) {
+                                $status = 'btn-info';
+                            }
+                            ?>
+                            <a class="btn <?= $status ?>"
+                               href=<?= \yii\helpers\Url::toRoute(['/particular/staff', 'sort' => 'name', 'StaffSearch' => ['type' => $staffType, 'gbkchart' => $char]]) ?>>
+                                <?= $char ?>
+                            </a>
+                            <?php
+                            $status = 'btn-default';
+                        }
+                        ?>
+                    </div>
+
+
+                    <div class="btn-group" style="margin-top: 9px">
+                        <?php
+                        //$staffType = Yii::$app->request->get('StaffSearch')['type'];
+                        for ($i = 86; $i < 91; $i++) {
+                            $char = strtoupper(chr($i));
+                            if ($activeChart == $char) {
+                                $status = 'btn-info';
+                            }
+                            ?>
+                            <a class="btn <?= $status ?>"
+                               href=<?= \yii\helpers\Url::toRoute(['/particular/staff', 'sort' => 'name', 'StaffSearch' => ['type' => $staffType, 'gbkchart' => $char]]) ?>>
+                                <?= $char ?>
+                            </a>
+                            <?php
+                            $status = 'btn-default';
+                        }
+                        ?>
+                    </div>
+
                 </div>
             </div>
-            <?= LinkPager::widget([
-                'pagination' => $pages,
-            ]); ?>
+            <div class="box box-solid">
+                <div class="box-body ">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-3 ">
+                            <ul class="menu">
+                                <?php for ($i = 0; $i < $count; $i += 2) { ?>
+                                    <li class="staff">
+                                        <a href="<?= \yii\helpers\Url::to(['/staff/view', 'id' => $models[$i]->id]) ?>">
+                                            <!--<div class="pull-left">
+                                                <img src="/adminlte/dist/img/user3-128x128.jpg" class="img-circle user-icon" alt="User Image">
+                                            </div>-->
+                                            <h4>
+                                                <?= $models[$i]->name ?>
+                                                <small><?= $models[$i]->title ?></small>
+                                            </h4>
+                                        </a>
+                                        <p><?= $models[$i]->public_email ?></p>
+                                    </li>
+                                    <?php
+                                } ?>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-sm-3 ">
+                            <ul class="menu">
+                                <?php for ($i = 1; $i < $count; $i += 2) {
+                                    ?>
+                                    <li class="staff">
+                                        <a href="<?= \yii\helpers\Url::to(['/staff/view', 'id' => $models[$i]->id]) ?>">
+                                            <!--<div class="pull-left">
+                                                <img src="/adminlte/dist/img/user3-128x128.jpg" class="img-circle user-icon" alt="User Image">
+                                            </div>-->
+                                            <h4>
+                                                <?= $models[$i]->name ?>
+                                                <small><?= $models[$i]->title ?></small>
+                                            </h4>
+
+                                        </a>
+                                        <p><?= $models[$i]->public_email ?></p>
+                                    </li>
+                                    <?php
+                                } ?>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="box-footer">
+                        <?= LinkPager::widget([
+                            'pagination' => $pages,
+                        ]); ?>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-2 ">
+            <div class="box box-solid">
+                <div class="box-header">
+                    <h4 class="" style="padding: 0 5px;    color: #adadad;">按拼音查找</h4>
+                </div>
+                <div class="box-body table-responsive pad gbkchart ">
+
+                    <div class="btn-group-vertical ">
+                        <?php
+                        $staffType = Yii::$app->request->get('StaffSearch')['type'];
+                        $activeChart = isset(Yii::$app->request->get('StaffSearch')['gbkchart']) ? Yii::$app->request->get('StaffSearch')['gbkchart'] : null;
+                        //var_dump($activeChart);die();
+                        $status = 'btn-default';
+                        for ($i = 65; $i < 74; $i++) {
+                            $char = strtoupper(chr($i));
+                            if ($activeChart == $char) {
+                                $status = 'btn-info';
+                            }
+                            ?>
+                            <a class="btn <?= $status ?>"
+                               href=<?= \yii\helpers\Url::toRoute(['/particular/staff', 'sort' => 'name', 'StaffSearch' => ['type' => $staffType, 'gbkchart' => $char]]) ?>>
+                                <?= $char ?>
+                            </a>
+                            <?php
+                            $status = 'btn-default';
+                        }
+                        ?>
+                    </div>
+                    <div class="btn-group-vertical ">
+                        <?php
+                        //$staffType = Yii::$app->request->get('StaffSearch')['type'];
+
+                        for ($i = 74; $i < 83; $i++) {
+                            $char = strtoupper(chr($i));
+                            if ($activeChart == $char) {
+                                $status = 'btn-info';
+                            }
+                            ?>
+                            <a class="btn <?= $status ?>"
+                               href=<?= \yii\helpers\Url::toRoute(['/particular/staff', 'sort' => 'name', 'StaffSearch' => ['type' => $staffType, 'gbkchart' => $char]]) ?>>
+                                <?= $char ?>
+                            </a>
+                            <?php
+                            $status = 'btn-default';
+                        }
+                        ?>
+                    </div>
+                    <div class="btn-group-vertical " style="vertical-align:top;">
+                        <?php
+                        //$staffType = Yii::$app->request->get('StaffSearch')['type'];
+                        for ($i = 83; $i < 91; $i++) {
+                            $char = strtoupper(chr($i));
+                            if ($activeChart == $char) {
+                                $status = 'btn-info';
+                            }
+                            ?>
+                            <a class="btn <?= $status ?>"
+                               href=<?= \yii\helpers\Url::toRoute(['/particular/staff', 'sort' => 'name', 'StaffSearch' => ['type' => $staffType, 'gbkchart' => $char]]) ?>>
+                                <?= $char ?>
+                            </a>
+                            <?php
+                            $status = 'btn-default';
+                        }
+                        ?>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
+</div>
+</div>
 </div>

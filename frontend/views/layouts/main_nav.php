@@ -25,9 +25,9 @@ if (Yii::$app->controller->action->id === 'login') {
     frontend\assets\AdminLteAsset::register($this);
 
     $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@app/web/lte/dist');
-    ?>
+    ?><!DOCTYPE html>
     <?php $this->beginPage() ?>
-    <!DOCTYPE html>
+
     <html lang="<?= Yii::$app->language ?>">
     <head>
         <meta name="renderer" content="webkit">
@@ -71,9 +71,8 @@ if (Yii::$app->controller->action->id === 'login') {
                             'encodeLabels' => false,
                             'items' => [
                                 ['label' => '首页', 'url' => '/site/index'],
-                                //['label' => '中国家庭金融中心', 'url' => 'http://chfs.swufe.edu.cn/','options'=>[]],
+                                ['label' => '中国家庭金融中心', 'url' => 'http://chfs.swufe.edu.cn/','options'=>[]],
                                 //['label' => '海外学习交流中心', 'url' => '#'],
-
                             ],
                         ]);
 
@@ -111,14 +110,8 @@ if (Yii::$app->controller->action->id === 'login') {
                                         <span class="hidden-xs"><?= Yii::$app->user->identity->username ?></span>
                                     </a>
                                     <ul class="dropdown-menu">
-
-                                        <!-- User image -->
-
-
                                         <li>
                                             <div class="box box-widget ">
-                                                <!-- Add the bg color to the header using any of the bg-* classes -->
-
                                                 <div class="box-footer no-padding">
                                                     <ul class="nav nav-stacked">
                                                         <li><a href="/dashboard/">控制台 </a></li>
@@ -150,21 +143,19 @@ if (Yii::$app->controller->action->id === 'login') {
             <div id="">
                 <div class="container">
                     <div class="row">
-                        <a class="col-md-7 normal" href="<?= Yii::$app->homeUrl ?>"
+                        <a class="col-sm-7 normal" href="<?= Yii::$app->homeUrl ?>"
                            style=" padding: 25px 0;display: inline-block;">
-                            <img src="<?= Url::to('@web/images/top.png') ?>"
-                                 style="width: 100%;float: left;padding: 0 20px 0 40px;"/>
+                            <img class="banner-logo" style="width: 100%;" src="<?= Url::to('@web/images/top.png') ?>" />
                         </a>
-                        <div class="col-md-3 pull-right normal">
+                        <div class="col-sm-5  normal">
                             <div class="row" style="margin-top: 1em;">
-
-                                <div class="col-md-8 ">
+                                <div class="col-sm-6 pull-right">
                                     <a href="<?= Yii::t('common', '') ?>" class=" index-top-tip">
                                         <i class="fa fa-exchange"></i> <?= Yii::t('common', '中文') ?></a>
                                 </div>
                             </div>
                             <div class="row" style="margin-top: 20px;">
-                                <div class="col-md-12">
+                                <div class="col-sm-6 pull-right">
                                     <div class="input-group">
                                         <input class="form-control" placeholder="搜索">
 

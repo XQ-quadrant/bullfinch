@@ -21,6 +21,7 @@ class StaffSearch extends Staff
     {
         return [
             [['id', 'status','level'], 'integer'],
+            [['gbkchart'], 'string'],
             [['type', 'name', 'public_email', 'icon', 'title', 'location', 'tel', 'education', 'resume', 'achievement', 'created_at', 'updated_at'], 'safe'],
         ];
     }
@@ -101,6 +102,7 @@ class StaffSearch extends Staff
 
         $query->andFilterWhere(['like', 'type', $this->type])
             ->andFilterWhere(['like', 'name', $this->name])
+            ->andFilterWhere(['like', 'gbkchart', $this->gbkchart])
             ->andFilterWhere(['like', 'public_email', $this->public_email])
             ->andFilterWhere(['like', 'icon', $this->icon])
             ->andFilterWhere(['like', 'title', $this->title])
@@ -130,4 +132,6 @@ class StaffSearch extends Staff
         }
         $dataProvider->setSort($sorts);
     }
+
+
 }

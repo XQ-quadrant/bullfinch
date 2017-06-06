@@ -58,12 +58,20 @@ return [
                         'power' => 'power.php',
                     ],
                 ],
+                'jiaowu' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    //'basePath' => '/messages',
+                    'fileMap' => [
+                        'jiaowu' => 'jiaowu.php',
+                    ],
+                ],
                 'model*' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     //'basePath' => '/messages',
                     'fileMap' => [
                         'model' => 'model.php',
                         'model/pic' => 'pic.php',
+                        'model/jiaowu' => 'jiaowu.php',
                     ],
                 ],
             ],
@@ -103,7 +111,7 @@ return [
                 //'/riem/<controller:\w+>/<action:\w+>' => '/<controller>/<action>',
                 //'/riem/user/<action:(login|logout)>'               => 'user/security/<action>',
                 /************ user rules ******************/
-                /*'riem/user/<controller:\w+>/<action:\w+>'          => 'user/<controller>/<action>',
+                'riem/user/<controller:\w+>/<action:\w+>'          => 'user/<controller>/<action>',
 
                 'riem/user/<id:\d+>'                               => 'user/profile/show',
                 'riem/user/<action:(login|logout)>'                => 'user/security/<action>',
@@ -119,13 +127,13 @@ return [
                 '/riem/admin/<controller:\w+>/<action:\w+>'     => '/admin/<controller>/<action>',
 
 
-                '/<app:\w+>/admin'                                   => '/admin',
+                '/riem/admin'                                   => '/admin',
 
-                '/<app:\w+>/admin/<controller:\w+>'                  => '/admin/<controller>/index',
+                '/riem/admin/<controller:\w+>'                  => '/admin/<controller>/index',
 
 
 
-                '/riem/user/login' => 'user/login',*/
+                '/riem/user/login' => 'user/login',
                 //'/riem/<prefix:\w+>/<controller:\w+>/<action:\w+>'=>'<module>/<controller>/<action>',
             ],
         ],

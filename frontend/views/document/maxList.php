@@ -38,20 +38,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="row container list-index" style="">
         <div class="col-lg-3" >
             <div class="box box-widget">
-
-                <div class="box-header with-border" style="text-align: center">
-                    <h4 class="box-title"><?= $pre_cate_name ?></h4>
-                    <div class="box-tools pull-right">
-
-                    </div>
-                </div>
-
-                <div class="box-body box-profile ">
+                <div class="box-body no-padding">
                     <?=\backend\widgets\catalog\CatalogWidget::widget([
                         'current_cate'=>$current_cate,
                         'css'=>'nav nav-pills nav-stacked'])?>
                 </div>
-
             </div>
         </div>
         <div class="col-lg-9" >
@@ -84,6 +75,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="box-footer text-center">
                     <?= LinkPager::widget([
                         'pagination' => $pages,
+                        'firstPageLabel'=>'首页',
+                        'lastPageLabel'=>'末页',
                     ]);?>
                 </div>
                 <!-- /.box-body -->

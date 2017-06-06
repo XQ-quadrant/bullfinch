@@ -9,8 +9,16 @@ use yii\helpers\Url;
  ?>
 <!-- About Me Box -->
 <ul class="nav nav-pills nav-stacked">
- <?php foreach($ac as $k=>$v){ ?>
-  <li><a href="<?=$v->uri?>">
+ <?php foreach($ac as $k=>$v){
+  if ($v->uri==Yii::$app->request->url){
+   //echo Yii::$app->request->url;
+   //die();
+   $active ='active';
+  }else{
+   $active ='';
+  }
+  ?>
+  <li class="<?=$active?>"><a href="<?=$v->uri?>"><i class="fa fa-graduation-cap"></i>
     <!--<i class="fa fa-angle-right"></i>--><?=$v->name?>
    </a></li>
  <?php } ?>

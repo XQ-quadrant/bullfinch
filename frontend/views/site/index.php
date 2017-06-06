@@ -82,7 +82,6 @@ position: relative;
                 'url' => Url::toRoute(['document/list', 'cate' => 32]),
                 'css' => ['warper' => 'box-widget index-box blue-border', 'title' => 'index-box-title', 'header' => 'with-border index-box-header', 'icon' => 'index-box-icon bicon-laba', 'body' => 'box-profile',]])
             ?>
-
         </div>
     </div>
     <div class="row" style="margin-bottom: 23px">
@@ -101,7 +100,7 @@ position: relative;
             echo common\widgets\box\BoxWidget::widget([
                 'model' => $achieve,
                 'type' => 'achievement-list', 'cate' => 67, 'title' => Yii::t('common', '科研成果'), 'liNum' => 6,
-                'url' => Url::toRoute(['/achievement/list']),
+                'url' => Url::toRoute(['/achievement/list?sort=-id']),
                 'sort' => ['id' => SORT_DESC],
                 'css' => ['warper' => 'box-widget index-box blue-border', 'title' => 'index-box-title', 'header' => 'with-border index-box-header', 'icon' => 'index-box-icon bicon-bookmark', 'body' => 'box-profile',]
                 ]
