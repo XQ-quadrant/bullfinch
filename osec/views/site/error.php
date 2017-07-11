@@ -9,7 +9,7 @@ use yii\helpers\Html;
 
 $this->title = $name;
 ?>
-<section class="content">
+<section class="container">
 
     <div class="error-page">
         <h2 class="headline text-info"><i class="fa fa-warning text-yellow"></i></h2>
@@ -27,17 +27,13 @@ $this->title = $name;
                 Meanwhile, you may <a href='<?= Yii::$app->homeUrl ?>'>return to dashboard</a> or try using the search
                 form.
             </p>
-
-            <form class='search-form'>
-                <div class='input-group'>
-                    <input type="text" name="search" class='form-control' placeholder="Search"/>
-
-                    <div class="input-group-btn">
-                        <button type="submit" name="submit" class="btn btn-primary"><i class="fa fa-search"></i>
-                        </button>
-                    </div>
+            <form role="search">
+                <div class="form-group has-feedback">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <i class="fa fa-search form-control-feedback"></i>
                 </div>
             </form>
+
         </div>
     </div>
 

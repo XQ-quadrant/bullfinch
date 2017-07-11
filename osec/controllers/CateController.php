@@ -112,7 +112,10 @@ class CateController extends Controller
      */
     public function actionCreate($pre_cate = null)
     {
-        $model = new Cate(['pre_cate'=>$pre_cate]);
+        //$config = [];
+        $config = Yii::$app->request->get('config')?:[];
+
+        $model = new Cate(['pre_cate'=>$pre_cate]+$config);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
            /* if($model->type==Cate::TYPE_document){

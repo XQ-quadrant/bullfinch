@@ -65,7 +65,7 @@ class SiteController extends Controller
 
         $link_bottom = Cate::findAll(['status'=>Cate::$STATUS_AOLLOW,'pre_cate'=>46]);
 
-        return $this->render('index',[
+        return $this->render('ydyl',[
             'pic'=>$pic,
             'pic_bottom'=>$pic_bottom,
             'link_bottom'=>$link_bottom

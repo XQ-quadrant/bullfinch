@@ -18,7 +18,7 @@ class AchievementSearch extends Achievement
     public function rules()
     {
         return [
-            [['id'], 'integer'],
+            [['id','cate'], 'integer'],
             [['year_id'], 'string'],
             [['author', 'title', 'periodical', 'year', 'address', 'serial_number', 'ei', 'hint'], 'safe'],
         ];
@@ -62,11 +62,13 @@ class AchievementSearch extends Achievement
         $query->andFilterWhere([
             'id' => $this->id,
             'year' => $this->year,
+            'cate' => $this->cate,
         ]);
 
         $query->andFilterWhere(['like', 'author', $this->author])
             ->andFilterWhere(['like', 'title', $this->title])
-            ->andFilterWhere(['like', 'year-id', $this->year_id])
+            ->andFilterWhere(['like', 'year_id', $this->year_id])
+            //->andFilterWhere(['like', 'cate', $this->cate])
             ->andFilterWhere(['like', 'periodical', $this->periodical])
             ->andFilterWhere(['like', 'address', $this->address])
             ->andFilterWhere(['like', 'serial_number', $this->serial_number])

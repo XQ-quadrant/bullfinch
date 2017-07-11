@@ -20,7 +20,7 @@ $this->blocks['content-header'] = '';
 
 }
 .normal{
-position: relative;
+    position: relative;
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;

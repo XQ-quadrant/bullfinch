@@ -41,10 +41,10 @@ class Document extends \yii\db\ActiveRecord
     {
         return [
             [['title', 'content', 'cate'], 'required'],
-            [['breviary', 'content', 'pic'], 'string'],
+            [['breviary', 'content', 'pic','subhead'], 'string'],
             [['cate', 'status', 'level', 'create_by'], 'integer'],
             [['create_at'], 'safe'],
-            [['title', 'view','breviary'], 'string', 'max' => 250],
+            [['title', 'view','breviary','subhead'], 'string', 'max' => 250],
             [['author'], 'string', 'max' => 100],
             [['level'], 'default', 'value'=>10],
         ];

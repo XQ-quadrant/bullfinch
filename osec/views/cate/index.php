@@ -11,13 +11,14 @@ use yii\helpers\Url;
 $this->title = 'Cates';
 $this->params['breadcrumbs'][] = $this->title;
 /*$this->registerCssFile('@web/adminlte/plugins/jstree/style.min.css',['depends'=>['yii\bootstrap\BootstrapAsset']]);
-
 $this->registerJsFile('@web/adminlte/plugins/jstree/jstree.min.js',['depends'=>['yii\web\JqueryAsset']]);
 $this->registerJsFile('@web/adminlte/plugins/jstree/treedomian.js',['depends'=>['yii\web\JqueryAsset']]);*/
 $this->registerCssFile('@web/lte/plugins/treeview/bootstrap-treeview.css',['depends'=>['yii\bootstrap\BootstrapAsset']]);
-
 $this->registerJsFile('@web/lte/plugins/treeview/bootstrap-treeview.js',['depends'=>['yii\web\JqueryAsset']]);
-$this->registerJsFile('@web/lte/plugins/treeview/treeview-demo.js',['depends'=>['yii\web\JqueryAsset']]);
+$js = "
+var cate_url = '".Url::toRoute('cate/tree').'\';';
+$this->registerJs($js,\yii\web\View::POS_HEAD);
+$this->registerJsFile('@web/lte/plugins/treeview/treeview-demo.js',['depends'=>['yii\web\JqueryAsset'],'position'=>\yii\web\View::POS_END]);
 
 ?>
 <div class="cate-index">

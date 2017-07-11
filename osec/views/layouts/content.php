@@ -23,13 +23,40 @@ use common\models\cate;
             }
         } ?>
 
-        <?=
-        Breadcrumbs::widget(
-            [
-                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-            ]
-        ) ?>
     </section>
+    <div class="banner">
+        <div class="fixed-image section dark-translucent-bg" style="background-image:url('<?= $this->params['banner']['pic'] ?>');">
+            <div class="container">
+                <div class="space-top"></div>
+                <div class="space-top"></div>
+                <h1><?= $this->title ?></h1>
+                <div class="separator-2"></div>
+                <p class="lead"><?= @$this->params['banner']['subhead'] ?>
+                    <!--<br class="hidden-xs hidden-sm">
+                    hic officiis illo dolore sunt assumenda saepe id commodi sint praesentium
+                    <br class="hidden-xs hidden-sm">
+                    natus laborum quas cumque facilis, suscipit aliquam dolorum.-->
+
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="page-intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <?=
+                    Breadcrumbs::widget(
+                        [
+                            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+                        ]
+                    ) ?>
+
+                </div>
+            </div>
+        </div>
+    </div>
 <?php } ?>
 
 

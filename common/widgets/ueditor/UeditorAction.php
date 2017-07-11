@@ -129,6 +129,7 @@ class UeditorAction extends Action
          * )
          */
         /* 返回数据 */
+        //var_dump($this->config['fileMaxSize']);
         return json_encode($up->getFileInfo());
     }
     /**

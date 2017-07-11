@@ -37,7 +37,7 @@ $data = $dataProvider->getModels();
                         <div class="col-md-6">
                             <div class="attachment-block clearfix ">
 
-                                <a href="<?=Url::to(['/'.$data[$i]->tableName().'/view/','id'=>$data[$i]->id])?>">
+                                <a href="<?=Url::to(['/student'.'/view/','id'=>$data[$i]->id])?>">
 
                                     <div class="attachment-img " style="overflow: hidden;max-height: 148px;">
                                         <img src="<?=$data[$i]->icon?>" style="max-width: 100%;max-height: 100%;">
@@ -53,9 +53,10 @@ $data = $dataProvider->getModels();
 
                             </div>
                         </div>
+                            <?php if($i+1 <$count){ ?>
                         <div class="col-md-6">
                             <div class="attachment-block clearfix">
-                                <a href="<?=Url::to(['/'.$data[$i+1]->tableName().'/view/','id'=>$data[$i+1]->id])?>">
+                                <a href="<?=Url::to(['/student'.'/view/','id'=>$data[$i+1]->id])?>">
                                     <div class="attachment-img " style="overflow: hidden;max-height: 148px;">
                                         <img src="<?=$data[$i+1]->icon?>" style="max-width: 100%;max-height: 100%;">
                                     </div>
@@ -68,6 +69,7 @@ $data = $dataProvider->getModels();
                                 </a>
                             </div>
                         </div>
+                            <?php }?>
                         </div>
                     <?php } ?>
                 </div>

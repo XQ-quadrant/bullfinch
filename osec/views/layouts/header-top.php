@@ -60,7 +60,7 @@ use backend\widgets\category\CategoryWidget;
                         <?php if(Yii::$app->user->isGuest) { ?>
                             <div class="btn-group dropdown">
                                 <button type="button" class="btn " >
-                                    <a class="" href="<?=Url::to('user/login')?>">
+                                    <a class="" href="<?=Url::toRoute('/user/login')?>">
                                         <i class="fa fa-search"></i> 登录 </a>
                                 </button>
                             </div>
@@ -78,7 +78,7 @@ use backend\widgets\category\CategoryWidget;
                                     <li><a href="">设置 </a></li>
                                     <li><?= Html::a(
                                             '退出',
-                                            [Url::toRoute('/site/logout')],
+                                            Url::toRoute('/site/logout'),
                                             ['data-method' => 'post', ]
                                         ) ?></li>
 

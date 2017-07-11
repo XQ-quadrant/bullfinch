@@ -19,7 +19,6 @@ foreach($cates as $k=>$v){
 ?>
 
 <div class="pic-form">
-
     <?php $form = ActiveForm::begin(); ?>
     <?= $form->field($model, 'savepath')->widget('common\widgets\file_upload\FileUpload',[
         'config'=>['imagePathFormat' => "/osec/images/upload/{yyyy}{mm}{dd}/{time}{rand:6}",]

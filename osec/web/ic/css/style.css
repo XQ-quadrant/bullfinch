@@ -2,11 +2,16 @@
 
 /* 1 Typography
 ----------------------------------------------------------------------------- */
+@font-face {
+	font-family : 微软雅黑;
+	src : url(../fonts/微软雅黑.ttf);
+}
 html {
 	height: 100%;
 }
 body {
-	font-family: 'Open Sans', sans-serif;
+	/*font-family: 'Open Sans', sans-serif;*/
+	font-family: '微软雅黑';
 	font-size: 15px;
 	line-height: 1.50;
 	color: #666666;

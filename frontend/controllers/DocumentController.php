@@ -27,6 +27,7 @@ class DocumentController extends Controller
                 'class' => 'common\widgets\file_upload\UploadAction',     //这里扩展地址别写错
                 'config' => [
                     'imagePathFormat' => "/images/upload/{yyyy}{mm}{dd}/{time}{rand:6}",
+                    "fileMaxSize"=> 51200000, /* 上传大小限制，单位B，默认50MB */
                     //'imagePathFormat' => "/images/upload/{yyyy}{mm}{dd}/{time}{rand:6}",
                 ]
             ],
@@ -37,6 +38,7 @@ class DocumentController extends Controller
                     'imageUrlPrefix' => "", /* 图片访问路径前缀 */
                     'imagePathFormat' => "/images/upload/{yyyy}{mm}{dd}/{time}{rand:6}", /* 上传保存路径,可以自定义保存路径和文件名格式 */
                     "imageRoot" => Yii::getAlias("@webroot"),
+                    "fileMaxSize"=> 51200000, /* 上传大小限制，单位B，默认50MB */
                 ]
             ]
         ];

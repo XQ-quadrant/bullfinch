@@ -32,10 +32,10 @@ ul {
      margin: 0;
 }
 .flex-viewport {
-    height: 740px;
+    height: 635px;
 }
 .flexslider .slides li{
-    height: 740px;
+    height: 640px;
     position: relative;
 }
 .flexslider .slider-text > .slider-text-inner {
@@ -43,7 +43,7 @@ ul {
     vertical-align: middle;*/
     /*min-height: 700px;*/
     position: relative;
-    top: 380px;
+    top: 252px;
     color: #ffffff;
 }
 .flexslider .slider-text > .slider-text-inner h1{
@@ -108,6 +108,21 @@ ul {
 }
 .overlay-container img{
     min-width: 100%;
+}
+
+
+.dark-translucent-bg:after {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.header {
+
+    border-bottom: 1px solid rgba(234, 234, 234, 0.7);
+}
+.light-translucent-bg, .dark-translucent-bg, .default-translucent-bg, .parallax {
+    -webkit-background-size: 100% auto !important;
+    -moz-background-size: 100% auto !important;
+    -o-background-size: 100% auto !important;
+    background-size: 100% auto  !important;
 }
 /*********************/
 

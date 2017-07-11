@@ -23,6 +23,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'periodical')->textInput(['maxlength' => true]) ?>
     <?= $form->field($model, 'serial_number')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'cate')->dropDownList([97 => '教师发表',98=>'学生发表'])->label('栏目') ?>
 
     <?= $form->field($model, 'publish_at' )
         ->widget(kartik\datetime\DateTimePicker::classname(), [

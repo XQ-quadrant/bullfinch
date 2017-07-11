@@ -51,7 +51,7 @@ class PicController extends Controller
             'upload'=>[
                 'class' => 'common\widgets\file_upload\UploadAction',     //这里扩展地址别写错
                 'config' => [
-                    'imagePathFormat' => "/osec/images/upload/{yyyy}{mm}{dd}/{time}{rand:6}",
+                    'imagePathFormat' => Url::to('@web')."/images/upload/{yyyy}{mm}{dd}/{time}{rand:6}",
                 ]
             ]
         ];

@@ -5,7 +5,7 @@
 			img : ['jpg','JPG','jpeg','JPEG','gif','GIF','PNG','png'],
 			zip : ['zip','ZIP','rar','RAR']
 		},
-		maxSize  : 2017520,//3000*102400*102400,
+		maxSize  : 2017520,//1024*1024*3*1000000,//2017520,//3000*102400*102400,
 		url      : '/default/certificate',
 		sucFn    : function(){console.log('success')}
 	};
@@ -42,8 +42,8 @@
 			//验证文件大小
 			var fileSize = that[0].files[0].size;
 			if(fileSize > settings.maxSize){
-				/*alert(fileSize);
-				alert(settings.maxSize);*/
+				alert(fileSize);
+				alert(settings.maxSize);
 				alert('文件超出规定大小');
 				return false;
 			}

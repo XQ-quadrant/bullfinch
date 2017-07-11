@@ -28,7 +28,7 @@ $category = isset($a)?$a:39;
                         <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
                         <p>
-                            <?= Html::a('Create Pic', ['create','category'=>Yii::$app->request->get('category')], ['class' => 'btn btn-success']) ?>
+                            <?= Html::a('Create Pic', ['create','category'=>Yii::$app->request->get('category')?:39], ['class' => 'btn btn-success']) ?>
                         </p>
                         <?= $this->render('_grid', [
                         'searchModel' => $searchModel,

@@ -160,8 +160,10 @@ class SecurityController extends Controller
 
         if ($model->load(Yii::$app->getRequest()->post()) && $model->login()) {
             $this->trigger(self::EVENT_AFTER_LOGIN, $event);
-            SocialTool::login();     //连接信件服务
-            return $this->goHome();
+            //SocialTool::login();     //连接信件服务
+
+            return $this->goBack();
+            //return $this->goHome();
             //return $this->redirect('/dashboard/');
         }
 

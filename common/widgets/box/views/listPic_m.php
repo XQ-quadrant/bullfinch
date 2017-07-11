@@ -37,7 +37,7 @@ text-overflow: ellipsis;">
                         <a href="<?= Url::to(['/' . $model->tableName() . '/view/', 'id' => $m->id]) ?>"><?= $m->title ?></a>
                     </h4>
 
-                    <div class="attachment-text listpic-text" style="height: 44px;">
+                    <div class="attachment-text listpic-text" style="height: 43px;">
                         <?= $m->breviary ?>
                     </div>
                 </div>

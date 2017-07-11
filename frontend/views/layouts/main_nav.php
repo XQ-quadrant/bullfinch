@@ -1,4 +1,4 @@
-<?php
+c<?php
 use yii\helpers\Html;
 use yii\helpers\Url;
 
@@ -71,7 +71,7 @@ if (Yii::$app->controller->action->id === 'login') {
                             'encodeLabels' => false,
                             'items' => [
                                 ['label' => '首页', 'url' => '/site/index'],
-                                ['label' => '中国家庭金融中心', 'url' => 'http://chfs.swufe.edu.cn/','options'=>[]],
+                                ['label' => '中国家庭金融调查与研究中心', 'url' => 'http://chfs.swufe.edu.cn/','options'=>[]],
                                 //['label' => '海外学习交流中心', 'url' => '#'],
                             ],
                         ]);
@@ -95,13 +95,19 @@ if (Yii::$app->controller->action->id === 'login') {
                                     'items' => [
 
                                         ['label' => '登录', 'url' => Url::toRoute('user/security/login'), 'linkOptions' => ['target' => "_blank"]],
-                                        ['label' => '旧版网站', 'url' => 'http://10.9.10.201:8082/', 'options' => ['target' => "_blank"]],
+                                        ['label' => '旧版网站', 'url' => 'http://riem.swufe.edu.cn/riem/index.html', 'options' => ['target' => "_blank"]],
                                     ],
                                 ]);
 
                                 ?>
                             <?php } else {
-
+                                echo \yii\bootstrap\Nav::widget([
+                                    'options' => ['class' => 'nav navbar-nav'],
+                                    'encodeLabels' => false,
+                                    'items' => [
+                                        ['label' => '旧版网站', 'url' => 'http://riem.swufe.edu.cn/riem/index.html', 'options' => ['target' => "_blank"]],
+                                    ],
+                                ]);
                                 ?>
                                 <li class="dropdown user user-menu">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">

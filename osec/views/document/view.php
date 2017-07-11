@@ -8,6 +8,12 @@ use yii\widgets\DetailView;
 
 $this->title = $model->title;
 $this->params['breadcrumbs'][] = ['label' => $cate->name, 'url' => ['document/list','cate'=>$cate->id]];
+
+$this->params['banner']['pic'] = $model->pic;
+$this->params['banner']['subhead'] = '<span class="name">'
+    . $model->author .'</span><span class="from">'
+    . Yii::$app->formatter->asDate($model->create_at, 'yyyy - M - dd')
+    .'</span>' ;
 //$this->params['breadcrumbs'][] = $this->title;
 function shtm($design_str)
 {
@@ -27,19 +33,8 @@ function shtm($design_str)
    <!-- <div class="col-md-3">
     </div>-->
     <div class="col-md-9">
-        <div class="panel panel-default ">
 
-
-            <div class="panel-body ">
-
-                <div class="col-md-12 padding-l-0">
-                    <h3 class="title"><?= $model->title ?></h3>
-                    <div class="author clearfix author-right">
-                        <!--<img src="img/profileimg4.png" alt="img">-->
-                        <span class="name" style="margin-right: 1em;"><?= $model->author ?> </span>
-                        <span class="from"><?= Yii::$app->formatter->asDate($model->create_at, 'yyyy - M - dd') ?></span>
-                    </div>
-                    <hr>
+<hr>
                     <pre style="white-space: normal;     word-break: none;
      word-wrap: break-word;
      background: none;
@@ -49,20 +44,13 @@ function shtm($design_str)
                     </pre>
 
 
-
-                </div>
-
-            </div>
-
-
-        </div>
     </div>
     <div class="col-md-3">
-        <div class="panel panel-default ">
+        <div class="box box-default ">
 
 
 
-            <div class="panel-body ">
+            <div class="box-body ">
                 <h5>相关</h5>
                <!-- <dl>
                     <dt>Donec lobortis justo at aliquet</dt>

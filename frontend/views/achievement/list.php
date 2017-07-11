@@ -18,6 +18,36 @@ $data = $dataProvider->getModels();
 <div class="container" style="padding: 15px 45px;">
 
 <div class="row" >
+    <?php
+    $xuesheng = $jiaoshi ='btn-default';
+    if(Yii::$app->request->get('AchievementSearch')['cate'] == 97){
+        $jiaoshi ='btn-info';
+    }elseif (Yii::$app->request->get('AchievementSearch')['cate'] == 98){
+        $xuesheng = 'btn-info';
+    }
+    else{
+        $jiaoshi ='btn-info';
+    }
+    ?>
+    <div class="col-md-6">
+        <a class="" href="/achievement/list?sort=-id&AchievementSearch%5Bcate%5D=97">
+            <button type="button" class="btn <?= $jiaoshi ?> btn-block btn-flat">
+                <i class="fa  fa-university"></i>
+                教师发表
+            </button>
+        </a>
+    </div>
+    <div class="col-md-6">
+        <a class="" href="/achievement/list?sort=-id&AchievementSearch%5Bcate%5D=98">
+            <button type="button" class="btn <?= $xuesheng ?> btn-block btn-flat">
+                <i class="fa fa-graduation-cap"></i>
+                学生发表
+            </button>
+        </a>
+    </div>
+    <hr>
+    <br>
+    <div class="col-md-12">
     <!--<button type="button" class="btn btn-default btn-block col-md-6">.btn-block</button>
     <button type="button" class="btn btn-default btn-block col-md-6">.btn-block</button>-->
         <div class="nav-tabs-custom">
@@ -38,6 +68,7 @@ $data = $dataProvider->getModels();
                     </ul>
                 </li>-->
                 <li class="pull-right" style="width: 50%;"> <div class="input-group input-group-sm" style="padding: 5px;">
+
                         <input type="text" name="table_search" class="form-control pull-right" placeholder="搜索">
 
                         <div class="input-group-btn">
@@ -50,8 +81,8 @@ $data = $dataProvider->getModels();
                         <div class="box-body table-responsive no-padding">
                             <table class="table table-hover table-tab">
                                 <tbody><tr >
-                                    <th class="tab-th"> </th>
-                                    <th class="tab-th"> </th>
+
+                                    <th class="tab-th"># </th>
                                     <th class="tab-th">题目</th>
                                     <th class="tab-th">作者</th>
                                     <th class="tab-th">期刊</th>
@@ -60,7 +91,7 @@ $data = $dataProvider->getModels();
                                 </tr>
                                 <?php foreach($data as $v){ ?>
                                     <tr>
-                                        <td width=70><?= $v['id'] ?></td>
+
                                         <td width=70><?= $v['year_id'] ?></td>
 
                                         <td><?= $v['title'] ?></td>
@@ -102,7 +133,7 @@ $data = $dataProvider->getModels();
             </div>
 
         </div>
-
+    </div>
 </div>
 
 

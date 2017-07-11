@@ -70,11 +70,22 @@ position: relative;
     <div class="row" style="    margin-bottom: 7px;">
         <div class="col-md-8" style="">
             <?= common\widgets\box\BoxWidget::widget([
-                'type' => 'listPic_m', 'cate' => 14, 'pic' => true, 'title' => Yii::t('common', 'News'),
+                'model'=>\common\models\Document::className(),
+                //'config' => ['cate'=>14],
+                'where' => ['or','cate=96','cate=14'],
+                'type' => 'listPic_m',
+                //'cate' => 14,
+                'sort' => [
+                    'create_at' => SORT_DESC,
+                    //'name' => SORT_DESC,
+                ],
+                'pic' => true,
+                'title' => Yii::t('common', 'News'),
                 'url' => Url::toRoute(['document/list', 'cate' => 14]),
                 'liNum' => 4,
                 'css' => ['warper' => 'box-widget index-box ', 'header' => 'with-border index-box-header', 'title' => 'index-box-title', 'icon' => 'index-box-icon bicon-news', 'body' => 'box-profile blue-border',],
             ]) ?>
+
         </div>
         <div class="col-md-4 wbox" style="height: 446px;">
             <?= common\widgets\box\BoxWidget::widget([
@@ -109,11 +120,23 @@ position: relative;
         </div>
         <div class="col-md-4 wbox" style="height: 506px;">
             <?= common\widgets\box\BoxWidget::widget([
-                'type' => 'listPic_m', 'cate' =>94, 'title' => Yii::t('common', '学术活动'), 'liNum' => 4,
+                'model'=>\common\models\Document::className(),
+                //'config' => ['cate'=>14],
+                'where' => ['or','cate=93','cate=94','cate=95'],
+                'type' => 'listPic_m',
+                //'cate' => 14,
+                'sort' => [
+                    'level' => SORT_DESC,
+                    'create_at' => SORT_DESC,
+                    //'name' => SORT_DESC,
+                ],
+                'pic' => true,
+                'title' => Yii::t('common', '学术活动'),
                 'url' => Url::toRoute(['document/max-list', 'cate' => 94]),
-                //'sort' => ['id' => SORT_DESC],
-                'css' => ['warper' => 'box-widget index-box blue-border', 'title' => 'index-box-title', 'header' => 'with-border index-box-header', 'icon' => 'index-box-icon bicon-laba', 'body' => 'box-profile',]])
-            ?>
+                'liNum' => 4,
+                'css' => ['warper' => 'box-widget index-box blue-border', 'title' => 'index-box-title', 'header' => 'with-border index-box-header', 'icon' => 'index-box-icon bicon-laba', 'body' => 'box-profile',]
+            ]) ?>
+
 
         </div>
     </div>

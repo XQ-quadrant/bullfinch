@@ -35,6 +35,7 @@ class Achievement extends \yii\db\ActiveRecord
     {
         return [
             [['author', 'title', 'year_id','periodical'  ], 'required'],
+            [['cate'], 'integer'],
             [['title', 'serial_number', 'ei', 'hint','year_id'], 'string'],
             [['publish_at'], 'safe'],
             [['author',  'address'], 'string', 'max' => 255],

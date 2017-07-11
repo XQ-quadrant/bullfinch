@@ -12,7 +12,7 @@ return [
     'controllerNamespace' => 'osec\controllers',
     //'bootstrap' => ['log'],
     //'HomeUrl'=>'index.php?r=admin',
-    'name'=>'OSEC ',
+    'name'=>'OSEC',
     'language'=>'zh-CN',
     //'debug'=>false,
     'components' => [
@@ -56,6 +56,14 @@ return [
                     //'basePath' => '/messages',
                     'fileMap' => [
                         'power' => 'power.php',
+                    ],
+                ],
+                'osec' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@common/messages',
+                    'sourceLanguage' => 'zh-CN',
+                    'fileMap' => [
+                        'osec' => 'osec.php',
                     ],
                 ],
                 'model*' => [
@@ -116,16 +124,19 @@ return [
 
 
 
-                '/<app:\w+>/admin/<controller:\w+>/<action:\w+>'     => '/admin/<controller>/<action>',
+                '/osec/admin/<controller:\w+>/<action:\w+>'     => '/admin/<controller>/<action>',
+                //'/osec/admin/assignment/index'     => '/admin/assignment',
 
 
-                '/<app:\w+>/admin'                                   => '/admin',
+                //'/<app:\w+>/admin'                                   => '/admin',
+                //'/<app:\w+>/admin/<module:\w+>/<controller:\w+>/<action:\w+>' => '/admin/<module>/<controller>/<action>',
 
-                '/<app:\w+>/admin/<controller:\w+>'                  => '/admin/<controller>/index',
+                //'/<app:\w+>/admin/<controller:\w+>'                  => '/admin/<controller>/index',
 
 
 
-                '/<app:\w+>/user/login' => 'user/login',
+                '/<app:\w+>/user/login' => '/user/login',
+                '/<app:\w+>/user/logout' => '/user/logout',
                 //'/riem/<prefix:\w+>/<controller:\w+>/<action:\w+>'=>'<module>/<controller>/<action>',
             ],
         ],

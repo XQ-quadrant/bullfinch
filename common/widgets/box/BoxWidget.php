@@ -25,6 +25,7 @@ class BoxWidget extends Widget
     public $title;
     public $url;
     public $sort = []; //顺序
+    public $config = []; //初始化model参数
 
     /**
      * 初始化
@@ -50,7 +51,7 @@ class BoxWidget extends Widget
             //$this->activeRecord = Cate::find()->where(['status'=>Cate::$STATUS_AOLLOW])->orderBy(['level' => SORT_DESC])->all();//new Room();//'Hello World';
         }else{
             //$this->model = new ActiveRecord();
-            $this->model = new $this->model();
+            $this->model = new $this->model($this->config);
             $this->activeRecord = $this->model
                 ->find()
                 ->where($this->where)

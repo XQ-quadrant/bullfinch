@@ -78,12 +78,14 @@ class Uploader
         }
         $this->oriName = $file['name'];
         $this->fileSize = $file['size'];
+
         $this->fileType = $this->getFileExt();
         $this->fullName = $this->getFullName();
         $this->filePath = $this->getFilePath();
         $this->fileName = $this->getFileName();
         $dirname = dirname($this->filePath);
         //检查文件大小是否超出限制
+
         if (!$this->checkSize()) {
             $this->stateInfo = $this->getStateInfo("ERROR_SIZE_EXCEED");
             return;

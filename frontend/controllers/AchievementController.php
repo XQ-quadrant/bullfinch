@@ -36,11 +36,14 @@ class AchievementController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new AchievementSearch();
+        $cate = Yii::$app->request->get('cate');
+        //$model = new Achievement(['cate'=>$cate]);
+        $searchModel = new AchievementSearch(['cate'=>$cate]);
         //Yii::$app->request->queryParams['sort']='-id';
         $t = Yii::$app->request->queryParams;
-        $t['sort']='-id';
+        //$t['sort']='-id';
         $dataProvider = $searchModel->search($t);
+        $dataProvider->query->orderBy(['id' => SORT_DESC,'create_at'=>SORT_DESC]);
         /*var_dump(Yii::$app->request->queryParams);
         var_dump($t);
         die();*/
@@ -49,7 +52,7 @@ class AchievementController extends Controller
             'dataProvider' => $dataProvider,
         ]);
     }
-    public function actionList($sort='-id')
+    public function actionList()
     {
         $this->layout = 'main_nav.php';
         $searchModel = new AchievementSearch();
@@ -81,7 +84,8 @@ class AchievementController extends Controller
      */
     public function actionCreate()
     {
-        $model = new Achievement();
+        $cate = Yii::$app->request->get('cate');
+        $model = new Achievement(['cate'=>$cate]);
 
         if ($model->load(Yii::$app->request->post()) && $model->create()) {
 
@@ -142,6 +146,7 @@ class AchievementController extends Controller
     }
 
     public function actionTool(){
+        die('喵喵');
         $temp_data = new Connection([
             'dsn' => 'mysql:host=localhost;dbname=temp_date',
             'username' => 'gb',
@@ -175,5 +180,44 @@ class AchievementController extends Controller
 
         $temp_data->close();
 
+    }
+    public function actionTool2($cate){
+        /*$temp_data = new Connection([
+            'dsn' => 'mysql:host=localhost;dbname=temp_date',
+            'username' => 'gb',
+            'password' => 'gb',
+            'charset' => 'utf8',
+        ]);
+        $temp_data->open();*/
+die('喵喵');
+        //$news = Yii::$app->db->createCommand("SELECT * FROM `TABLE 32` WHERE id <= 63")->queryAll();
+
+        $news = Yii::$app->db->createCommand("SELECT * FROM `TABLE 31` WHERE id <= 74 AND id>=65")->queryAll();
+
+        foreach ($news as $key=>$v){
+            $new = new Achievement();
+            $new->title = $v['COL 3'];
+            $new->periodical = $v['COL 4'];
+            $new->author = $v['COL 11'];
+            $new->year_id = '2016-'.$v['COL 1'] ;
+            $new->cate = $cate ;
+
+            //die();
+            /*echo $new->year_id ;
+            echo $new->title ;
+            echo $new->author.'<br><br>';*/
+
+            if($new->insert()){
+                echo $new->year_id ;
+                echo $new->title ;
+                echo $new->author.'<br><br>';
+            }else{
+                echo "FAIL";
+                echo $new->year_id .'<br><br>';
+            }
+            $new->refresh();
+
+        }
+        //$temp_data->close();
     }
 }

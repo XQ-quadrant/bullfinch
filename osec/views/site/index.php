@@ -9,6 +9,7 @@ $this->title = '经济与管理研究院';//Yii::t('common', 'School of Internat
 $this->params['index'] = true;//$this->title;
 $this->params['breadcrumbs'] = null;//$this->title;
 $this->blocks['content-header'] = '';
+
 $this->registerCssFile('@web/plugins/flexslider/flexslider.css', []);
 //$this->registerCssFile('@web/ic/plugins/magnific-popup/magnific-popup.css',[]);
 //$this->registerCssFile('@web/ic/plugins/owl-carousel/owl.carousel.css',[]);
@@ -58,14 +59,11 @@ $(function(){
       });
       sliderMain();
     });
-
 JS;
 $this->registerJs($js);
 ?>
 
-
 <div id="container" class="cf">
-
     <div id="main" role="main">
         <section class="slider">
             <div class="flexslider">
@@ -390,7 +388,7 @@ $this->registerJs($js);
             <?= common\widgets\box\BoxWidget::widget([
                 'type' => 'masonry-grid-item', 'cate' => 14, 'pic' => true, 'title' => Yii::t('common', 'News'),
                 'url' => Url::toRoute(['document/list', 'cate' => 14]),
-                'liNum' => 6,
+                'liNum' => 3,
                 'css' => ['warper' => 'box-widget index-box ', 'header' => 'with-border index-box-header', 'title' => 'index-box-title', 'icon' => 'index-box-icon bicon-news', 'body' => 'box-profile blue-border',],
             ]) ?>
 

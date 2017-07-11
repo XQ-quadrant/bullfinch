@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a(Yii::t('common', 'Create Achievement'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('common', 'Create Achievement'), ['create','cate'=>Yii::$app->request->get('cate')], ['class' => 'btn btn-success']) ?>
     </p>
     <div class="table-wrap">
     <?= GridView::widget([
@@ -30,13 +30,24 @@ $this->params['breadcrumbs'][] = $this->title;
             'title:ntext',
             'periodical',
             'year_id',
+            'year_id',
+            'cate',
             // 'address',
-           'serial_number:ntext',
+           //'serial_number:ntext',
             // 'ei:ntext',
              //'hint:ntext',
 
             ['class' => 'yii\grid\ActionColumn'],
+
         ],
+        'pager'=>[
+            //'class' => \yii\widgets\LinkPager::className(),
+                //'pagination' => $pages,
+                'firstPageLabel'=>'首页',
+                'lastPageLabel'=>'末页',
+            ],
+
     ]); ?>
+
     </div>
 </div>

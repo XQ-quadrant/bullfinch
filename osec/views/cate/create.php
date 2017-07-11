@@ -6,7 +6,7 @@ use common\models\Cate;
 /* @var $this yii\web\View */
 /* @var $model common\models\Cate */
 
-$this->title = 'Create Cate';
+$this->title = '新建栏目';
 $this->params['breadcrumbs'][] = ['label' => 'Cates', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 $cur_cate = Yii::$app->request->get('pre_cate');
@@ -21,24 +21,43 @@ foreach($cates as $v){
 $list[0]= '基础';
 ?>
 <div class="cate-create">
-    <div class="box box-widget">
-        <div class="box-header with-border">
-            <div class="box-title">
-                <h3><?= Html::encode($this->title) ?></h3>
-            </div>
-            <div class="box-tools">
-            </div>
-        </div>
-        <div class="box-body">
-            <div class="row">
-                <div class="col-md-offset-1 col-md-6">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-1">
+            <div class="box box-widget">
+                <div class="box-header with-border " style="text-align: center">
+                    <div class="box-title" >
+                        <h3 class="center" ><?= Html::encode(Yii::t('model/pic',$this->title)) ?></h3>
+                    </div>
+                    <div class="box-tools">
+                    </div>
+                </div>
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-9">
                     <?= $this->render('_form', [
                         'model' => $model,
                         'list' => $list,
                     ]) ?>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="col-md-3 ">
+            <div class="box box-widget">
+                <div class="box-header with-border " style="text-align: center">
+                    <div class="box-title" >
+                        <h3 class="center" ></h3>
+                    </div>
+                    <div class="box-tools">
+                    </div>
+                </div>
+                <div class="box-body">
 
+
+                </div>
+            </div>
         </div>
     </div>
+
 </div>

@@ -8,6 +8,15 @@ $callback = function($menu){
         'label' => $menu['name'],
         'url' => [$menu['route']],
     ];
+    if(isset($data['get'])){
+        $return['url']+=$data['get'];
+        //die();
+    }
+
+    /*if(isset($data['get'])){
+        var_dump($return);
+        die();
+    }*/
 
     //处理我们的配置
     if ($data) {
